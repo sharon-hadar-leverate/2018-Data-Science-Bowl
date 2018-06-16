@@ -10,11 +10,12 @@ A successful type of models for image analysis are convolutional neural networks
 
 Part one - Building a base line with MLP\CNN network: 
 
-![alt text](https://raw.githubusercontent.com/sharon-hadar-leverate/2018-Data-Science-Bowl/assets/Part-one.png)
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/part-one1.PNG)
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/part-one2.PNG)
 
 Part two – using a ladder network: 
 
-![alt text](https://raw.githubusercontent.com/sharon-hadar-leverate/2018-Data-Science-Bowl/assets/Part-two.png)
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/part-two.PNG)
 
 My Assumption is that combining ladders networks would improve the network-hidden features learning 
  
