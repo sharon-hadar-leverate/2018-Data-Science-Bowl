@@ -1,10 +1,9 @@
-## Introduction: 
+# Progress Report Introduction: 
 This README file is a progress report for the project "2018-Data-Science-Bowl".    
 In this project, I am going to explore the possibilities of deep learning and segmentation problem assuming that combining ladders networks will enhance the hidden network learning features.  
 #### In this report i will introduce: 
 - [X] The project description 
-- [ ] The segmentation problem and the engineering challenge in it
-- [ ] A review of basic techniques in image segmentation
+- [X] A brif review of basic techniques in image segmentation
 - [ ] Deep Learning consepts
 - [ ] Use of Deep Learning in segmentation problem
 - [ ] Ladder Networks
@@ -27,10 +26,6 @@ The images were acquired under a variety of conditions and vary in the cell type
 
 #### This algorithm needs to identify a range of nuclei across varied conditions. 
 
-image segmentetion: the process of partitioning a digital image into multiple segments (sets of pixels, a.k.a super-pixels)[1] The goal of segmentation is to simplify and/or change the representation of an image into something that is more meaningful and easier to analyze. Image segmentation is typically used to locate objects and boundaries (lines, curves, etc.) in images.   
-More precisely,   
-### In other words: image segmentation is the process of assigning a label to every pixel in an image such that pixels with the same label share certain characteristics.
-
 Except from the segmentetion problem, there is another problem:  
 
 The images data were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
@@ -39,11 +34,13 @@ The images can be in RGB, RGBA and gray scale format, based on the modality in w
 
 ### This means that a learning model (svm, deep learning etc.) for this problem should be enquired with a pipeline to process each image to an appropriate input and output for it.  
 
+## A review of basic techniques in image segmentation
 
-## Expanded literature review:  
-_The status of current scientific knowledge on the topic of the thesis,   
-comparison The current thesis for similar works_  
+**image segmentetion** is the process of partitioning a digital image into multiple segments (sets of pixels, a.k.a super-pixels)[1] The goal of segmentation is to simplify and/or change the representation of an image into something that is more meaningful and easier to analyze. Image segmentation is typically used to locate objects and boundaries (lines, curves, etc.) in images.   
+ 
+### More precisely, image segmentation is the process of assigning a label to every pixel in an image such that pixels with the same label share certain characteristics.
 
+##### basic techniques
 The simplest method of image segmentation is called the **thresholding method**. [2][1]
 This method is based on a clip-level (or a threshold value) to turn a gray-scale image into a binary image
 The key of this method is to select the threshold value (or values when multiple-levels are selected). 
@@ -65,6 +62,11 @@ Pixels having the highest gradient magnitude intensities (GMIs) correspond to wa
 Pixels draining to a common minimum form a catch basin, which represents a segment.  
 
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/watershed_segmentetion.PNG)
+
+#### Trainable segmentation:
+Most segmentation methods are based only on color information of pixels in the image. Humans use much more knowledge than this when doing image segmentation, but implementing this knowledge would cost considerable computation time and would require a huge domain knowledge database, which is currently not available. In addition to traditional segmentation methods, there are trainable segmentation methods which can model some of this knowledge.
+
+## Deep Learning consepts:
 
 
 ## Methods: 
