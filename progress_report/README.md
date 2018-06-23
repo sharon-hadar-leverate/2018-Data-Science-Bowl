@@ -1,15 +1,35 @@
 ## Introduction: 
-_A short description of the subject and its main purpose._
+This README file is a progress report for the project "2018-Data-Science-Bowl".    
+In this project, I am going to explore the possibilities of deep learning and segmentation problem assuming that combining ladders networks will enhance the hidden network learning features.  
+#### In this report i will introduce: 
+- [X] The project description 
+- [ ] The segmentation problem and the engineering challenge in it
+- [ ] A review of basic techniques in image segmentation
+- [ ] Deep Learning consepts
+- [ ] Use of Deep Learning in segmentation problem
+- [ ] Ladder Networks
+- [ ] Use of Ladder Network in a CNN
+- [ ] Use of Ladder Network in segmentation problem
+- [ ] Description of primary products
+- [ ] Bibliography
 
-“2018 Data Science Bowl” is a Kaggle competition that its goal is to create an algorithm to automate nucleus detection in divergent images to advance medical discovery.  
-The Data This dataset contains a large number of segmented nuclei images.
+## The project description
+_“2018 Data Science Bowl” is a Kaggle competition that its goal is to create an algorithm to automate nucleus detection in divergent images to advance medical discovery._  
 
-## The problem 
-_discussed by the work the engineering challenge._
+_By observing patterns, asking questions, and building a model, participants will have a chance to push state-of-the-art technology farther._  
 
-image segmentetion: In computer vision, image segmentation is the process of partitioning a digital image into multiple segments (sets of pixels, a.k.a super-pixels)[1] The goal of segmentation is to simplify and/or change the representation of an image into something that is more meaningful and easier to analyze. Image segmentation is typically used to locate objects and boundaries (lines, curves, etc.) in images.   
+in this competition, the challanger expose a dataset contains a large number of segmented nuclei images.  
+The images were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
+
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/data_bowl_data.PNG)
+
+
+
+#### This algorithm needs to identify a range of nuclei across varied conditions. 
+
+image segmentetion: the process of partitioning a digital image into multiple segments (sets of pixels, a.k.a super-pixels)[1] The goal of segmentation is to simplify and/or change the representation of an image into something that is more meaningful and easier to analyze. Image segmentation is typically used to locate objects and boundaries (lines, curves, etc.) in images.   
 More precisely,   
-### image segmentation is the process of assigning a label to every pixel in an image such that pixels with the same label share certain characteristics.
+### In other words: image segmentation is the process of assigning a label to every pixel in an image such that pixels with the same label share certain characteristics.
 
 Except from the segmentetion problem, there is another problem:  
 
