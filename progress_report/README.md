@@ -67,6 +67,31 @@ Pixels draining to a common minimum form a catch basin, which represents a segme
 Most segmentation methods are based only on color information of pixels in the image. Humans use much more knowledge than this when doing image segmentation, but implementing this knowledge would cost considerable computation time and would require a huge domain knowledge database, which is currently not available. In addition to traditional segmentation methods, there are trainable segmentation methods which can model some of this knowledge.
 
 ## Deep Learning consepts:
+Though the main ideas behind deep learning have been in place for decades, it wasn’t until data sets became large enough and computers got fast enough that their true power could be revealed.
+
+#### multilayer perceptron
+
+
+
+#### Latent variables: 
+are variables that are not directly observed but are rather inferred (through a mathematical model) from other variables that are observed (directly measured).
+
+#### Latent variable models: 
+are mathematical models that aim to explain observed variables in terms of latent variables.
+(Hidden Markov model, PCA, tc)
+
+#### Hierarchical latent variable models: 
+explain latent variables with latent variables
+(Hierarchical Hidden Markov model, Trees, PCA, etc.)
+
+### Learning Latent Variable Models
+Use the Expectation-Maximization algorithm (Dempster,
+Laird and Rubin, 1977)
+I Goal is to find parameters θ that maximize the log
+likelihood
+
+
+
 
 
 ## Methods: 
