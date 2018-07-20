@@ -72,7 +72,7 @@ Though the main ideas behind deep learning have been in place for decades, it wa
 
 A good way to understand deep learning is to take a look at logistic regression:  
 logistic regression uses binary classification on input data, 
-the model takes the input's n features and uses a weighted average on them, the weighted average is passed as an input to a log function and the classification is activated to one if the log output is greater than a certen threshold.
+the model takes the input's n features and uses a weighted average on them, the weighted average is passed on as an input to a log function and the classification is activated to one if the log output is greater than a certen threshold.
 #### Logistic regression is a simple neural network.
 
 
