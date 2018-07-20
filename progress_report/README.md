@@ -70,9 +70,9 @@ Most segmentation methods are based only on color information of pixels in the i
 Deep learning is a subfield of machine learning. While both fall under the broad category of artificial intelligence, deep learning is what powers the most human-like artificial intelligence.  
 Though the main ideas behind deep learning have been in place for decades, it wasn’t until data sets became large enough and computers got fast enough that their true power could be revealed.
 
-A good way to understand deep learning is to look at logistic regression:  
+A good way to understand deep learning is to take a look at logistic regression:  
 logistic regression uses binary classification on input data, 
-the model takes the input's n fetures and use weighted average on them, then it uses a log function on the weighted average and uses a threshold to activate a classification as one.  
+the model takes the input's n features and uses a weighted average on them, the weighted average is passed as an input to a log function and the classification is activated to one if the log output is greater than a certen threshold.
 #### Logistic regression is a simple neural network.
 
 
