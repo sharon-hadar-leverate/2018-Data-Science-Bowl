@@ -67,7 +67,14 @@ Pixels draining to a common minimum form a catch basin, which represents a segme
 Most segmentation methods are based only on color information of pixels in the image. Humans use much more knowledge than this when doing image segmentation, but implementing this knowledge would cost considerable computation time and would require a huge domain knowledge database, which is currently not available. In addition to traditional segmentation methods, there are trainable segmentation methods which can model some of this knowledge.
 
 ## Deep Learning consepts:
+Deep learning is a subfield of machine learning. While both fall under the broad category of artificial intelligence, deep learning is what powers the most human-like artificial intelligence.
 Though the main ideas behind deep learning have been in place for decades, it wasn’t until data sets became large enough and computers got fast enough that their true power could be revealed.
+
+A good way to understand deep learning is to look at logistic regression:  
+logistic regression uses binary classification on input data, 
+the model takes the input's n fetures and use weighted average on them, then it uses a log function on the weighted average and uses a threshold to activate a classification as one.  
+#### Logistic regression is a simple neural network.
+
 
 #### multilayer perceptron
 
@@ -108,3 +115,4 @@ work limitations _
 [3]  Barghout, Lauren; Sheynin, Jacob (2013). "Real-world scene perception and perceptual organization: Lessons from Computer Vision". Journal of Vision. 13 (9): 709–709. doi:10.1167/13.9.709.  
 [4]  Olsen, O. and Nielsen, M.: Multi-scale gradient magnitude watershed segmentation, Proc. of ICIAP 97, Florence, Italy, Lecture Notes in Computer Science, pages 6–13. Springer Verlag, September 1997.  
 [5] http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review  
+[6]  Andrew L. Beam (a great introduction to deep learning): http://beamandrew.github.io/deeplearning/2017/02/23/deep_learning_101_part2.html
