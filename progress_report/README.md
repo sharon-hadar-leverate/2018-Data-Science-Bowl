@@ -72,9 +72,17 @@ Though the main ideas behind deep learning have been in place for decades, it wa
 
 A good way to understand deep learning is to take a look at logistic regression:  
 Logistic regression uses a binary classification on input data, 
-the model takes the input's n features and uses a weighted sum on them, the weighted sum is passed on as an input to a log function and the classification is activated to one if the log output is greater than a certen threshold.
+the model takes the input's n features and uses a weighted sum over them, the weighted sum is then passed as an input to a log function and the classification is activated to one if the log output is greater than a certen threshold.
 #### Logistic regression is a simple neural network.
 
+### Training NN (neural network)
+Logistic regression uses binary crossentropy as a loss function, which is a very popular technique in binary classification.
+When we train a model we are trying to minimize the loss function to get the model optimal weights, one way to minimize this loss function is using Gradient descent.
+
+#### Gradient Decent:
+Gradient Decent is an optimization algorithm, where after each epoch (= pass over the training dataset) the model weights are updated incrementally.  
+The magnitude and direction of the weight update is computed by taking a step in the opposite direction of the cost gradient, which is the derivative calculation of the loss function.  
+The weights are updated according to the learning rate after each epoch.
 
 #### multilayer perceptron
 
