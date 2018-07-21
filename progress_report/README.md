@@ -140,6 +140,22 @@ A classic architecture for CNN:
 ##### imput -> Conv -> Relu -> Conv -> Relu -> Pool -> Conv -> Relu -> Pool -> Fully Connected
 
 ## Use of Deep Learning in segmentation problem
+One of the popular initial deep learning approaches was patch classification where each pixel was separately classified into classes using a patch of image around it.[10]  
+Main reason to use patches was that classification networks usually have full connected layers and therefore required fixed size images.
+
+In 2014, Fully Convolutional Networks (FCN) by Long et al. from Berkeley, popularized CNN architectures for dense predictions without any fully connected layers.  
+This allowed segmentation maps to be generated for image of any size and was also much faster compared to the patch classification approach.  
+Almost all the subsequent state of the art approaches on semantic segmentation adopted this paradigm.
+
+Apart from fully connected layers, one of the main problems with using CNNs for segmentation is pooling layers.  
+Pooling layers increase the field of view and are able to aggregate the context while discarding the ‘where’ information.  
+However, semantic segmentation requires the exact alignment of class maps and thus, needs the ‘where’ information to be preserved. Two different classes of architectures evolved in the literature to tackle this issue.
+
+First one is encoder-decoder architecture.   
+Encoder gradually reduces the spatial dimension with pooling layers and decoder gradually recovers the object details and spatial dimension. There are usually shortcut connections from encoder to decoder to help decoder recover the object details better.   
+U-Net is a popular architecture from this class.
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/unet.png)
+
 ## Autoencoders
 
 #### Latent variables: 
@@ -180,3 +196,4 @@ work limitations _
 [7] Bottou, Léon (1998). "Online Algorithms and Stochastic Approximations". Online Learning and Neural Networks. Cambridge University Press. ISBN 978-0-521-65263-6
 [8] https://en.wikipedia.org/wiki/Convolutional_neural_network
 [9] http://neuralnetworksanddeeplearning.com/
+[10] http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review
