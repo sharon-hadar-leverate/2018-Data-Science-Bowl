@@ -74,6 +74,7 @@ A good way to understand deep learning is to take a look at logistic regression:
 Logistic regression uses a binary classification on input data, 
 the model takes the input's n features and uses a weighted sum over them, the weighted sum is then passed as an input to a log function and the classification is activated to one if the log output is greater than a certen threshold.
 #### Logistic regression is a simple neural network.
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/%E2%80%8F%E2%80%8FLR.PNG)
 
 ### Training NN (neural network)
 Logistic regression uses binary crossentropy as a loss function, which is a very popular technique in binary classification.
