@@ -107,7 +107,32 @@ MLP is defined by several parameters:
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/MLP.PNG)
  
 
-## Convolutional Neural Network (CNN)
+## Convolutional Neural Network (CNN) [8]
+Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex.
+
+A successfully neural network for image and text recognition required all neurons to be connected, resulting in an overly-complex   network structure and very long training times.   
+The convolution operation brings a solution to this problem as it reduces the number of free parameters, each neuron is connected to only a small region of the input volume. The extent of this connectivity is a hyperparameter called the receptive field of the neuron. allowing the network to be deeper with fewer parameters. 
+Yann LeCun from Facebook’s AI Research group built the first Convolution Neural Network in 1988 called LeNet.
+
+#### Convolutional - needs to be change
+convolution is a mathematical operation on two functions (f and g) to produce a third function that expresses how the shape of one is modified by the other.  
+Convolutional layers apply a convolution operation to the input with a filter, passing the result to the next layer. 
+The convolution emulates the response of an individual neuron to visual stimuli.
+Each convolutional neuron processes data only for its receptive field.
+Convolution as a property of being translational invariant: The output signal strength is not dependent on where the features are located, but simply whether the features are present.
+
+#### Pooling
+Combine the outputs of neuron clusters at one layer into a single neuron in the next layer. 
+For example, max pooling uses the maximum value from each of a cluster of neurons at the prior layer (another example is using the average value from each of the clusters).
+
+#### Fully connected
+Fully connected layers connect every neuron in one layer to every neuron in another layer. It is in principle the same as the traditional multi-layer perceptron neural network (MLP).
+
+#### Weights
+CNNs share weights in convolutional layers, which means that the same filter is used for each receptive field in the layer, this reduces memory footprint and improves performance.
+
+
+
 ## Use of Deep Learning in segmentation problem
 ## Autoencoders
 
@@ -147,3 +172,4 @@ work limitations _
 [5] http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review  
 [6]  Andrew L. Beam (a great introduction to deep learning): http://beamandrew.github.io/deeplearning/2017/02/23/deep_learning_101_part2.html
 [7] Bottou, Léon (1998). "Online Algorithms and Stochastic Approximations". Online Learning and Neural Networks. Cambridge University Press. ISBN 978-0-521-65263-6
+[8] https://en.wikipedia.org/wiki/Convolutional_neural_network
