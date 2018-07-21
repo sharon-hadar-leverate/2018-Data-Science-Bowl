@@ -2,11 +2,15 @@
 This README file is a progress report for the project "2018-Data-Science-Bowl".    
 In this project, I am going to explore the possibilities of deep learning and segmentation problem assuming that combining ladders networks will enhance the hidden network learning features.  
 #### In this report i will introduce: 
+
+### Part One:
 - [X] The project description 
 - [X] A brif review of basic techniques in image segmentation
 - [X] Deep Learning consepts
-- [ ] Convolutional Neural Network (CNN)
+- [X] Convolutional Neural Network (CNN)
 - [ ] Use of Deep Learning in segmentation problem
+- [ ] Description of primary products
+### Part Two:
 - [ ] Autoencoders
 - [ ] Ladder Networks
 - [ ] Use of Ladder Network in a CNN
