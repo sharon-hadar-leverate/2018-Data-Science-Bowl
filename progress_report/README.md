@@ -78,7 +78,17 @@ the model takes the input's n features and uses a weighted sum over them, the we
 #### Logistic regression is a simple neural network.
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/%E2%80%8F%E2%80%8FLR.PNG)
 
-### Training NN (neural network)
+### Multi Layer Perceptron (MLP):
+MLPs are just logistic regression where a set of nonlinear features are automatically learned from data.  
+MLP is defined by several parameters: 
+ - Number of hidden units in each layer
+ - Number of hidden layers in the network
+ - The nonlinear activation function: (could also be RELU an rectified linear unit or tanh)
+ - Learning rate for to use in SGD (using the chain rule of derivatives)
+ 
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/MLP.PNG)
+ 
+### Training NN (neural network) or Logistic regression:
 Logistic regression uses binary crossentropy as a loss function, which is a very popular technique in binary classification.
 When we train a model we are trying to minimize the loss function to get the model optimal weights, one way to minimize this loss function is using Gradient descent.
 
@@ -96,16 +106,6 @@ There are different tricks to improve the GD-based learning, one is choosing a d
 #### Mini-batch Gradient Descent:
 instead of computing the gradient from 1 sample or all n training samples: Mini-batch gradient Descent  update the model based on smaller groups of training samples.
 
-### Multi Layer Perceptron (MLP):
-MLPs are just logistic regression where a set of nonlinear features are automatically learned from data.  
-MLP is defined by several parameters: 
- - Number of hidden units in each layer
- - Number of hidden layers in the network
- - The nonlinear activation function: (could also be RELU an rectified linear unit or tanh)
- - Learning rate for to use in SGD (using the chain rule of derivatives)
- 
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/MLP.PNG)
- 
 
 ## Convolutional Neural Network (CNN) [8]
 Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex.
