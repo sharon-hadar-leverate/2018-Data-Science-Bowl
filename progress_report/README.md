@@ -1,4 +1,4 @@
-# Progress Report Introduction:  :shipit:
+# Progress Report Introduction:  :image:
 This README file is a progress report for the project "2018-Data-Science-Bowl".    
 In this project, I am going to explore the possibilities of deep learning and segmentation problem assuming that combining ladders networks will enhance the hidden network learning features.  
 #### In this report i will introduce: 
