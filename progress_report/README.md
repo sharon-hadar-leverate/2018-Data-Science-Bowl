@@ -107,6 +107,9 @@ MLP is defined by several parameters:
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/MLP.PNG)
  
 
+## Convolutional Neural Network (CNN)
+## Use of Deep Learning in segmentation problem
+## Autoencoders
 
 #### Latent variables: 
 are variables that are not directly observed but are rather inferred (through a mathematical model) from other variables that are observed (directly measured).
@@ -125,17 +128,16 @@ Laird and Rubin, 1977)
 I Goal is to find parameters θ that maximize the log
 likelihood
 
-
-
-
+## Ladder Networks
+## Use of Ladder Network in a CNN
+## Use of Ladder Network in segmentation problem
+## Description of primary products
 
 ## Methods: 
 _Detailed description of algorithms and computational models used,   
 tools use,   
 work process,   
 work limitations _ 
-
-## Description of primary products.
 
 ## Bibliography.
 [1] Linda G. Shapiro and George C. Stockman (2001): “Computer Vision”, pp 279-325, New Jersey, Prentice-Hall, ISBN 0-13-030796-3  
