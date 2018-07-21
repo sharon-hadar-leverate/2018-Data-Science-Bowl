@@ -69,12 +69,12 @@ Pixels draining to a common minimum form a catch basin, which represents a segme
 Most segmentation methods are based only on color information of pixels in the image. Humans use much more knowledge than this when doing image segmentation, but implementing this knowledge would cost considerable computation time and would require a huge domain knowledge database, which is currently not available. In addition to traditional segmentation methods, there are trainable segmentation methods which can model some of this knowledge.
 
 ## Deep Learning consepts:
-Deep learning is a subfield of machine learning. While both fall under the broad category of artificial intelligence, deep learning is what powers the most human-like artificial intelligence.  
-Though the main ideas behind deep learning have been in place for decades, it wasn’t until data sets became large enough and computers got fast enough that their true power could be revealed.
+Deep learning is a subfield of machine learning. While both fall under the broad category of artificial intelligence, deep learning is what powers the most human-like artificial intelligence.    
+Though the main ideas behind deep learning have been in place for decades, it wasn’t until data sets became large enough and computers got fast enough that their true power could be revealed.  
 
-A good way to understand deep learning is to take a look at logistic regression:  
-Logistic regression uses a binary classification on input data, 
-the model takes the input's n features and uses a weighted sum over them, the weighted sum is then passed as an input to a log function and the classification is activated to one if the log output is greater than a certen threshold.
+A good way to understand deep learning is to take a look at logistic regression:    
+Logistic regression uses a binary classification on input data,  
+the model takes the input's n features and uses a weighted sum over them, the weighted sum is then passed as an input to a log function  and the classification is activated to one if the log output is greater than a certen threshold.  
 #### Logistic regression is a simple neural network.
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/%E2%80%8F%E2%80%8FLR.PNG)
 
@@ -89,19 +89,20 @@ MLP is defined by several parameters:
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/MLP.PNG)
  
 ### Training NN (neural network) or Logistic regression:
-Logistic regression uses binary crossentropy as a loss function, which is a very popular technique in binary classification.
+Logistic regression uses binary crossentropy as a loss function, which is a very popular technique in binary classification.  
 When we train a model we are trying to minimize the loss function to get the model optimal weights, one way to minimize this loss function is using Gradient descent.
 
 #### Gradient Descent (GD): [7]
 Gradient descent is an optimization algorithm, where after each epoch (= pass over the training dataset) the model weights are updated incrementally.  
 The magnitude and direction of the weight update is computed by taking a step in the opposite direction of the cost gradient, which is the derivative calculation of the loss function.  
-The weights are updated according to the learning rate after each epoch.
+The weights are updated according to the learning rate after each epoch.  
 
 #### Stochastic Gradient Descent (SGD):
 Stochastic gradient descent compute the cost gradient based on a single training sample and not the complete training set like regular gradient descent.  
 In case of very large datasets, using GD can be quite costly.  
 the term "stochastic" comes from the fact that a single training sample is a "stochastic approximation" of the "true" cost gradient.  
-There are different tricks to improve the GD-based learning, one is choosing a decrease constant d that shrinks the learning rate over time. another is to learn momentum by adding a factor of the previous gradient to the weight update for faster updates.
+There are different tricks to improve the GD-based learning, one is choosing a decrease constant d that shrinks the learning rate over time.  
+another is to learn momentum by adding a factor of the previous gradient to the weight update for faster updates.
 
 #### Mini-batch Gradient Descent:
 instead of computing the gradient from 1 sample or all n training samples: Mini-batch gradient Descent  update the model based on smaller groups of training samples.
@@ -111,20 +112,22 @@ instead of computing the gradient from 1 sample or all n training samples: Mini-
 Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex.[8]
 
 A successfully neural network for image and text recognition required all neurons to be connected, resulting in an overly-complex   network structure and very long training times.   
-The convolution operation brings a solution to this problem as it reduces the number of free parameters, each neuron is connected to only a small region of the input volume. The extent of this connectivity is a hyperparameter called the receptive field of the neuron. allowing the network to be deeper with fewer parameters. 
+The convolution operation brings a solution to this problem as it reduces the number of free parameters, each neuron is connected to only a small region of the input volume.   
+The extent of this connectivity is a hyperparameter called the receptive field of the neuron. allowing the network to be deeper with fewer parameters.  
 Yann LeCun from Facebook’s AI Research group built the first Convolution Neural Network in 1988 called LeNet.
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/CNN.PNG)[9]
 #### Convolutional
 convolution is a mathematical operation on two functions (f and g) to produce a third function that expresses how the shape of one is modified by the other.  
-Convolutional layers apply a convolution operation to the input with a filter (weights) on its receptive field, passing the result to the next layer. 
-Convolution as a property of being translational invariant: The output signal strength is not dependent on where the features are located, but simply whether the features are present.
+Convolutional layers apply a convolution operation to the input with a filter (weights) on its receptive field, passing the result to the next layer.  
+Convolution as a property of being translational invariant: The output signal strength is not dependent on where the features are located, but simply whether the features are present.  
 
 #### Pooling
-Combine the outputs of neuron clusters at one layer into a single neuron in the next layer. 
-For example, max pooling uses the maximum value from each of a cluster of neurons at the prior layer (another example is using the average value from each of the clusters).
+Combine the outputs of neuron clusters at one layer into a single neuron in the next layer.  
+For example, max pooling uses the maximum value from each of a cluster of neurons at the prior layer (another example is using the average value from each of the clusters).  
 
 #### Fully connected
-Fully connected layers connect every neuron in one layer to every neuron in another layer. It is in principle the same as the traditional multi-layer perceptron neural network (MLP).
+Fully connected layers connect every neuron in one layer to every neuron in another layer.  
+It is in principle the same as the traditional multi-layer perceptron neural network (MLP).
 
 #### Weights
 CNNs share weights in convolutional layers, which means that the same filter is used for each receptive field in the layer, this reduces memory footprint and improves performance.
