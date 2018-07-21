@@ -79,10 +79,20 @@ the model takes the input's n features and uses a weighted sum over them, the we
 Logistic regression uses binary crossentropy as a loss function, which is a very popular technique in binary classification.
 When we train a model we are trying to minimize the loss function to get the model optimal weights, one way to minimize this loss function is using Gradient descent.
 
-#### Gradient Decent:
-Gradient Decent is an optimization algorithm, where after each epoch (= pass over the training dataset) the model weights are updated incrementally.  
+#### Gradient Descent (GD): [7]
+Gradient descent is an optimization algorithm, where after each epoch (= pass over the training dataset) the model weights are updated incrementally.  
 The magnitude and direction of the weight update is computed by taking a step in the opposite direction of the cost gradient, which is the derivative calculation of the loss function.  
 The weights are updated according to the learning rate after each epoch.
+
+#### Stochastic Gradient Descent (SGD):
+Stochastic gradient descent compute the cost gradient based on a single training sample and not the complete training set like regular gradient descent.  
+In case of very large datasets, using GD can be quite costly.  
+the term "stochastic" comes from the fact that a single training sample is a "stochastic approximation" of the "true" cost gradient.  
+There are different tricks to improve the GD-based learning, one is choosing a decrease constant d that shrinks the learning rate over time. another is to learn momentum by adding a factor of the previous gradient to the weight update for faster updates.
+
+#### Mini-batch Gradient Descent:
+instead of computing the gradient from 1 sample or all n training samples: Mini-batch gradient Descent  update the model based on smaller groups of training samples.
+
 
 #### multilayer perceptron
 
@@ -124,3 +134,4 @@ work limitations _
 [4]  Olsen, O. and Nielsen, M.: Multi-scale gradient magnitude watershed segmentation, Proc. of ICIAP 97, Florence, Italy, Lecture Notes in Computer Science, pages 6–13. Springer Verlag, September 1997.  
 [5] http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review  
 [6]  Andrew L. Beam (a great introduction to deep learning): http://beamandrew.github.io/deeplearning/2017/02/23/deep_learning_101_part2.html
+[7] Bottou, Léon (1998). "Online Algorithms and Stochastic Approximations". Online Learning and Neural Networks. Cambridge University Press. ISBN 978-0-521-65263-6
