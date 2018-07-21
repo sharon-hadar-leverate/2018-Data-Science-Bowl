@@ -1,16 +1,16 @@
-# Progress Report Introduction:  :last_quarter_moon:
+# Progress Report Introduction: 
 This README file is a progress report for the project "2018-Data-Science-Bowl".    
 In this project, I am going to explore the possibilities of deep learning and segmentation problem assuming that combining ladders networks will enhance the hidden network learning features.  
 #### In this report i will introduce: 
 
-### Part One:
+### Part One:  :last_quarter_moon:
 - [X] The project description 
 - [X] A brif review of basic techniques in image segmentation
 - [X] Deep Learning consepts
 - [X] Convolutional Neural Network (CNN)
 - [X] Use of Deep Learning in segmentation problem
 - [ ] Description of primary products
-### Part Two:
+### Part Two: :new_moon:
 - [ ] Autoencoders
 - [ ] Ladder Networks
 - [ ] Use of Ladder Network in a CNN
