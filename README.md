@@ -1,5 +1,7 @@
 #### “2018 Data Science Bowl” is a Kaggle competition that its goal is to create an algorithm to automate nucleus detection in divergent images to advance medical discovery. 
 
+# [see progress report](progress_report/README.md)
+
 The Data This dataset contains a large number of segmented nuclei images. 
 The images were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
 
