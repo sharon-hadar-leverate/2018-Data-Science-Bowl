@@ -4,8 +4,10 @@ In this project, I am going to explore the possibilities of deep learning and se
 #### In this report i will introduce: 
 - [X] The project description 
 - [X] A brif review of basic techniques in image segmentation
-- [ ] Deep Learning consepts
+- [X] Deep Learning consepts
+- [ ] Convolutional Neural Network (CNN)
 - [ ] Use of Deep Learning in segmentation problem
+- [ ] Autoencoders
 - [ ] Ladder Networks
 - [ ] Use of Ladder Network in a CNN
 - [ ] Use of Ladder Network in segmentation problem
@@ -94,9 +96,16 @@ There are different tricks to improve the GD-based learning, one is choosing a d
 #### Mini-batch Gradient Descent:
 instead of computing the gradient from 1 sample or all n training samples: Mini-batch gradient Descent  update the model based on smaller groups of training samples.
 
-
-#### multilayer perceptron
-
+### Multi Layer Perceptron (MLP):
+MLPs are just logistic regression where a set of nonlinear features are automatically learned from data.  
+MLP is defined by several parameters: 
+ - Number of hidden units in each layer
+ - Number of hidden layers in the network
+ - The nonlinear activation function: (could also be RELU an rectified linear unit or tanh)
+ - Learning rate for to use in SGD (using the chain rule of derivatives)
+ 
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/MLP.PNG)
+ 
 
 
 #### Latent variables: 
