@@ -8,7 +8,7 @@ In this project, I am going to explore the possibilities of deep learning and se
 - [X] A brif review of basic techniques in image segmentation
 - [X] Deep Learning consepts
 - [X] Convolutional Neural Network (CNN)
-- [ ] Use of Deep Learning in segmentation problem
+- [X] Use of Deep Learning in segmentation problem
 - [ ] Description of primary products
 ### Part Two:
 - [ ] Autoencoders
@@ -151,9 +151,10 @@ Apart from fully connected layers, one of the main problems with using CNNs for 
 Pooling layers increase the field of view and are able to aggregate the context while discarding the ‘where’ information.  
 However, semantic segmentation requires the exact alignment of class maps and thus, needs the ‘where’ information to be preserved. Two different classes of architectures evolved in the literature to tackle this issue.
 
-First one is encoder-decoder architecture.   
-Encoder gradually reduces the spatial dimension with pooling layers and decoder gradually recovers the object details and spatial dimension. There are usually shortcut connections from encoder to decoder to help decoder recover the object details better.   
-U-Net is a popular architecture from this class.
+### U-Net - TODO: add more information on u-net
+Encoder gradually reduces the spatial dimension with pooling layers and decoder gradually recovers the object details and spatial dimension.  
+There are shortcut connections from encoder to decoder to help decoder recover the object details better.   
+
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/unet.png)
 
 ## Autoencoders
