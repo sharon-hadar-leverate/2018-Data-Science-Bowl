@@ -111,6 +111,8 @@ another is to learn momentum by adding a factor of the previous gradient to the 
 #### Mini-batch Gradient Descent:
 instead of computing the gradient from 1 sample or all n training samples: Mini-batch gradient Descent  update the model based on smaller groups of training samples.
 
+#### Adam Optimization Algorithm:
+Adam is an optimization algorithm that can used instead of the classical stochastic gradient descent procedure to update network weights iterative based in training data, the algorithm calculates an exponential moving average of the gradient and the squared gradient.
 
 ## Convolutional Neural Network (CNN) 
 Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex.[8]
@@ -151,11 +153,37 @@ Apart from fully connected layers, one of the main problems with using CNNs for 
 Pooling layers increase the field of view and are able to aggregate the context while discarding the ‘where’ information.  
 However, semantic segmentation requires the exact alignment of class maps and thus, needs the ‘where’ information to be preserved. Two different classes of architectures evolved in the literature to tackle this issue.
 
-### U-Net - TODO: add more information on u-net
+### U-Net
 Encoder gradually reduces the spatial dimension with pooling layers and decoder gradually recovers the object details and spatial dimension.  
 There are shortcut connections from encoder to decoder to help decoder recover the object details better.   
 
+The main problem in CNN segmentetion is encode pooling, pooling convert n pixels to m pixels where n>>m, this is use , as i describe above, in order to aggregate the context.
+When trying to go back from m dimension to n dimension, there is a loss in border pixels.
+
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/unet.png)
+[11] U-net architecture (example for 32x32 pixels in the lowest resolution).  
+Each blue box corresponds to a multi-channel feature map.  
+The number of channels is denoted on top of the box.  
+The x-y-size is provided at the lower left edge of the box. White
+boxes represent copied feature maps.  
+The arrows denote the different operations. 
+
+The u-net architecture achieves very good performance on very different biomedical segmentation applications
+The network consist of 2 paths:
+#### contracting:
+Convolutional network with two 3x3 convolutions followed by a ReLU activation function and 2x2 max pooling with stride of 2.   
+At each downsampling step the network doubles the number of feature channels.  
+
+#### expansive:
+Every step consists of an upsampling of the feature map followed by a 2x2 convolution that halves the number of feature channels.  
+Also, to prevent the loss of border pixels, a concatenation with the correspondingly cropped feature map from the contracting path, 
+Then, two 3x3 convolutions, followed by a ReLU.
+The cropping is necessary due to the loss of border pixels in every convolution.
+
+At the final layer a 1x1 convolution is used to map each 64-
+component feature vector to the desired number of classes. In total the network
+has 23 convolutional layers.
+
 
 ## Autoencoders
 
@@ -198,3 +226,4 @@ work limitations _
 [8] https://en.wikipedia.org/wiki/Convolutional_neural_network
 [9] http://neuralnetworksanddeeplearning.com/
 [10] http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review
+[11] https://arxiv.org/abs/1505.04597
