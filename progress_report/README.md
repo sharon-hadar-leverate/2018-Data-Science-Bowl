@@ -190,7 +190,7 @@ Missing input data is extrapolated by mirroring.
 It is important to select the input tile size such that all 2x2 max-pooling operations are applied to a layer with an even x- and y-size.
 
 
-
+--------------------------------------------PART TWO----------------------------------------------------------------------------
 ## Autoencoders
 
 #### Latent variables: 
