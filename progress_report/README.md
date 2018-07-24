@@ -121,7 +121,7 @@ A successfully neural network for image and text recognition required all neuron
 The convolution operation brings a solution to this problem as it reduces the number of free parameters, each neuron is connected to only a small region of the input volume.   
 The extent of this connectivity is a hyperparameter called the receptive field of the neuron. allowing the network to be deeper with fewer parameters.  
 Yann LeCun from Facebook’s AI Research group built the first Convolution Neural Network in 1988 called LeNet.
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/CNN.PNG)[9]
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/CNN.PNG)[9]  
 #### Convolutional
 convolution is a mathematical operation on two functions (f and g) to produce a third function that expresses how the shape of one is modified by the other.  
 Convolutional layers apply a convolution operation to the input with a filter (weights) on its receptive field, passing the result to the next layer.  
@@ -144,11 +144,11 @@ A classic architecture for CNN:
 ## Use of Deep Learning in segmentation problem
 One of the popular initial deep learning approaches was patch classification where each pixel was separately classified into classes using a patch of image around it.[10]  
 Main reason to use patches was that classification networks usually have full connected layers and therefore required fixed size images.
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/pixlewise.PNG)
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/pixlewise.PNG  
 
 In 2014, Fully Convolutional Networks (FCN) by Long et al. from Berkeley, popularized CNN architectures for dense predictions without any fully connected layers.  
 This allowed segmentation maps to be generated for image of any size and was also much faster compared to the patch classification approach.  
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/FCN.PNG)
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/FCN.PNG)  
 Almost all the subsequent state of the art approaches on semantic segmentation adopted this paradigm.  
 (pictures from Stanford University School of Engineering course)
 
@@ -160,7 +160,7 @@ However, semantic segmentation requires the exact alignment of class maps and th
 Encoder gradually reduces the spatial dimension with pooling layers and decoder gradually recovers the object details and spatial dimension.  
 There are shortcut connections from encoder to decoder to help decoder recover the object details better.   
 
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/unet.png)
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/unet.png)  
 [11] U-net architecture (example for 32x32 pixels in the lowest resolution).  
 Each blue box corresponds to a multi-channel feature map.  
 The number of channels is denoted on top of the box.  
@@ -184,7 +184,7 @@ At the final layer a 1x1 convolution is used to map each 64-
 component feature vector to the desired number of classes. In total the network
 has 23 convolutional layers.
 
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/unet_smaple.png)
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/unet_smaple.png)  
 Prediction of the segmentation in the yellow area, requires image data within the blue area as input.  
 Missing input data is extrapolated by mirroring.  
 It is important to select the input tile size such that all 2x2 max-pooling operations are applied to a layer with an even x- and y-size.
