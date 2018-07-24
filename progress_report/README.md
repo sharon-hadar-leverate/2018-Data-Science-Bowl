@@ -170,11 +170,11 @@ The arrows denote the different operations.
 
 The u-net architecture achieves very good performance on very different biomedical segmentation applications
 The network consist of 2 paths:
-#### contracting:
+#### Contracting:
 Convolutional network with two 3x3 convolutions followed by a ReLU activation function and 2x2 max pooling with stride of 2.   
 At each downsampling step the network doubles the number of feature channels.  
 
-#### expansive:
+#### Expansive:
 Every step consists of an upsampling of the feature map followed by a 2x2 convolution that halves the number of feature channels.  
 Also, to prevent the loss of border pixels, a concatenation with the correspondingly cropped feature map from the contracting path, 
 Then, two 3x3 convolutions, followed by a ReLU.
@@ -183,6 +183,12 @@ The cropping is necessary due to the loss of border pixels in every convolution.
 At the final layer a 1x1 convolution is used to map each 64-
 component feature vector to the desired number of classes. In total the network
 has 23 convolutional layers.
+
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/unet_smaple.png)
+Prediction of the segmentation in the yellow area, requires image data within the blue area as input.  
+Missing input data is extrapolated by mirroring.  
+It is important to select the input tile size such that all 2x2 max-pooling operations are applied to a layer with an even x- and y-size.
+
 
 
 ## Autoencoders
