@@ -144,7 +144,7 @@ A classic architecture for CNN:
 ## Use of Deep Learning in segmentation problem
 One of the popular initial deep learning approaches was patch classification where each pixel was separately classified into classes using a patch of image around it.[10]  
 Main reason to use patches was that classification networks usually have full connected layers and therefore required fixed size images.
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/pixlewise.PNG  
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/pixlewise.PNG)  
 
 In 2014, Fully Convolutional Networks (FCN) by Long et al. from Berkeley, popularized CNN architectures for dense predictions without any fully connected layers.  
 This allowed segmentation maps to be generated for image of any size and was also much faster compared to the patch classification approach.  
