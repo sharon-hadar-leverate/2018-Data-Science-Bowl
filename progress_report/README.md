@@ -144,10 +144,13 @@ A classic architecture for CNN:
 ## Use of Deep Learning in segmentation problem
 One of the popular initial deep learning approaches was patch classification where each pixel was separately classified into classes using a patch of image around it.[10]  
 Main reason to use patches was that classification networks usually have full connected layers and therefore required fixed size images.
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/pixlewise.PNG)
 
 In 2014, Fully Convolutional Networks (FCN) by Long et al. from Berkeley, popularized CNN architectures for dense predictions without any fully connected layers.  
 This allowed segmentation maps to be generated for image of any size and was also much faster compared to the patch classification approach.  
-Almost all the subsequent state of the art approaches on semantic segmentation adopted this paradigm.
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/FCN.PNG)
+Almost all the subsequent state of the art approaches on semantic segmentation adopted this paradigm.  
+(pictures from Stanford University School of Engineering course)
 
 Apart from fully connected layers, one of the main problems with using CNNs for segmentation is pooling layers.  
 Pooling layers increase the field of view and are able to aggregate the context while discarding the ‘where’ information.  
@@ -156,9 +159,6 @@ However, semantic segmentation requires the exact alignment of class maps and th
 ### U-Net
 Encoder gradually reduces the spatial dimension with pooling layers and decoder gradually recovers the object details and spatial dimension.  
 There are shortcut connections from encoder to decoder to help decoder recover the object details better.   
-
-The main problem in CNN segmentetion is encode pooling, pooling convert n pixels to m pixels where n>>m, this is use , as i describe above, in order to aggregate the context.
-When trying to go back from m dimension to n dimension, there is a loss in border pixels.
 
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/unet.png)
 [11] U-net architecture (example for 32x32 pixels in the lowest resolution).  
