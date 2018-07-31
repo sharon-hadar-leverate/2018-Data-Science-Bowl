@@ -154,7 +154,7 @@ Almost all the subsequent state of the art approaches on semantic segmentation a
 
 Apart from fully connected layers, one of the main problems with using CNNs for segmentation is pooling layers.  
 Pooling layers increase the field of view and are able to aggregate the context while discarding the ‘where’ information.  
-However, semantic segmentation requires the exact alignment of class maps and thus, needs the ‘where’ information to be preserved. Two different classes of architectures evolved in the literature to tackle this issue.
+However, semantic segmentation requires the exact alignment of class maps and thus, needs the ‘where’ information to be preserved.
 
 ### U-Net
 Encoder gradually reduces the spatial dimension with pooling layers and decoder gradually recovers the object details and spatial dimension.  
