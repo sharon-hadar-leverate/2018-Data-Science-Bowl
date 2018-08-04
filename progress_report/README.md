@@ -9,7 +9,7 @@ In this project, I am going to explore the possibilities of deep learning and se
 - [X] Deep Learning consepts
 - [X] Convolutional Neural Network (CNN)
 - [X] Use of Deep Learning in segmentation problem
-- [ ] Description of primary products
+- [X] [Description of primary products](2018-Data-Science-Bowl.ipynb)
 ### Part Two: :waning_crescent_moon:
 - [ ] Autoencoders
 - [ ] Ladder Networks
