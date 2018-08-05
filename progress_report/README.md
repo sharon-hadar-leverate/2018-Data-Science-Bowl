@@ -1,10 +1,22 @@
 # Progress Report Introduction: 
-This README file is a progress report for the project "2018-Data-Science-Bowl".    
-In this project, I am going to explore the possibilities of deep learning and segmentation problem assuming that combining ladders networks will enhance the hidden network learning features.  
+In this work I will present my thesis that a Ladder network could improve the accuracy of existing methods for medical image segmentation.  
+
+I devided this project into two parts: 
+ - Part One: Existing Segmentetion Techniques - where i would build a benchmark of existing segmentetion technigues and models with reference to the "2018 data sience bowl" goals.  
+ - Part Two: Use Of Ladder Network - where i would combine ladder network with a deep learning segmentetion state of the art model. 
+ 
+In order to understand if ladder network helps improving segmentation, i will build a benchmark of various methods for segmentation with performance measures (as IOU).
+I will start by reviewing what is image segmentation and what are the basic techniques in image segmentation,
+I will present what are the image segmentation performance measures and practice a threshold technique to get the first row of my banchmark,  
+Then i would review trainable segmentation techniques with deep learning: 
+ill start with explaining basic consepts of deep learning, convolutional neural network (CNN) and the use of it in segmentation problem, 
+i would present a second row in my benchmark which is a full connected network (FCN),  
+Then, i will use Unet, which is a state of the art deep learning model for image segmentation, and add it as row to my benchmark
+
 #### In this report i will introduce: 
 
 ### Part One:  :waxing_gibbous_moon:
-- [X] The project description 
+- [X] 2018 data sience bowl description 
 - [X] A brif review of basic techniques in image segmentation
 - [X] Deep Learning consepts
 - [X] Convolutional Neural Network (CNN)
@@ -18,7 +30,7 @@ In this project, I am going to explore the possibilities of deep learning and se
 - [ ] Description of primary products
 - [ ] Bibliography
 
-## The project description
+## 2018 data sience bowl description
 _“2018 Data Science Bowl” is a Kaggle competition that its goal is to create an algorithm to automate nucleus detection in divergent images to advance medical discovery._  
 
 _By observing patterns, asking questions, and building a model, participants will have a chance to push state-of-the-art technology farther._  
@@ -36,9 +48,11 @@ Except from the segmentetion problem, there is another problem:
 
 The images data were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
 
-The images can be in RGB, RGBA and gray scale format, based on the modality in which they were acquired. For color images, a third dimension encodes the "channel" (e.g. Red, Green, and Blue).  
+The images can be in RGB, RGBA and gray scale format, based on the modality in which they were acquired. For color images, a third dimension encodes the "channel" (e.g. Red, Green, and Blue). 
 
-### This means that a learning model (svm, deep learning etc.) for this problem should be enquired with a pipeline to process each image to an appropriate input and output for it.  
+
+
+
 
 ## A review of basic techniques in image segmentation
 
@@ -184,10 +198,8 @@ At the final layer a 1x1 convolution is used to map each 64-
 component feature vector to the desired number of classes. In total the network
 has 23 convolutional layers.
 
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/unet_smaple.png)  
-Prediction of the segmentation in the yellow area, requires image data within the blue area as input.  
-Missing input data is extrapolated by mirroring.  
-It is important to select the input tile size such that all 2x2 max-pooling operations are applied to a layer with an even x- and y-size.
+## Description of primary products
+[click here](2018-Data-Science-Bowl.ipynb) to see the hole jupyter notebook
 
 
 --------------------------------------------PART TWO----------------------------------------------------------------------------
