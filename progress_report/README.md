@@ -66,7 +66,7 @@ This method is based on a clip-level (or a threshold value) to turn a gray-scale
 The key of this method is to select the threshold value (or values when multiple-levels are selected). 
 Several popular methods are used in industry including the maximum entropy method, Otsu's method (maximum variance), and k-means clustering.
 
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/%E2%80%8F%E2%80%8Fotsu_threshold.PNG)
+![Fotsu_threshold](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/%E2%80%8F%E2%80%8Fotsu_threshold.PNG)
 
 The **K-means algorithm**[3] is an iterative technique that is used to partition an image into K clusters.
 In this case, distance is the squared or absolute difference between a pixel and a cluster center.   
@@ -75,23 +75,30 @@ K can be selected manually, randomly, or by a heuristic.
 This algorithm is guaranteed to converge, but it may not return the optimal solution.   
 The quality of the solution depends on the initial set of clusters and the value of K.  
 
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/kmeans_segmentetion.PNG)
+![kmeans_segmentetion](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/kmeans_segmentetion.PNG)
 
 The **watershed transformation**[4] considers the gradient magnitude of an image as a topographic surface.
 Pixels having the highest gradient magnitude intensities (GMIs) correspond to watershed lines, which represent the region boundaries.   Water placed on any pixel enclosed by a common watershed line flows downhill to a common local intensity minimum (LIM).  
 Pixels draining to a common minimum form a catch basin, which represents a segment.  
 
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/watershed_segmentetion.PNG)
+![watershed_segmentetion](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/watershed_segmentetion.PNG)
 
 #### Trainable segmentation:
 Most segmentation methods are based only on color information of pixels in the image. Humans use much more knowledge than this when doing image segmentation, but implementing this knowledge would cost considerable computation time and would require a huge domain knowledge database, which is currently not available. In addition to traditional segmentation methods, there are trainable segmentation methods which can model some of this knowledge.
 
 ### Threshold exploring:
 When using different threshold methods on a training sample, the following segmentations received:   
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/thresholds.png)  
+![thresholds](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/thresholds.png)  
 Threshold Yen (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]) seems to have the best IoU.   
 In the figure below is the original nuclei images, the image segmentation (ground truth) and Yen thresholding (from left to right) 
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/threshold%20Yen.png)
+![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/threshold%20Yen.png)  
+Threshold Yen got an avarage of 0.384 IoU over all test data  
+
+
+| technique   | IoU |
+| ------------- | ------------- |
+| Threshold Yen | 0.384  |
+
 
 
 
