@@ -86,6 +86,16 @@ Pixels draining to a common minimum form a catch basin, which represents a segme
 #### Trainable segmentation:
 Most segmentation methods are based only on color information of pixels in the image. Humans use much more knowledge than this when doing image segmentation, but implementing this knowledge would cost considerable computation time and would require a huge domain knowledge database, which is currently not available. In addition to traditional segmentation methods, there are trainable segmentation methods which can model some of this knowledge.
 
+### Threshold exploring:
+When using different threshold methods on a training sample, the following segmentations received:   
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/thresholds.png)  
+Threshold Yen (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]) seems to have the best IoU.   
+In the figure below is the original nuclei images, the image segmentation (ground truth) and Yen thresholding (from left to right) 
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/threshold%20Yen.png)
+
+
+
+
 ## Deep Learning consepts:
 Deep learning is a subfield of machine learning. While both fall under the broad category of artificial intelligence, deep learning is what powers the most human-like artificial intelligence.    
 Though the main ideas behind deep learning have been in place for decades, it wasn’t until data sets became large enough and computers got fast enough that their true power could be revealed.  
@@ -245,3 +255,4 @@ work limitations _
 [9] http://neuralnetworksanddeeplearning.com/
 [10] http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review
 [11] https://arxiv.org/abs/1505.04597
+[12] https://ieeexplore.ieee.org/abstract/document/366472/
