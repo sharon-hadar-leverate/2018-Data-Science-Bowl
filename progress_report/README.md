@@ -94,9 +94,12 @@ In the figure below is the original nuclei images, the image segmentation (groun
 ![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/threshold%20Yen.png)  
 Threshold Yen got a nice segmentation with almost no flase positive with an avarage of 0.698 IoU over all test data   
 ### IoU - Intersection over union
-IoU is a segmentation with performance measures, it   
-![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN.png)
+IoU is a segmentation performance measure which stand for intersection over union.  
+The intersection (A∩B) is comprised of the pixels found in both the prediction mask and the ground truth mask, whereas the union (A∪B) is simply comprised of all pixels found in either the prediction or target mask.  
 
+![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN.png)  
+Intersection over union for this case:  
+![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN2.png)  
 
 | technique   | IoU |
 | ------------- | ------------- |
