@@ -95,7 +95,7 @@ In the figure below is the original nuclei images, the image segmentation (groun
 Threshold Yen got a nice segmentation with almost no flase positive with an avarage of 0.698 IoU over all test data   
 ### IoU - Intersection over union
 IoU is a segmentation with performance measures, it   
-![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN.png(
+![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN.png)
 
 
 | technique   | IoU |
