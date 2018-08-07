@@ -240,7 +240,7 @@ Learn representation that would be robust to introduction of noise will enforce 
 ![denoise_autoencoder](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/denoise_autoencoder.png)  
 
 Hidden layer representetion (what the encoder has learn by levels of corruption) 
-![hidden_layer_rep_dae](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/hidden_layer_rep_dae.png)
+![hidden_layer_rep_dae](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/hidden_layer_rep_dae.png)  
 Each square is one hidden unit visualization of the weight vector between all inputs and the specific hidden unit [13]  
 There is a more significant representation as the signal is more corrupt, clear edges of digits are shown at 50% corruption.  
   
