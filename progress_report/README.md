@@ -221,6 +221,75 @@ At the final layer a 1x1 convolution is used to map each 64-
 component feature vector to the desired number of classes. In total the network
 has 23 convolutional layers.
 
+## Unet exploring:
+in order to create a deep learning model i use'd keras over Tensorflow kernal.
+Keras is an open source neural network library written in Python. 
+It is capable of running on top of TensorFlow, Microsoft Cognitive Toolkit or Thean.  
+TensorFlow is an open-source software library for dataflow programming across a range of tasks. 
+It is a symbolic math library, and is also used for machine learning applications such as neural networks.
+Based on the article "U-Net: Convolutional Networks for Biomedical Image Segmentation" (Olaf Ronneberger, Philipp Fischer, Thomas Brox)
+i implemented U-net NN with keras,
+since in the next step i would test Ladder network and Unet combinetion, ill use a smaller image input size, instead of 256 by 256 pixle image ill reduce the size of an image to 128 by 128 pixles.  
+The network new architecture is:
+
+| Layer (type) | Output Shape | Param | Connected to |                     
+| input (InputLayer) | (None, 128, 128, 3) | 0 |  |
+| dropout (Dropout) | (None, 128, 128, 3) | 0 | input |
+| conv2d_1 (Conv2D) | (None, 128, 128, 4) | 112 | dropout |
+| conv2d_2 (Conv2D) | (None, 128, 128, 4) | 148 | conv2d_1 |  
+| max_pooling2d_1 (MaxPooling2D) | (None, 64, 64, 4) | 0 | conv2d_2 | 
+| conv2d_3 (Conv2D) | (None, 64, 64, 8) | 296 | max_pooling2d_1 | 
+| conv2d_4 (Conv2D) | (None, 64, 64, 8) | 584 | conv2d_3 |
+| max_pooling2d_2 (MaxPooling2D) | (None, 32, 32, 8) | 0 | conv2d_4 |
+| conv2d_5 (Conv2D) | (None, 32, 32, 16) | 1168 | max_pooling2d_2 | 
+| conv2d_6 (Conv2D) | (None, 32, 32, 16) | 2320 | conv2d_5 |
+| max_pooling2d_3 (MaxPooling2D) | (None, 16, 16, 16) | 0 | conv2d_6 |
+| conv2d_7 (Conv2D) | (None, 16, 16, 32) | 4640 | max_pooling2d_3 |
+| conv2d_8 (Conv2D) | (None, 16, 16, 32) | 9248 | conv2d_7 |
+| dropout_2 (Dropout) | (None, 16, 16, 32) | 0 | conv2d | 
+| up_sampling2d_1 (UpSampling2D) | (None, 32, 32, 32) | 0 | dropout_2 | 
+| conv2d_9 (Conv2D) | (None, 32, 32, 16) | 2064 | up_sampling2d_1|
+| concatenate_1 (Concatenate) | (None, 32, 32, 32) | 0| conv2d_63[0][0] conv2d_66[0][0]
+| conv2d_10 (Conv2D) | (None, 32, 32, 16) | 4624 | concatenate_1 | 
+| conv2d_11 (Conv2D) | (None, 32, 32, 16) | 2320 | conv2d_10 | 
+| up_sampling2d_2 (UpSampling2D) | (None, 64, 64, 16) | 0 | conv2d_11 | 
+| conv2d_12 (Conv2D) | (None, 64, 64, 8) | 520 | up_sampling2d_2 |
+| concatenate_2 (Concatenate) | (None, 64, 64, 16) | 0 |conv2d_12 conv2d_69[0][0] |
+| conv2d_13 (Conv2D) | (None, 64, 64, 8) | 1160 | concatenate_2 | 
+| conv2d_14 (Conv2D) | (None, 64, 64, 8) | 584 | conv2d_13 |
+| up_sampling2d_3 (UpSampling2D) | (None, 128, 128, 8) | 0 | conv2d_14 |
+| conv2d_15 (Conv2D) | (None, 128, 128, 4) | 132 | up_sampling2d_3 | 
+| concatenate_3 (Concatenate) | (None, 128, 128, 8) | 0 | conv2d_59[0][0] conv2d_72[0][0] | 
+| conv2d_16 (Conv2D) | (None, 128, 128, 4) | 292 | concatenate_3 | 
+| conv2d_17 (Conv2D) | (None, 128, 128, 4) | 148 | conv2d_16 | 
+| conv2d_18 (Conv2D) | (None, 128, 128, 2) | 74 | conv2d_17 |
+
+____________________________________________________________________________________________________
+conv2d_76 (Conv2D)               (None, 128, 128, 1)   3           conv2d_75[0][0]                  
+====================================================================================================
+Total params: 30,437
+Trainable params: 30,437
+Non-trainable params: 0
+____________________________________________________________________________________________________
+
+
+When using different threshold methods on a training sample, the following segmentations received:   
+![thresholds](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/thresholds.png)  
+Threshold Yen (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]) seems to have the best IoU over explored thresholds for this task.   
+In the figure below is the original nuclei images, the image segmentation (ground truth) and Yen thresholding (from left to right) 
+![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/threshold%20Yen.png)  
+Threshold Yen got a nice segmentatiodn with almost no flase positive with an avarage of 0.698 IoU over all test data   
+
+![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN.png)  
+Intersection over union for this case:  
+![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN2.png)  
+
+| technique   | IoU |
+| ------------- | ------------- |
+| Threshold Yen | 0.698  |
+
+
+
 ## Description of primary products
 [click here](2018-Data-Science-Bowl.ipynb) to see the hole jupyter notebook
 
