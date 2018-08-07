@@ -251,17 +251,17 @@ The network new architecture is:
 | dropout_2 (Dropout) | (None, 16, 16, 32) | 0 | conv2d | 
 | up_sampling2d_1 (UpSampling2D) | (None, 32, 32, 32) | 0 | dropout_2 | 
 | conv2d_9 (Conv2D) | (None, 32, 32, 16) | 2064 | up_sampling2d_1|
-| concatenate_1 (Concatenate) | (None, 32, 32, 32) | 0| conv2d_63[0][0] conv2d_66[0][0]
+| concatenate_1 (Concatenate) | (None, 32, 32, 32) | 0 | conv2d_6 conv2d_9 |
 | conv2d_10 (Conv2D) | (None, 32, 32, 16) | 4624 | concatenate_1 | 
 | conv2d_11 (Conv2D) | (None, 32, 32, 16) | 2320 | conv2d_10 | 
 | up_sampling2d_2 (UpSampling2D) | (None, 64, 64, 16) | 0 | conv2d_11 | 
 | conv2d_12 (Conv2D) | (None, 64, 64, 8) | 520 | up_sampling2d_2 |
-| concatenate_2 (Concatenate) | (None, 64, 64, 16) | 0 |conv2d_12 conv2d_69[0][0] |
+| concatenate_2 (Concatenate) | (None, 64, 64, 16) | 0 |conv2d_4 conv2d_12 |
 | conv2d_13 (Conv2D) | (None, 64, 64, 8) | 1160 | concatenate_2 | 
 | conv2d_14 (Conv2D) | (None, 64, 64, 8) | 584 | conv2d_13 |
 | up_sampling2d_3 (UpSampling2D) | (None, 128, 128, 8) | 0 | conv2d_14 |
 | conv2d_15 (Conv2D) | (None, 128, 128, 4) | 132 | up_sampling2d_3 | 
-| concatenate_3 (Concatenate) | (None, 128, 128, 8) | 0 | conv2d_59[0][0] conv2d_72[0][0] | 
+| concatenate_3 (Concatenate) | (None, 128, 128, 8) | 0 | conv2d_2 conv2d_15 | 
 | conv2d_16 (Conv2D) | (None, 128, 128, 4) | 292 | concatenate_3 | 
 | conv2d_17 (Conv2D) | (None, 128, 128, 4) | 148 | conv2d_16 | 
 | conv2d_18 (Conv2D) | (None, 128, 128, 2) | 74 | conv2d_17 |
