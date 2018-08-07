@@ -92,12 +92,15 @@ When using different threshold methods on a training sample, the following segme
 Threshold Yen (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]) seems to have the best IoU over explored thresholds for this task.   
 In the figure below is the original nuclei images, the image segmentation (ground truth) and Yen thresholding (from left to right) 
 ![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/threshold%20Yen.png)  
-Threshold Yen got a nice segmentation with almost no flase positive with an avarage of 0.384 IoU over all test data  
+Threshold Yen got a nice segmentation with almost no flase positive with an avarage of 0.698 IoU over all test data   
+### IoU - Intersection over union
+IoU is a segmentation with performance measures, it 
+https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN.png
 
 
 | technique   | IoU |
 | ------------- | ------------- |
-| Threshold Yen | 0.384  |
+| Threshold Yen | 0.698  |
 
 
 
