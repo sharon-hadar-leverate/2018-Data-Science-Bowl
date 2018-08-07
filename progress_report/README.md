@@ -222,14 +222,14 @@ component feature vector to the desired number of classes. In total the network
 has 23 convolutional layers.
 
 ## Unet exploring:
-in order to create a deep learning model i use'd keras over Tensorflow kernal.
-Keras is an open source neural network library written in Python. 
-It is capable of running on top of TensorFlow, Microsoft Cognitive Toolkit or Thean.  
-TensorFlow is an open-source software library for dataflow programming across a range of tasks. 
-It is a symbolic math library, and is also used for machine learning applications such as neural networks.
-Based on the article "U-Net: Convolutional Networks for Biomedical Image Segmentation" (Olaf Ronneberger, Philipp Fischer, Thomas Brox)
-i implemented U-net NN with keras,
-since in the next step i would test Ladder network and Unet combinetion, ill use a smaller image input size, instead of 256 by 256 pixle image ill reduce the size of an image to 128 by 128 pixles.  
+In order to create a deep learning model i use'd keras over Tensorflow kernal.    
+Keras is an open source neural network library written in Python.   
+It is capable of running on top of TensorFlow, Microsoft Cognitive Toolkit or Theano.    
+TensorFlow is an open-source software library for dataflow programming across a range of tasks.   
+It is a symbolic math library, and is also used for machine learning applications such as neural networks.  
+I implemented U-net NN using keras and based on the article "U-Net: Convolutional Networks for Biomedical Image Segmentation" (Olaf Ronneberger, Philipp Fischer, Thomas Brox).
+since in the next step i would combine Ladder network with Unet, ill use a smaller image input size.  
+Instead of 256 by 256 pixle image ill reduce the size of an image to 128 by 128 pixles.    
 The network new architecture is:
 
 
