@@ -232,12 +232,14 @@ i implemented U-net NN with keras,
 since in the next step i would test Ladder network and Unet combinetion, ill use a smaller image input size, instead of 256 by 256 pixle image ill reduce the size of an image to 128 by 128 pixles.  
 The network new architecture is:
 
-| Layer (type) | Output Shape | Param | Connected to |                     
-| input (InputLayer) | (None, 128, 128, 3) | 0 |  |
-| dropout (Dropout) | (None, 128, 128, 3) | 0 | input |
-| conv2d_1 (Conv2D) | (None, 128, 128, 4) | 112 | dropout |
+
+| Layer (type) | Output Shape | Param | Connected to |  
+| --- | --- | --- | --- |
+| input (InputLayer) | (None, 128, 128, 3) | 0 | +++ |  
+| dropout (Dropout) | (None, 128, 128, 3) | 0 | input |  
+| conv2d_1 (Conv2D) | (None, 128, 128, 4) | 112 | dropout |  
 | conv2d_2 (Conv2D) | (None, 128, 128, 4) | 148 | conv2d_1 |  
-| max_pooling2d_1 (MaxPooling2D) | (None, 64, 64, 4) | 0 | conv2d_2 | 
+| max_pooling2d_1 (MaxPooling2D) | (None, 64, 64, 4) | 0 | conv2d_2 |
 | conv2d_3 (Conv2D) | (None, 64, 64, 8) | 296 | max_pooling2d_1 | 
 | conv2d_4 (Conv2D) | (None, 64, 64, 8) | 584 | conv2d_3 |
 | max_pooling2d_2 (MaxPooling2D) | (None, 32, 32, 8) | 0 | conv2d_4 |
@@ -263,13 +265,13 @@ The network new architecture is:
 | conv2d_16 (Conv2D) | (None, 128, 128, 4) | 292 | concatenate_3 | 
 | conv2d_17 (Conv2D) | (None, 128, 128, 4) | 148 | conv2d_16 | 
 | conv2d_18 (Conv2D) | (None, 128, 128, 2) | 74 | conv2d_17 |
+| conv2d_19 (Conv2D) | (None, 128, 128, 1) | 3 | conv2d_18 |
 
 ____________________________________________________________________________________________________
-conv2d_76 (Conv2D)               (None, 128, 128, 1)   3           conv2d_75[0][0]                  
-====================================================================================================
-Total params: 30,437
-Trainable params: 30,437
-Non-trainable params: 0
+
+Total params: 30,437  
+Trainable params: 30,437  
+Non-trainable params: 0  
 ____________________________________________________________________________________________________
 
 
