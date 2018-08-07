@@ -221,6 +221,34 @@ has 23 convolutional layers.
 
 --------------------------------------------PART TWO----------------------------------------------------------------------------
 ## Autoencoders
+An autoencoder learns to compress data from the input layer into a short code, and then uncompress that code into something that closely matches the original data.  
+The simplest form of an autoencoder is a feedforward neural network having an input layer where the output layer having the same number of nodes as the input layer, and with the purpose of reconstructing its own inputs (instead of predicting the target value Y given inputs X).   
+Therefore, autoencoders are unsupervised learning models.  
+
+
+![autoencoder2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/autoencoder2.png)  
+
+Hidden layer representetion (what the encoder has learn) 
+Each square is one hidden unit visualization of the weight vector between all inputs and the specific hidden unit [13]  
+There is a more significant representation as the signal is more corrupt, clear edges of digits are shown at 50% corruption.  
+![hidden_layer_rep_dae](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/hidden_layer_rep_dae.png)  
+
+
+#### Denoising Autoencoders
+This idea relay on the Hebbian learning concept - A synapse between two neurons is strengthened when the neurons on either side of the synapse (input and output) have highly correlated outputs.
+
+Learn representation that would be robust to introduction of noise will enforce the hidden unit to extract particular types of structures of correlations and to learn the training data distribution and more meaningful features.
+
+2 ways to use Hebbian learning in deep learning models:
+ - Dropouts - Random assignment of subset of inputs to 0, with the probability of V.
+ - Gaussian additive noise.
+
+
+
+
+![denoise_autoencoder](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/denoise_autoencoder.png)  
+
+
 
 #### Latent variables: 
 are variables that are not directly observed but are rather inferred (through a mathematical model) from other variables that are observed (directly measured).
@@ -263,3 +291,4 @@ work limitations _
 [10] http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review
 [11] https://arxiv.org/abs/1505.04597
 [12] https://ieeexplore.ieee.org/abstract/document/366472/
+[13] https://www.youtube.com/watch?v=6DO_jVbDP3I&t=1s
