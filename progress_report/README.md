@@ -73,7 +73,7 @@ Pixels draining to a common minimum form a catch basin, which represents a segme
 ### Threshold exploring:
 When using different threshold methods on a training sample, the following segmentations received:   
 ![thresholds](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/thresholds.png)  
-Threshold Yen (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]) seems to have the best IoU over explored thresholds for this task.   
+Threshold Yen (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]) seems to have the best fit over explored thresholds for this task.   
 
 ### IoU - Intersection over union
 IoU is a segmentation performance measure which stand for intersection over union.  
@@ -82,7 +82,8 @@ The intersection (A∩B) is comprised of the pixels found in both the prediction
 ![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN.png)  
 Intersection over union for this case:  
 ![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN2.png)  
-Threshold Yen got a nice segmentation with almost no flase positive with an avarage of 0.698 IoU over all test data   
+Threshold Yen got a nice segmentation with almost no flase positive with an avarage of 0.698 IoU over all test data  
+
 | technique   | IoU |
 | ------------- | ------------- |
 | Threshold Yen | 0.698  |
