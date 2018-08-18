@@ -355,15 +355,23 @@ The idea is to use denoising autoencoder to train one layer at a time from the f
  Second layer: find combinations of hidden unit features that are more common than random hidden unit features.  
  Third layer: find combinations of combinations of..   
 
-## Ladder Networks  
+## Ladder Networks  [14]
 In complex tasks there is often much more structure in the inputs than can be represented, and unsupervised learning cannot, by definition, know what will be useful for the task at hand.  
 One instance is the autoencoder approach applied to natural images: 
 The autoencoder will try to preserve all the details needed for reconstructing the image at pixel level, even though classification is typically invariant to all kinds of transformations which do not preserve pixel values.  
-Most of the information required for pixel-level reconstruction is irrelevant and takes space from the more relevant invariant features which cannot alone be used for reconstruction.  
-#### Ladder Network learns the latent space of each layer by combining dinoising auto encoders to each layer and adding the auto encoders loss fuction to the network cost function.   
-#### The structure of the Ladder network:  
-![ladder network](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/ladder_network.png)  
+Most of the information required for pixel-level reconstruction is irrelevant and takes space from the more relevant invariant features which cannot alone be used for reconstruction. 
 
+#### Ladder Network learns the latent space of each layer by combining dinoising auto encoders to each layer and adding the auto encoders loss fuction to the network cost function.   
+Ladder Network is a semi-supervised that was developed by "Harri Valpola" from "The Curious AI Company" back in nov 2015.
+The Curious AI Company was founded by Harri Valpola in 2015 in Helsinki,  
+The company focuses on semi-supervised and unsupervised machine learning, which takes the human brain as its model.  
+
+#### The structure of the Ladder network:  
+![ladder network](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/ladder_network2.png)  
+A conceptual illustration of the Ladder network with two hidden layers.  
+f(l) The feedforward path with the corrupted feedforward path  
+g(l) Denoising functions  
+C(l)d Cost functions on each layer trying to minimize the difference between zˆ(l) and z(l)  
 
 
 ## Use of Ladder Network in a CNN
@@ -390,3 +398,4 @@ work limitations _
 [11] https://arxiv.org/abs/1505.04597
 [12] https://ieeexplore.ieee.org/abstract/document/366472/
 [13] https://www.youtube.com/watch?v=6DO_jVbDP3I&t=1s
+[14] https://arxiv.org/pdf/1507.02672.pdf
