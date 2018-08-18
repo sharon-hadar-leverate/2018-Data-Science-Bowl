@@ -296,6 +296,9 @@ Trainable params: 30,437
 Non-trainable params: 0  
 ____________________________________________________________________________________________________
 
+
+![unet](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/Unet_model2.png)
+
 When comparing Unet to FCN, Unet has 30,437 trainable parameters, almost 30 times more parameters then FCN, 
 the training procedure takes more time and required more memory, 
 the large model (which includes an additional contracting and expansive step) also require a strong GPU.  
