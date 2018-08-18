@@ -201,6 +201,12 @@ Trainable params: 1,177
 Non-trainable params: 0  
 ____________________________________________________________________________________________________
 
+#### Testing The Model
+The model prediction has one channel and a spectrum of values while the segmentetion mask has only 2 values.  
+In order to get a mask prediction, i used binarization with threshold.  
+I selected this threshold by testing all test set samples IoU's as a function of all tresholds from 0 to 1 with a step of 0.001.  
+The result:  
+![FCN_results](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/FCC_model.png)  
 FCN received an IoU average 0.501, which is worse than the Yen threshold: 
 
 | technique   | IoU |
@@ -293,11 +299,11 @@ ________________________________________________________________________________
 When comparing Unet to FCN, Unet has 30,437 trainable parameters, almost 30 times more parameters then FCN, 
 the training procedure takes more time and required more memory, 
 the large model (which includes an additional contracting and expansive step) also require a strong GPU.  
-Unet got an highst average IoU score of 0.735.
+Unet got an highst average IoU score of 0.807.
 
 | technique   | IoU |
 | ------------- | ------------- |
-| Unet | 0.735  |
+| Unet | 0.807  |
 | Threshold Yen | 0.573  | 
 | FCN | 0.501  |
 
