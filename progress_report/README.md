@@ -70,15 +70,11 @@ Pixels draining to a common minimum form a catch basin, which represents a segme
 
 ![watershed_segmentetion](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/watershed_segmentetion.PNG)
 
-#### Trainable segmentation:
-Most segmentation methods are based only on color information of pixels in the image. Humans use much more knowledge than this when doing image segmentation, but implementing this knowledge would cost considerable computation time and would require a huge domain knowledge database, which is currently not available. In addition to traditional segmentation methods, there are trainable segmentation methods which can model some of this knowledge.
-
 ### Threshold exploring:
 When using different threshold methods on a training sample, the following segmentations received:   
 ![thresholds](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/thresholds.png)  
 Threshold Yen (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]) seems to have the best IoU over explored thresholds for this task.   
-![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/threshold_Yen2.png)  
-Threshold Yen got a nice segmentation with almost no flase positive with an avarage of 0.698 IoU over all test data   
+
 ### IoU - Intersection over union
 IoU is a segmentation performance measure which stand for intersection over union.  
 The intersection (A∩B) is comprised of the pixels found in both the prediction mask and the ground truth mask, whereas the union (A∪B) is simply comprised of all pixels found in either the prediction or target mask.  
@@ -86,13 +82,14 @@ The intersection (A∩B) is comprised of the pixels found in both the prediction
 ![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN.png)  
 Intersection over union for this case:  
 ![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN2.png)  
-
+Threshold Yen got a nice segmentation with almost no flase positive with an avarage of 0.698 IoU over all test data   
 | technique   | IoU |
 | ------------- | ------------- |
 | Threshold Yen | 0.698  |
 
 
-
+#### Trainable segmentation:
+Most segmentation methods are based only on color information of pixels in the image. Humans use much more knowledge than this when doing image segmentation, but implementing this knowledge would cost considerable computation time and would require a huge domain knowledge database, which is currently not available. In addition to traditional segmentation methods, there are trainable segmentation methods which can model some of this knowledge.
 
 
 ## Deep Learning consepts:
