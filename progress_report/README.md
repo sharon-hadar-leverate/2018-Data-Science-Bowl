@@ -77,8 +77,7 @@ Most segmentation methods are based only on color information of pixels in the i
 When using different threshold methods on a training sample, the following segmentations received:   
 ![thresholds](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/thresholds.png)  
 Threshold Yen (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]) seems to have the best IoU over explored thresholds for this task.   
-In the figure below is the original nuclei images, the image segmentation (ground truth) and Yen thresholding (from left to right) 
-![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/threshold%20Yen.png)  
+![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/threshold_Yen2.png)  
 Threshold Yen got a nice segmentation with almost no flase positive with an avarage of 0.698 IoU over all test data   
 ### IoU - Intersection over union
 IoU is a segmentation performance measure which stand for intersection over union.  
