@@ -67,11 +67,11 @@ The intersection (A∩B) is comprised of the pixels found in both the prediction
 ![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN.png)  
 Intersection over union for this case:  
 ![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN2.png)  
-Threshold Yen got a nice segmentation with almost no flase positive with an avarage of 0.698 IoU over all test data  
+Threshold Yen got a nice segmentation with almost no flase positive with an avarage of 0.573 IoU over all test data  
 
 | technique   | IoU |
 | ------------- | ------------- |
-| Threshold Yen | 0.698  |
+| Threshold Yen | 0.573  |
 
 
 ##### Additional Techniques
@@ -182,6 +182,8 @@ It is capable of running on top of TensorFlow, Microsoft Cognitive Toolkit or Th
 TensorFlow is an open-source software library for dataflow programming across a range of tasks.   
 It is a symbolic math library, and is also used for machine learning applications such as neural networks.  
 
+I implemtneted one variant of a FCN without pulling layer to test a base score for deep learning and tranable model:  
+
 | Layer (type) | Output Shape | Param | Connected to |  
 | --- | --- | --- | --- |
 | input (InputLayer) | (None, 128, 128, 3) | 0 | +++ |  
@@ -199,10 +201,17 @@ Trainable params: 1,177
 Non-trainable params: 0  
 ____________________________________________________________________________________________________
 
+FCN received an IoU average 0.501, which is worse than the Yen threshold: 
+
+| technique   | IoU |
+| ------------- | ------------- |
+| Threshold Yen | 0.573  | 
+| FCN | 0.501  |
 
 Apart from fully connected layers, one of the main problems with using CNNs for segmentation is pooling layers.  
 Pooling layers increase the field of view and are able to aggregate the context while discarding the ‘where’ information.  
-However, semantic segmentation requires the exact alignment of class maps and thus, needs the ‘where’ information to be preserved.
+However, semantic segmentation requires the exact alignment of class maps and thus, needs the ‘where’ information to be preserved.  
+U-net is a good architectures to tackle this issue.  
 
 ### U-Net
 Encoder gradually reduces the spatial dimension with pooling layers and decoder gradually recovers the object details and spatial dimension.  
@@ -281,21 +290,14 @@ Trainable params: 30,437
 Non-trainable params: 0  
 ____________________________________________________________________________________________________
 
-
-When using different threshold methods on a training sample, the following segmentations received:   
-![thresholds](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/thresholds.png)  
-Threshold Yen (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]) seems to have the best IoU over explored thresholds for this task.   
-In the figure below is the original nuclei images, the image segmentation (ground truth) and Yen thresholding (from left to right) 
-![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/threshold%20Yen.png)  
-Threshold Yen got a nice segmentatiodn with almost no flase positive with an avarage of 0.698 IoU over all test data   
-
-![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN.png)  
-Intersection over union for this case:  
-![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN2.png)  
+When comparing Unet to FCN, Unet has 30,437 trainable parameters, almost 30 times more parameters then FCN.
+Unet got an high average IoU score of 0.735.
 
 | technique   | IoU |
 | ------------- | ------------- |
-| Threshold Yen | 0.698  |
+| Threshold Yen | 0.573  | 
+| FCN | 0.501  |
+| Unet | 0.735  |
 
 
 
