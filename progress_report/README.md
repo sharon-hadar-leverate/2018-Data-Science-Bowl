@@ -337,7 +337,7 @@ Learn representation that would be robust to introduction of noise will enforce 
  - Gaussian additive noise.  
 
 The introduction of noise causes the sample to distance itself from the data distribution.  
-Then, when learning to reconstruct the same sample without the noise, the gradient is forced אם contain a component that is precisely oriented to the data distribution.
+Then, when learning to reconstruct the same sample without the noise, the gradient is forced to contain a component that is precisely oriented to the data distribution.
  
 ![denoise_autoencoder](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/denoise_autoencoder.png)  
 
@@ -345,7 +345,20 @@ Hidden layer representetion (what the encoder has learn by levels of corruption)
 ![hidden_layer_rep_dae](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/hidden_layer_rep_dae.png)  
 Each square is one hidden unit visualization of the weight vector between all inputs and the specific hidden unit [13]  
 There is a more significant representation as the signal is more corrupt, clear edges of digits are shown at 50% corruption.  
-  
+
+#### Unsupervised Pretraining
+Deep nueral network model wheits starts with random values and twik with each sample / batch according to 
+Use denoising autoencoder to train one layer at a time from the first hidden layer to the last.
+when Fix the parameters of previous hidden layers previous layers viewed as feature extraction
+
+This procedure:  
+First layer: find hidden unit features that are more common in training inputs than in random input  
+Second layer: find combinations of hidden unit features that are more common than random hidden unit features.  
+Third layer: find combinations of combinations of.. 
+
+
+Stacked denoising autoencoders can be useful for deep learning models. 
+A stacked denoising autoencoder is a denoising autoencoder with multiple hidden layers, and is trained layer by layer, by trying to minimise the error in the layer’s reconstruction compared to it’s input (the previous layer’s output). By using a stacked autoencoder in an unsupervised manner, we can learn starting weights prior to the main supervised training procedure with deep learning. A regularisation effect is then created as a result of the pretraining procedure creating an initialisation point, to which the parameters are restricted to a near optimal local minimum [3].
 
 
 
