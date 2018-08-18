@@ -290,7 +290,9 @@ Trainable params: 30,437
 Non-trainable params: 0  
 ____________________________________________________________________________________________________
 
-When comparing Unet to FCN, Unet has 30,437 trainable parameters, almost 30 times more parameters then FCN.  
+When comparing Unet to FCN, Unet has 30,437 trainable parameters, almost 30 times more parameters then FCN, 
+the training procedure takes more time and required more memory, 
+the large model (which includes an additional contracting and expansive step) also require a strong GPU.  
 Unet got an highst average IoU score of 0.735.
 
 | technique   | IoU |
