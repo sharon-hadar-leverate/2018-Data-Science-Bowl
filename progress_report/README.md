@@ -175,6 +175,31 @@ This allowed segmentation maps to be generated for image of any size and was als
 Almost all the subsequent state of the art approaches on semantic segmentation adopted this paradigm.  
 (pictures from Stanford University School of Engineering course)
 
+## Full Connected Network exploring:
+In order to create a deep learning model i use'd keras over Tensorflow kernal.    
+Keras is an open source neural network library written in Python.   
+It is capable of running on top of TensorFlow, Microsoft Cognitive Toolkit or Theano.    
+TensorFlow is an open-source software library for dataflow programming across a range of tasks.   
+
+
+| Layer (type) | Output Shape | Param | Connected to |  
+| --- | --- | --- | --- |
+| input (InputLayer) | (None, 128, 128, 3) | 0 | +++ |  
+| conv2d_1 (Conv2D) |  (None, 128, 128, 8) | 224 | input |  
+| dropout (Conv2D) | (None, 128, 128, 8) | 0 | conv2d_1 |  
+| conv2d_2 (Conv2D) | (None, 128, 128, 8) | 584 | dropout |  
+| conv2d_3 (Conv2D) | (None, 128, 128, 4) | 292 | conv2d_2 |
+| conv2d_4 (Conv2D) | (None, 128, 128, 2) | 74  | conv2d_3 | 
+| conv2d_5 (Conv2D) | (None, 128, 128, 1) | 3 | conv2d_4 |
+
+____________________________________________________________________________________________________
+
+Total params: 1,177  
+Trainable params: 1,177  
+Non-trainable params: 0  
+____________________________________________________________________________________________________
+
+
 Apart from fully connected layers, one of the main problems with using CNNs for segmentation is pooling layers.  
 Pooling layers increase the field of view and are able to aggregate the context while discarding the ‘where’ information.  
 However, semantic segmentation requires the exact alignment of class maps and thus, needs the ‘where’ information to be preserved.
@@ -212,6 +237,8 @@ In order to create a deep learning model i use'd keras over Tensorflow kernal.
 Keras is an open source neural network library written in Python.   
 It is capable of running on top of TensorFlow, Microsoft Cognitive Toolkit or Theano.    
 TensorFlow is an open-source software library for dataflow programming across a range of tasks.   
+
+
 It is a symbolic math library, and is also used for machine learning applications such as neural networks.  
 I implemented U-net NN based on the article "U-Net: Convolutional Networks for Biomedical Image Segmentation" (Olaf Ronneberger, Philipp Fischer, Thomas Brox).  
 since in the next step i would combine Ladder network with Unet, ill use a smaller image input size.  
