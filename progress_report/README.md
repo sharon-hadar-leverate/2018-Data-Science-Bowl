@@ -347,18 +347,14 @@ Each square is one hidden unit visualization of the weight vector between all in
 There is a more significant representation as the signal is more corrupt, clear edges of digits are shown at 50% corruption.  
 
 #### Unsupervised Pretraining
-Deep nueral network model wheits starts with random values and twik with each sample / batch according to 
-Use denoising autoencoder to train one layer at a time from the first hidden layer to the last.
-when Fix the parameters of previous hidden layers previous layers viewed as feature extraction
+Deep nueral network model weights starts with random values and 'twiks' with each sample / batch according to the gradient,
+when pretraining a deep nueral network, the model start with almost optimal weights for the problem and is fine tuned with the training samples.    
+The idea is to use denoising autoencoder to train one layer at a time from the first hidden layer to the last, previous layers viewed as feature extraction when Fix the parameters of previous hidden layers:    
+![pretrained](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/pretrain.png)  
+ First layer: find hidden unit features that are more common in training inputs than in random input  
+ Second layer: find combinations of hidden unit features that are more common than random hidden unit features.  
+ Third layer: find combinations of combinations of..   
 
-This procedure:  
-First layer: find hidden unit features that are more common in training inputs than in random input  
-Second layer: find combinations of hidden unit features that are more common than random hidden unit features.  
-Third layer: find combinations of combinations of.. 
-
-
-Stacked denoising autoencoders can be useful for deep learning models. 
-A stacked denoising autoencoder is a denoising autoencoder with multiple hidden layers, and is trained layer by layer, by trying to minimise the error in the layer’s reconstruction compared to it’s input (the previous layer’s output). By using a stacked autoencoder in an unsupervised manner, we can learn starting weights prior to the main supervised training procedure with deep learning. A regularisation effect is then created as a result of the pretraining procedure creating an initialisation point, to which the parameters are restricted to a near optimal local minimum [3].
 
 
 
