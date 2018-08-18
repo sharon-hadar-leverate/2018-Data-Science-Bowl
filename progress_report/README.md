@@ -334,7 +334,11 @@ Learn representation that would be robust to introduction of noise will enforce 
 
 2 ways to use Hebbian learning in deep learning models:
  - Dropouts - Random assignment of subset of inputs to 0, with the probability of V.
- - Gaussian additive noise.
+ - Gaussian additive noise.  
+
+The introduction of noise causes the sample to distance itself from the data distribution.  
+Then, when learning to reconstruct the same sample without the noise, the gradient is forced אם contain a component that is precisely oriented to the data distribution.
+ 
 ![denoise_autoencoder](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/denoise_autoencoder.png)  
 
 Hidden layer representetion (what the encoder has learn by levels of corruption) 
