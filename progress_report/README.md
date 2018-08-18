@@ -355,27 +355,17 @@ The idea is to use denoising autoencoder to train one layer at a time from the f
  Second layer: find combinations of hidden unit features that are more common than random hidden unit features.  
  Third layer: find combinations of combinations of..   
 
+## Ladder Networks  
+In complex tasks there is often much more structure in the inputs than can be represented, and unsupervised learning cannot, by definition, know what will be useful for the task at hand.  
+One instance is the autoencoder approach applied to natural images: 
+The autoencoder will try to preserve all the details needed for reconstructing the image at pixel level, even though classification is typically invariant to all kinds of transformations which do not preserve pixel values.  
+Most of the information required for pixel-level reconstruction is irrelevant and takes space from the more relevant invariant features which cannot alone be used for reconstruction.  
+#### Ladder Network learns the latent space of each layer by combining dinoising auto encoders to each layer and adding the auto encoders loss fuction to the network cost function.   
+#### The structure of the Ladder network:  
+![ladder network](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/ladder_network.png)  
 
 
 
-#### Latent variables: 
-are variables that are not directly observed but are rather inferred (through a mathematical model) from other variables that are observed (directly measured).
-
-#### Latent variable models: 
-are mathematical models that aim to explain observed variables in terms of latent variables.
-(Hidden Markov model, PCA, tc)
-
-#### Hierarchical latent variable models: 
-explain latent variables with latent variables
-(Hierarchical Hidden Markov model, Trees, PCA, etc.)
-
-### Learning Latent Variable Models
-Use the Expectation-Maximization algorithm (Dempster,
-Laird and Rubin, 1977)
-I Goal is to find parameters θ that maximize the log
-likelihood
-
-## Ladder Networks
 ## Use of Ladder Network in a CNN
 ## Use of Ladder Network in segmentation problem
 ## Description of primary products
