@@ -37,23 +37,10 @@ _By observing patterns, asking questions, and building a model, participants wil
 
 in this competition, the challanger expose a dataset contains a large number of segmented nuclei images.  
 The images were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
-
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/data_bowl_data1.PNG)
-
-
-
-#### This algorithm needs to identify a range of nuclei across varied conditions. 
-
-Except from the segmentetion problem, there is another problem:  
-
-The images data were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
-
 The images can be in RGB, RGBA and gray scale format, based on the modality in which they were acquired. For color images, a third dimension encodes the "channel" (e.g. Red, Green, and Blue). 
 
-
-
-
-
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/data_bowl_data1.PNG)  
+#### This algorithm needs to identify a range of nuclei across varied conditions.  
 ## A review of basic techniques in image segmentation
 
 **image segmentetion** is the process of partitioning a digital image into multiple segments (sets of pixels, a.k.a super-pixels)[1] The goal of segmentation is to simplify and/or change the representation of an image into something that is more meaningful and easier to analyze. Image segmentation is typically used to locate objects and boundaries (lines, curves, etc.) in images.   
