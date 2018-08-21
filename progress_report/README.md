@@ -364,6 +364,11 @@ Ladder networks and U-net inspired lots of researches in the field, one example 
 Another one is LinkNet, which resemble the U-net structure, composed by an encoder decoder pair with skip connections between them, it was designed for real time object segmentation, especially for self driving cars, and needs to to process images fast, that is why LinkNet has less polling and up-sampling layers then U-net.[16]  
 The Curious AI Company extend the use of ladder networks concepts with a new framework for learning efficient iterative inference of perceptual grouping which called iTerative Amortized Grouping (TAG) where training can be completely unsupervised and additional terms for supervised tasks can be added too. Divide the input into K parts insert it to a recurrent ladder network, with denoising auto encoders, where each group is processed separately and learns its own prediction, in each iteration, save the group assignment probabilities and the expected value of the input for that group, and insert it ass an additional input to the next iteration. [17]
 
+### Future Work
+In the next step i will add Batch Normalization and denoising autoencoder to the FCN and Unet models i implemented.  
+Combining U-net with these component isnt trivial and could create a very complex model, one that will probably required more memory and GPU, in this case, i would use Google Cloud Platform compute engine \ ML engine.  
+Finally, I will evaluate the new models in relation to the same base line.
+
 ## Description of primary products
 [click here](2018-Data-Science-Bowl.ipynb) to see the hole jupyter notebook
 
