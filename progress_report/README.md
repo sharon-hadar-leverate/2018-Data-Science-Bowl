@@ -13,7 +13,7 @@ ________________________________________________________________________________
 In this work I will present my thesis that a Ladder network could improve the accuracy of existing methods for medical image segmentation.  
 
 
-In order to understand if the ladder network helps improving segmentation,  
+In order to understand if the ladder network helps improving segmentation, 
 I will build a benchmark of various methods for segmentation with performance measures (as IOU).   
 I will start by reviewing what is image segmentation and what are the basic techniques in image segmentation,   
 I will present what are the image segmentation performance measures and practice a threshold technique to get the first row of my benchmark,   
