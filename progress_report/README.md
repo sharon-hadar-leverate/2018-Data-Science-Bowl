@@ -342,7 +342,7 @@ Unet got a highest average IoU score of 0.807.
 | Threshold Yen | 0.573  | 
 | FCN | 0.501  |
 
-This is the first part of acquiring a baseline. in the next step, I would combine these methods with Ladder Networks components.    
+This is the first part of acquiring a baseline. in the next part, I would combine these methods with Ladder Networks components.    
 In order to understand Ladder Network, one need to understand Denoising Autoencoders.  
 
 ## Autoencoders
