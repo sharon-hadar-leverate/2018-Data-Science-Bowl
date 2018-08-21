@@ -69,7 +69,7 @@ Several popular methods are used in industry including the maximum entropy metho
 When using different threshold methods on a training sample, the following segmentations received:   
 ![thresholds](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/thresholds.png)  
 Threshold Yen (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]) seems to have the best fit over explored thresholds for this task, 
-One of the ways to measure the quality of segmentation models is IoU.   
+one way to measure the quality of segmentation models is IoU.   
    
 ### IoU - Intersection over union
 IoU is a segmentation performance measure which stands for intersection over union.  
