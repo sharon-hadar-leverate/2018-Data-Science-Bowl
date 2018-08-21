@@ -1,5 +1,17 @@
+
+
 # Progress Report Introduction: 
+____________________________________________________________________________________________________
+21.08.2018
+Find the nuclei in divergent images to advance medical discovery  מציאת גרעיני תא בתמונות מסתעפות לקדם גילוי רפואי
+ 
+Student Sharon Hadar   
+Supervisor Sharon Yalov-handzel, DR   
+____________________________________________________________________________________________________
+
+
 In this work I will present my thesis that a Ladder network could improve the accuracy of existing methods for medical image segmentation.  
+
 
 In order to understand if ladder network helps improving segmentation, i will build a benchmark of various methods for segmentation with performance measures (as IOU).
 I will start by reviewing what is image segmentation and what are the basic techniques in image segmentation,
