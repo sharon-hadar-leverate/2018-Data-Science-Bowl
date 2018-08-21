@@ -250,7 +250,7 @@ However, semantic segmentation requires the exact alignment of class maps and th
 U-net is a good architecture to tackle this issue.  
 
 ### U-Net
-In 2015, Olaf Ronneberger, Philipp Fischer and Thomas Brox proposed a new deep learning architecture called the U-net.  
+In 2015, Olaf Ronneberger, Philipp Fischer and Thomas Brox proposed a new deep learning architecture for image segmentation called the U-net.  
 Encoder gradually reduces the spatial dimension with pooling layers and decoder gradually recovers the object details and spatial dimension.  
 There are shortcut connections from the encoder to the decoder to help decoder recover the object details better.  
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/unet.png)  
