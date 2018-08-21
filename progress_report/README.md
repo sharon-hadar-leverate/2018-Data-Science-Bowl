@@ -2,7 +2,7 @@
 
 # Progress Report Introduction: 
 ____________________________________________________________________________________________________
-21.08.2018
+21.08.2018  
 Find the nuclei in divergent images to advance medical discovery  
 מציאת גרעיני תא בתמונות מסתעפות לקדם גילוי רפואי
  
