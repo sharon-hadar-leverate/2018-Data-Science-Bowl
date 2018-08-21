@@ -21,7 +21,7 @@ ill start with explaining basic consepts of deep learning, convolutional neural 
 i would present a second row in my benchmark which is a full connected network (FCN),  
 Then, i will use Unet, which is a state of the art deep learning model for image segmentation, and add it as row to my benchmark.
 After inquiring a base line with two neural networks (a simple and a complex one) i would combine each with a ladder network components and evaluate these models.
-
+<div style="page-break-after: always;"></div>
 #### In this report i will introduce: 
 
 - [X] 2018 data sience bowl description 
