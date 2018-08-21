@@ -46,6 +46,16 @@ in this competition, the challenger exposes a dataset contains a large number of
 The images were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
 The images can be in RGB, RGBA and grayscale format, based on the modality in which they were acquired. For color images, a third dimension encodes the "channel" (e.g. Red, Green, and Blue).  
 
+# Progress Report Introduction: 
+____________________________________________________________________________________________________
+21.08.2018  
+Find the nuclei in divergent images to advance medical discovery  
+מציאת גרעיני תא בתמונות מסתעפות לקדם גילוי רפואי
+ 
+Student Sharon Hadar   
+Supervisor Sharon Yalov-handzel, DR   
+____________________________________________________________________________________________________
+
 
 # Progress Report Introduction: 
 ____________________________________________________________________________________________________
