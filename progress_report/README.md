@@ -1,34 +1,27 @@
 # Progress Report Introduction: 
 In this work I will present my thesis that a Ladder network could improve the accuracy of existing methods for medical image segmentation.  
 
-I devided this project into two parts: 
- - Part One: Existing Segmentetion Techniques - where i would build a benchmark of existing segmentetion technigues and models with reference to the "2018 data sience bowl" goals.  
- - Part Two: Use Of Ladder Network - where i would combine ladder network with a deep learning segmentetion state of the art model. 
- 
 In order to understand if ladder network helps improving segmentation, i will build a benchmark of various methods for segmentation with performance measures (as IOU).
 I will start by reviewing what is image segmentation and what are the basic techniques in image segmentation,
 I will present what are the image segmentation performance measures and practice a threshold technique to get the first row of my banchmark,  
 Then i would review trainable segmentation techniques with deep learning: 
 ill start with explaining basic consepts of deep learning, convolutional neural network (CNN) and the use of it in segmentation problem, 
 i would present a second row in my benchmark which is a full connected network (FCN),  
-Then, i will use Unet, which is a state of the art deep learning model for image segmentation, and add it as row to my benchmark
+Then, i will use Unet, which is a state of the art deep learning model for image segmentation, and add it as row to my benchmark.
+After inquiring a base line with two neural networks (a simple and a complex one) i would combine each with a ladder network components and evaluate these models.
 
 #### In this report i will introduce: 
 
-### Part One:  :waxing_gibbous_moon:
 - [X] 2018 data sience bowl description 
 - [X] A brif review of basic techniques in image segmentation
 - [X] Deep Learning consepts
 - [X] Convolutional Neural Network (CNN)
 - [X] Use of Deep Learning in segmentation problem
+- [X] Autoencoders
+- [X] Ladder Networks
+- [X] Future Work
 - [X] [Description of primary products](2018-Data-Science-Bowl.ipynb)
-### Part Two: :waning_crescent_moon:
-- [ ] Autoencoders
-- [ ] Ladder Networks
-- [ ] Use of Ladder Network in a CNN
-- [ ] Use of Ladder Network in segmentation problem
-- [ ] Description of primary products
-- [ ] Bibliography
+- [X] Bibliography
 
 ## 2018 data sience bowl description
 _“2018 Data Science Bowl” is a Kaggle competition that its goal is to create an algorithm to automate nucleus detection in divergent images to advance medical discovery._  
@@ -311,13 +304,6 @@ Unet got an highst average IoU score of 0.807.
 | FCN | 0.501  |
 
 
-
-
-## Description of primary products
-[click here](2018-Data-Science-Bowl.ipynb) to see the hole jupyter notebook
-
-
---------------------------------------------PART TWO----------------------------------------------------------------------------
 ## Autoencoders
 An autoencoder learns to compress data from the input layer into a short code, and then uncompress that code into something that closely matches the original data.  
 The simplest form of an autoencoder is a feedforward neural network having an input layer where the output layer having the same number of nodes as the input layer, and with the purpose of reconstructing its own inputs (instead of predicting the target value Y given inputs X).   
@@ -368,21 +354,18 @@ The company focuses on semi-supervised and unsupervised machine learning, which 
 
 #### The structure of the Ladder network:  
 ![ladder network](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/ladder_network2.png)  
-A conceptual illustration of the Ladder network with two hidden layers.  
+ladder network architecture resemble the unet architecture, These models use an encoder and a decoder pair to segment images into parts and objects.
 f(l) The feedforward path with the corrupted feedforward path  
 g(l) Denoising functions  
 C(l)d Cost functions on each layer trying to minimize the difference between zˆ(l) and z(l)  
 
+### Related Work:
+Ladder networks and U-net inspired lots of researches in the field, one example is the CortexNet, which is one of the most complex deep neural network architectures, where adding recursion to ladder networks in order to learn videos segmentation frame by frame. [15]  
+Another one is LinkNet, which resemble the U-net structure, composed by an encoder decoder pair with skip connections between them, it was designed for real time object segmentation, especially for self driving cars, and needs to to process images fast, that is why LinkNet has less polling and up-sampling layers then U-net.[16]  
+The Curious AI Company extend the use of ladder networks concepts with a new framework for learning efficient iterative inference of perceptual grouping which called iTerative Amortized Grouping (TAG) where training can be completely unsupervised and additional terms for supervised tasks can be added too. Divide the input into K parts insert it to a recurrent ladder network, with denoising auto encoders, where each group is processed separately and learns its own prediction, in each iteration, save the group assignment probabilities and the expected value of the input for that group, and insert it ass an additional input to the next iteration. [17]
 
-## Use of Ladder Network in a CNN
-## Use of Ladder Network in segmentation problem
 ## Description of primary products
-
-## Methods: 
-_Detailed description of algorithms and computational models used,   
-tools use,   
-work process,   
-work limitations _ 
+[click here](2018-Data-Science-Bowl.ipynb) to see the hole jupyter notebook
 
 ## Bibliography.
 [1] Linda G. Shapiro and George C. Stockman (2001): “Computer Vision”, pp 279-325, New Jersey, Prentice-Hall, ISBN 0-13-030796-3  
@@ -399,3 +382,6 @@ work limitations _
 [12] https://ieeexplore.ieee.org/abstract/document/366472/
 [13] https://www.youtube.com/watch?v=6DO_jVbDP3I&t=1s
 [14] https://arxiv.org/pdf/1507.02672.pdf
+[15] https://engineering.purdue.edu/elab/CortexNet/
+[16] https://arxiv.org/pdf/1707.03718.pdf
+[17] https://arxiv.org/pdf/1606.06724.pdf
