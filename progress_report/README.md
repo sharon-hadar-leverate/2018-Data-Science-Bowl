@@ -53,7 +53,7 @@ The images can be in RGB, RGBA and grayscale format, based on the modality in wh
 
 ## A review of basic techniques in image segmentation
 
-**Image segmentetion** s the process of partitioning a digital image into multiple segments (sets of pixels, a.k.a super-pixels)[1] The goal of segmentation is to simplify and/or change the representation of an image into something that is more meaningful and easier to analyze. Image segmentation is typically used to locate objects and boundaries (lines, curves, etc.) in images.  
+**Image Segmentation** s the process of partitioning a digital image into multiple segments (sets of pixels, a.k.a super-pixels)[1] The goal of segmentation is to simplify and/or change the representation of an image into something that is more meaningful and easier to analyze. Image segmentation is typically used to locate objects and boundaries (lines, curves, etc.) in images.  
 
 ### More precisely, image segmentation is the process of assigning a label to every pixel in an image such that pixels with the same label share certain characteristics.
 
@@ -68,11 +68,13 @@ Several popular methods are used in industry including the maximum entropy metho
 ### Threshold exploring:
 When using different threshold methods on a training sample, the following segmentations received:   
 ![thresholds](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/thresholds.png)  
-Threshold Yen (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]) seems to have the best fit over explored thresholds for this task.  
+Threshold Yen (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]) seems to have the best fit over explored thresholds for this task, 
+One of the ways to measure the quality of segmentation models is IoU.   
    
 ### IoU - Intersection over union
 IoU is a segmentation performance measure which stands for intersection over union.  
-The intersection (A∩B) is comprised of the pixels found in both the prediction mask and the ground truth mask, whereas the union (A∪B) is simply comprised of all pixels found in either the prediction or target mask.  
+The intersection (A∩B) is comprised of the pixels found in both the prediction mask and the ground truth mask, 
+whereas the union (A∪B) is simply comprised of all pixels found in either the prediction or target mask.  
 ![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN.png)  
 
 Intersection over union for this case:  
@@ -84,7 +86,7 @@ Threshold Yen got a nice segmentation with almost no false positive with an aver
 | Threshold Yen | 0.573  |
 
 
-##### Additional Techniques
+##### Additional Segmentation Techniques
 
 The **K-means algorithm**[3] is an iterative technique that is used to partition an image into K clusters.
 In this case, distance is the squared or absolute difference between a pixel and a cluster center.   
@@ -102,7 +104,8 @@ Pixels draining to a common minimum form a catch basin, which represents a segme
 ![watershed_segmentetion](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/watershed_segmentetion.PNG)
 
 #### Trainable segmentation:
-Most segmentation methods are based only on color information of pixels in the image. Humans use much more knowledge than this when doing image segmentation, but implementing this knowledge would cost considerable computation time and would require a huge domain knowledge database, which is currently not available. In addition to traditional segmentation methods, there are trainable segmentation methods which can model some of this knowledge.
+Most segmentation methods are based only on color information of pixels in the image. Humans use much more knowledge than this when doing image segmentation, but implementing this knowledge would cost considerable computation time and would require a huge domain knowledge database, which is currently not available. In addition to traditional segmentation methods, there are trainable segmentation methods which can model some of this knowledge.  
+One of these methods is Deep learning.  
 
 
 ## Deep Learning consepts:
@@ -110,81 +113,89 @@ Deep learning is a subfield of machine learning. While both fall under the broad
 Though the main ideas behind deep learning have been in place for decades, it wasn’t until data sets became large enough and computers got fast enough that their true power could be revealed.  
 
 
-A good way to understand deep learning is to observe logistic regression:
-Logistic regression uses a binary classification on input data,  
+A good way to understand deep learning is to observe logistic regression:  
+Logistic regression uses a binary classification on input data, 
 the model takes the input's n features and uses a weighted sum over them, the weighted sum is then passed as an input to a log function and the classification is activated to one if the log output is greater than a certain threshold.  
 #### Logistic regression is a simple neural network.
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/%E2%80%8F%E2%80%8FLR.PNG)
 
 ### Multi Layer Perceptron (MLP):
-MLPs are just logistic regression where a set of nonlinear features are automatically learned from data.  
-MLP is defined by several parameters: 
- - Number of hidden units in each layer
- - Number of hidden layers in the network
- - The nonlinear activation function: (could also be RELU an rectified linear unit or tanh)
- - Learning rate for to use in SGD (using the chain rule of derivatives)
+MLPs are just logistic regression where a set of nonlinear features are automatically learned from data.    
+MLP is defined by several parameters:  
+ - Number of hidden units in each layer  
+ - Number of hidden layers in the network  
+ - The nonlinear activation function: (could also be RELU an rectified linear unit or tanh)  
+ - Learning rate for to use in SGD (using the chain rule of derivatives)  
  
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/MLP.PNG)
   
-### Training NN (neural network) or Logistic regression:
-Logistic regression uses binary cross-entropy as a loss function, which is a very popular technique in binary classification.
+### How To Train NN (neural network) or Logistic regression:  
+Logistic regression uses binary cross-entropy as a loss function, which is a very popular technique in binary classification.  
 When we train a model we are trying to minimize the loss function to get the model optimal weights, one way to minimize this loss function is using Gradient Descent.  
 
 #### Gradient Descent (GD): [7]
 
-Gradient descent is an optimization algorithm, where after each epoch (= pass over the training dataset) the model weights are updated incrementally.  
+Gradient descent is an optimization algorithm, where after each epoch (= pass over the training dataset) the model weights are updated incrementally.   
 The magnitude and direction of the weight update are computed by taking a step in the opposite direction of the cost gradient, which is the derivative calculation of the loss function.  
-The weights are updated according to the learning rate after each epoch.
+The weights are updated according to the learning rate after each epoch.  
 
 #### Stochastic Gradient Descent (SGD):
 Stochastic gradient descent computes the cost gradient based on a single training sample and not the complete training set like regular gradient descent.  
 In the case of very large datasets, using GD can be quite costly.  
-the term "stochastic" comes from the fact that a single training sample is a "stochastic approximation" of the "true" cost gradient.
+the term "stochastic" comes from the fact that a single training sample is a "stochastic approximation" of the "true" cost gradient.  
 There are different tricks to improve the GD-based learning, one is choosing a decrease constant d that shrinks the learning rate over time.  
 another is to learn momentum by adding a factor of the previous gradient to the weight update for faster updates.  
 
 #### Mini-batch Gradient Descent:
-instead of computing the gradient from 1 sample or all n training samples: Mini-batch gradient Descent updates the model based on smaller groups of training samples.
+Instead of computing the gradient from 1 sample or all n training samples:   
+Mini-batch gradient Descent updates the model based on smaller groups of training samples.
 
 #### Adam Optimization Algorithm:  
 Adam is an optimization algorithm that can be used instead of the classical stochastic gradient descent procedure to update network weights iterative based in training data, 
-the algorithm calculates an exponential moving average of the gradient and the squared gradient.
+the algorithm calculates an exponential moving average of the gradient and the squared gradient.  
 
-## Convolutional Neural Network (CNN) 
-Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex.[8]
 
 A successfully neural network for image and text recognition required all neurons to be connected, resulting in an overly-complex   network structure and very long training times.   
+
+## Convolutional Neural Network (CNN)   
 The convolution operation brings a solution to this problem as it reduces the number of free parameters, each neuron is connected to only a small region of the input volume.   
-The extent of this connectivity is a hyperparameter called the receptive field of the neuron. allowing the network to be deeper with fewer parameters.  
-Yann LeCun from Facebook’s AI Research group built the first Convolution Neural Network in 1988 called LeNet.
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/CNN.PNG)[9]  
+The extent of this connectivity is a hyperparameter called the receptive field of the neuron.   
+allowing the network to be deeper with fewer parameters.  
+Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex.[8]  
+Yann LeCun from Facebook’s AI Research group built the first Convolution Neural Network in 1988 called LeNet. [9]
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/CNN.PNG)  
+
+The CNN components are:  
+
 #### Convolutional
 convolution is a mathematical operation on two functions (f and g) to produce a third function that expresses how the shape of one is modified by the other.  
 Convolutional layers apply a convolution operation to the input with a filter (weights) on its receptive field, passing the result to the next layer.  
-Convolution as a property of being translational invariant: The output signal strength is not dependent on where the features are located, but simply whether the features are present.  
+Convolution as a property of being translational invariant:  
+The output signal strength is not dependent on where the features are located, but simply whether the features are present.   
 
 #### Pooling
-Combine the outputs of neuron clusters at one layer into a single neuron in the next layer.  
-For example, max pooling uses the maximum value from each of a cluster of neurons at the prior layer (another example is using the average value from each of the clusters).  
+Combine the outputs of neuron clusters at one layer into a single neuron in the next layer.   
+For example, max pooling uses the maximum value from each of a cluster of neurons at the prior layer (another example is using the average value from each of the clusters).   
 
 #### Fully connected
-Fully connected layers connect every neuron in one layer to every neuron in another layer.  
-It is in principle the same as the traditional multi-layer perceptron neural network (MLP).
+Fully connected layers connect every neuron in one layer to every neuron in another layer.   
+It is in principle the same as the traditional multi-layer perceptron neural network (MLP). 
 
 #### Weights
-CNNs share weights in convolutional layers, which means that the same filter is used for each receptive field in the layer, this reduces memory footprint and improves performance.
+CNNs share weights in convolutional layers, which means that the same filter is used for each receptive field in the layer, 
+this reduces memory footprint and improves performance.
 
 A classic architecture for CNN:  
 ##### imput -> Conv -> Relu -> Conv -> Relu -> Pool -> Conv -> Relu -> Pool -> Fully Connected
 
 ## Use of Deep Learning in segmentation problem
 
-One of the popular initial deep learning approaches was patch classification where each pixel was separately classified into classes using a patch of the image around it.[10]  
-The main reason to use patches was that classification networks usually have full connected layers and therefore required fixed size images.  
+One of the popular initial deep learning approaches was patch classification where each pixel was separately classified into classes using a patch of the image around it.[10]   
+The main reason to use patches was that classification networks usually have full connected layers and therefore required fixed size images.   
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/pixlewise.PNG)  
 
 
-In 2014, Fully Convolutional Networks (FCN) by Long et al. from Berkeley, popularized CNN architectures for dense predictions without any fully connected layers.
+In 2014, Fully Convolutional Networks (FCN) by Long et al. from Berkeley, popularized CNN architectures for dense predictions without any fully connected layers.  
 This allowed segmentation maps to be generated for an image of any size and was also much faster compared to the patch classification approach.  
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/FCN.PNG)  
 
@@ -193,8 +204,8 @@ Almost all the subsequent state of the art approaches on semantic segmentation a
 
 ## Full Connected Network exploring:
 
-In order to create a deep learning model, I used keras over Tensorflow kernel.  
-Keras is an open source neural network library written in Python.  
+In order to create a deep learning model, I used keras over Tensorflow kernel.    
+Keras is an open source neural network library written in Python.    
 It is capable of running on top of TensorFlow, Microsoft Cognitive Toolkit or Theano.  
 TensorFlow is an open-source software library for dataflow programming across a range of tasks.  
 It is a symbolic math library and is also used for machine learning applications such as neural networks.  
@@ -233,12 +244,13 @@ FCN received an IoU average 0.501, which is worse than the Yen threshold:
 | Threshold Yen | 0.573  | 
 | FCN | 0.501  |
 
-Apart from fully connected layers, one of the main problems with using CNN's for segmentation is pooling layers.
-Pooling layers increase the field of view and are able to aggregate the context while discarding the ‘where’ information.  
-However, semantic segmentation requires the exact alignment of class maps and thus, needs the ‘where’ information to be preserved.  
+Apart from fully connected layers, one of the main problems with using CNN's for segmentation is pooling layers.  
+Pooling layers increase the field of view and are able to aggregate the context while discarding the ‘where’ information.    
+However, semantic segmentation requires the exact alignment of class maps and thus, needs the ‘where’ information to be preserved.   
 U-net is a good architecture to tackle this issue.  
 
 ### U-Net
+In 2015, Olaf Ronneberger, Philipp Fischer and Thomas Brox proposed a new deep learning architecture called the U-net.  
 Encoder gradually reduces the spatial dimension with pooling layers and decoder gradually recovers the object details and spatial dimension.  
 There are shortcut connections from the encoder to the decoder to help decoder recover the object details better.  
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/unet.png)  
@@ -250,14 +262,14 @@ The x-y-size is provided at the lower left edge of the box.
 White boxes represent copied feature maps.   
 The arrows denote the different operations.  
 
-The u-net architecture achieves very good performance on very different biomedical segmentation applications The network consist of 2 paths:  
+The u-net architecture achieves very good performance on very different biomedical segmentation applications.   
+The network consist of 2 paths:  
 
 #### Contracting:
 Convolutional network with two 3x3 convolutions followed by a ReLU activation function and 2x2 max pooling with a stride of 2.  
 At each downsampling step, the network doubles the number of feature channels.  
 
 #### Expansive:
-
 Every step consists of an upsampling of the feature map followed by a 2x2 convolution that halves the number of feature channels.  
 Also, to prevent the loss of border pixels,
 a concatenation with the correspondingly cropped feature map from the contracting path,  
@@ -330,6 +342,8 @@ Unet got a highest average IoU score of 0.807.
 | Threshold Yen | 0.573  | 
 | FCN | 0.501  |
 
+This is the first part of acquiring a baseline. in the next step, I would combine these methods with Ladder Networks components.    
+In order to understand Ladder Network, one need to understand Denoising Autoencoders.  
 
 ## Autoencoders
 
@@ -341,12 +355,8 @@ Therefore, autoencoders are unsupervised learning models.
 ![autoencoder2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/autoencoder2.png)  
 
 
-#### Denoising Autoencoders
-This idea relay on the Hebbian learning concept - A synapse between two neurons is strengthened when the neurons on either side of the synapse (input and output) have highly correlated outputs.
-
-
-Learn representation that would be robust to the introduction of noise will 
-Hidden layer representation (what the encoder has learn by levels of corruption) 
+#### Denoising Autoencoders  
+This idea relay on the Hebbian learning concept - A synapse between two neurons is strengthened when the neurons on either side of the synapse (input and output) have highly correlated outputs.  
 
 Learn representation that would be robust to the introduction of noise will enforce the hidden unit to extract particular types of structures of correlations and to learn the training data distribution and more meaningful features.
 
@@ -362,24 +372,27 @@ Hidden layer representation (what the encoder has learn by levels of corruption)
 ![hidden_layer_rep_dae](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/hidden_layer_rep_dae.png)
 
 Each square is one hidden unit visualization of the weight vector between all inputs and the specific hidden unit [13]  
-There is a more significant representation as the signal is more corrupt, clear edges of digits are shown at 50% corruption.  
+There is a more significant representation as the signal is more corrupt, clear edges of digits are shown at 50% corruption.
+
+One way to use the benefits of Denoising Autoencoders is by pretraining.  
 
 #### Unsupervised Pretraining
 
 Deep neural network model weights start with random values and 'twiks' with each sample/batch according to the gradient,   
 when pretraining a deep neural network, 
 the model start with almost optimal weights for the problem and is fine-tuned with the training samples.  
-The idea is to use denoising autoencoder to train one layer at a time from the first hidden layer to the last, previous layers viewed as feature extraction when Fix the parameters of previously hidden layers:  
+The idea is to use denoising autoencoder to train one layer at a time from the first hidden layer to the last, 
+previous layers viewed as feature extraction when Fix the parameters of previously hidden layers:  
 ![pretrained](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/pretrain.png)   
 
  First layer: find hidden unit features that are more common in training inputs than in random input  
  Second layer: find combinations of hidden unit features that are more common than random hidden unit features.  
  Third layer: find combinations of combinations of..   
 
+
 ## Ladder Networks  [14]
 
-
-In complex tasks, there is often much more structure in the inputs than can be represented, 
+There is a problem with pretraining: In complex tasks, there is often much more structure in the inputs than can be represented, 
 and unsupervised learning cannot, by definition, know what will be useful for the task at hand.  
 One instance is the autoencoder approach applied to natural images:   
 The autoencoder will try to preserve all the details needed for reconstructing the image at a pixel level,  even though classification is typically invariant to all kinds of transformations which do not preserve pixel values.  
