@@ -42,7 +42,7 @@ I would combine each with a ladder network components and evaluate these models.
 ## 2018 data sience bowl description
 “2018 Data Science Bowl” is a Kaggle competition that its goal is to create an algorithm to automate nucleus detection in divergent images to advance medical discovery.  
 
-_ By observing patterns, asking questions, and building a model, participants will have a chance to push state-of-the-art technology farther._  
+_By observing patterns, asking questions, and building a model, participants will have a chance to push state-of-the-art technology farther._  
 
 in this competition, the challenger exposes a dataset contains a large number of segmented nuclei images.  
 The images were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
