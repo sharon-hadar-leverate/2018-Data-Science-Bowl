@@ -202,7 +202,7 @@ This allowed segmentation maps to be generated for an image of any size and was 
 Almost all the subsequent state of the art approaches on semantic segmentation adopted this paradigm.  
 (pictures from Stanford University School of Engineering course)
 
-## Full Connected Network exploring:
+## Fully Convolutional Networks exploring:
 
 In order to create a deep learning model, I used keras over Tensorflow kernel.    
 Keras is an open source neural network library written in Python.    
