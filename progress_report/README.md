@@ -379,14 +379,14 @@ Finally, I will evaluate the new models in relation to the same base line.
 [4]  Olsen, O. and Nielsen, M.: Multi-scale gradient magnitude watershed segmentation, Proc. of ICIAP 97, Florence, Italy, Lecture Notes in Computer Science, pages 6–13. Springer Verlag, September 1997.  
 [5] http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review  
 [6]  Andrew L. Beam (a great introduction to deep learning): http://beamandrew.github.io/deeplearning/2017/02/23/deep_learning_101_part2.html
-[7] Bottou, Léon (1998). "Online Algorithms and Stochastic Approximations". Online Learning and Neural Networks. Cambridge University Press. ISBN 978-0-521-65263-6
-[8] https://en.wikipedia.org/wiki/Convolutional_neural_network
-[9] http://neuralnetworksanddeeplearning.com/
-[10] http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review
-[11] https://arxiv.org/abs/1505.04597
-[12] https://ieeexplore.ieee.org/abstract/document/366472/
-[13] https://www.youtube.com/watch?v=6DO_jVbDP3I&t=1s
-[14] https://arxiv.org/pdf/1507.02672.pdf
-[15] https://engineering.purdue.edu/elab/CortexNet/
-[16] https://arxiv.org/pdf/1707.03718.pdf
-[17] https://arxiv.org/pdf/1606.06724.pdf
+[7] Bottou, Léon (1998). "Online Algorithms and Stochastic Approximations". Online Learning and Neural Networks. Cambridge University Press. ISBN 978-0-521-65263-6  
+[8] https://en.wikipedia.org/wiki/Convolutional_neural_network  
+[9] http://neuralnetworksanddeeplearning.com/  
+[10] http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review  
+[11] https://arxiv.org/abs/1505.04597  
+[12] https://ieeexplore.ieee.org/abstract/document/366472/  
+[13] https://www.youtube.com/watch?v=6DO_jVbDP3I&t=1s  
+[14] https://arxiv.org/pdf/1507.02672.pdf  
+[15] https://engineering.purdue.edu/elab/CortexNet/  
+[16] https://arxiv.org/pdf/1707.03718.pdf  
+[17] https://arxiv.org/pdf/1606.06724.pdf  
