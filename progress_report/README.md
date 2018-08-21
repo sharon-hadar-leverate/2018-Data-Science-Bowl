@@ -47,6 +47,66 @@ _By observing patterns, asking questions, and building a model, participants wil
 in this competition, the challenger exposes a dataset contains a large number of segmented nuclei images.  
 The images were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
 The images can be in RGB, RGBA and grayscale format, based on the modality in which they were acquired. For color images, a third dimension encodes the "channel" (e.g. Red, Green, and Blue).  
+
+# Progress Report Introduction: 
+____________________________________________________________________________________________________
+21.08.2018  
+Find the nuclei in divergent images to advance medical discovery  
+מציאת גרעיני תא בתמונות מסתעפות לקדם גילוי רפואי
+ 
+Student Sharon Hadar   
+Supervisor Sharon Yalov-handzel, DR   
+____________________________________________________________________________________________________
+
+
+# Progress Report Introduction: 
+____________________________________________________________________________________________________
+21.08.2018  
+Find the nuclei in divergent images to advance medical discovery  
+מציאת גרעיני תא בתמונות מסתעפות לקדם גילוי רפואי
+ 
+Student Sharon Hadar   
+Supervisor Sharon Yalov-handzel, DR   
+____________________________________________________________________________________________________
+
+
+In this work I will present my thesis that a Ladder network could improve the accuracy of existing methods for medical image segmentation.  
+
+
+In order to understand if the ladder network helps improving segmentation, 
+I will build a benchmark of various methods for segmentation with performance measures (as IOU).   
+I will start by reviewing what is image segmentation and what are the basic techniques in image segmentation,   
+I will present what are the image segmentation performance measures and practice a threshold technique to get the first row of my benchmark,   
+Then I would review trainable segmentation techniques with deep learning:   
+Ill start with explaining basic concepts of deep learning,
+convolutional neural network (CNN) and the use of it in segmentation problem,    
+I would present the second row in my benchmark which is a  Fully Convolutional Networks (FCN),  
+Then, I will use Unet, which is a state of the art deep learning model for image segmentation, 
+and add it as a row to my benchmark.   
+After acquiring a baseline with two neural networks (a simple and a complex one) 
+I would combine each with a ladder network components and evaluate these models.  
+
+#### In this report i will introduce: 
+
+- [X] 2018 data sience bowl description 
+- [X] A brif review of basic techniques in image segmentation
+- [X] Deep Learning consepts
+- [X] Convolutional Neural Network (CNN)
+- [X] Use of Deep Learning in segmentation problem
+- [X] Autoencoders
+- [X] Ladder Networks
+- [X] Future Work
+- [X] [Description of primary products](2018-Data-Science-Bowl.ipynb)
+- [X] Bibliography
+
+## 2018 data sience bowl description
+“2018 Data Science Bowl” is a Kaggle competition that its goal is to create an algorithm to automate nucleus detection in divergent images to advance medical discovery.  
+
+_By observing patterns, asking questions, and building a model, participants will have a chance to push state-of-the-art technology farther._  
+
+in this competition, the challenger exposes a dataset contains a large number of segmented nuclei images.  
+The images were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
+The images can be in RGB, RGBA and grayscale format, based on the modality in which they were acquired. For color images, a third dimension encodes the "channel" (e.g. Red, Green, and Blue).  
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/data_bowl_data1.PNG)  
 
 #### This algorithm needs to identify a range of nuclei across varied conditions.  
