@@ -19,7 +19,7 @@ I will start by reviewing what is image segmentation and what are the basic tech
 I will present what are the image segmentation performance measures and practice a threshold technique to get the first row of my benchmark,  
 Then I would review trainable segmentation techniques with deep learning: ill start with explaining basic concepts of deep learning,
 convolutional neural network (CNN) and the use of it in segmentation problem,   
-I would present the second row in my benchmark which is a fully connected network (FCN),
+I would present the second row in my benchmark which is a  Fully Convolutional Networks (FCN),
 Then, I will use Unet, which is a state of the art deep learning model for image segmentation,   
 and add it as a row to my benchmark. After acquiring a baseline with two neural networks (a simple and a complex one) 
 I would combine each with a ladder network components and evaluate these models.  
