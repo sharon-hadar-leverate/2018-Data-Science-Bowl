@@ -47,9 +47,18 @@ _By observing patterns, asking questions, and building a model, participants wil
 in this competition, the challenger exposes a dataset contains a large number of segmented nuclei images.  
 The images were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
 The images can be in RGB, RGBA and grayscale format, based on the modality in which they were acquired. For color images, a third dimension encodes the "channel" (e.g. Red, Green, and Blue).  
+
+When ploting diffrent random images, we can clearly see that they are differ from each other, for example we can see that the first image is grayscale where the third image is pink and purple.  
 ![plot_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/plot_images.png)  
 
+The image histogram gives an overall idea about the intensity distribution of an image,  
+in the plot above, it seems that a grayscale image has a simillar distribute to other grayscale images but has diffrent distribute to pink or purple images.
+In order to understand better the data, one can use an embadding technic to transform the image histogram into 2 dimentions and plot it.    
+I choose to try 2 methods PCA vs UMAP (Uniform Manifold Approximation and Projection):  
 ![hist_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/hist_embedding.png)  
+UMAP will act better as an iterperator to the data distribute since it manage to split the data in to obviuse group, also the image projection is uncleared (as you can see in my jupyter note book here), forthere more, 
+
+PCA does not preform well in prepering the hist distribute for clusting  cluster the images
 
 ![UMAP_embedding_with_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png)  
 
