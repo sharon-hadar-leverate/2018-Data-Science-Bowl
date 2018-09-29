@@ -47,7 +47,14 @@ _By observing patterns, asking questions, and building a model, participants wil
 in this competition, the challenger exposes a dataset contains a large number of segmented nuclei images.  
 The images were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
 The images can be in RGB, RGBA and grayscale format, based on the modality in which they were acquired. For color images, a third dimension encodes the "channel" (e.g. Red, Green, and Blue).  
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/data_bowl_data1.PNG)  
+![plot_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/plot_images.png)  
+
+![hist_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/hist_embedding.png)  
+
+![UMAP_embedding_with_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png)  
+
+![hist_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_hist.png)  
+
 
 #### This algorithm needs to identify a range of nuclei across varied conditions.  
 
