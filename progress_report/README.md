@@ -124,7 +124,13 @@ the threshold methods assign a new value base on the original value, if the orig
 
 Several popular methods are used in industry including Otsu's method (maximum variance), and Yen method.  
 
+Here is an example of Yen theshold, in this method the the threshold is calculate base on the incompatibility between the final image and the original image, (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]).  
+The thershold is calculate per image:  
+
 ![th_yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen.png)  
+
+The threshold needs to be revert in the cases where the nuclei is darker then the background,  
+if the original value is lower then the threshold it would be 1 (white) and if the value is greater it would be 0 (black):  
 
 ![th_yen2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen2.png)  
 
