@@ -142,26 +142,23 @@ whereas the union (A∪B) is simply comprised of all pixels found in either the 
   
 ![iou1](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/iou1.png)  
 
-Intersection over union for this case (where white is intersaction and grey is union):  
+Intersection over union for this case (where white is intersection and grey is union):  
   
 ![iou2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/iou2.png)  
 
-Choosing threshold would directly impact the IoU score:  
+Choosing a threshold would directly impact the IoU score:  
   
 ![score_per_iou](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/score_per_iou.png)  
-A resonable value for a good segmentation is above 0.7.
-0.4 IoU score is consider to be poor segmentation.
+A reasonable value for a good segmentation is above 0.7.  
+0.4 IOU score is considered to be poor segmentation.
+  
+The benchmark performance would be measured by mean IOU score on the test data.  
+Both threshold methods score:  
 
-
-
-
-
-
-Threshold Yen got a nice segmentation with almost no false positive with an average of 0.573 IoU overall test data  
-
-| technique   | IoU |
+| technique   | Mean IoU |
 | ------------- | ------------- |
-| Threshold Yen | 0.573  |
+| Threshold Yen | 0.743 |
+| Threshold Otsu | 0.739 |
 
 
 ##### Additional Segmentation Techniques
