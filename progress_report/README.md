@@ -44,15 +44,21 @@ I would combine each with a ladder network components and evaluate these models.
 
 _By observing patterns, asking questions, and building a model, participants will have a chance to push state-of-the-art technology farther._  
 
-in this competition, the challenger exposes a dataset contains a large number of segmented nuclei images.  
+In this competition, the challenger exposes a dataset contains a large number of segmented nuclei images.  
 The images were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
 The images can be in RGB, RGBA and grayscale format, based on the modality in which they were acquired. For color images, a third dimension encodes the "channel" (e.g. Red, Green, and Blue).  
 
-When ploting diffrent random images, we can clearly see that they are differ from each other, for example we can see that the first image is grayscale where the third image is pink and purple.  
+number of train samples:  570   number of test samples:  100.  
+
+When plotting random images for the train set, we can clearly see that they differ from each other, for example, we can see that the first image is grayscale where the third image is pink and purple.  
+  
 ![plot_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/plot_images.png)  
 
+Dimension reduction techniques can be used for better visualisation of the data:   
 ![image_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_embedding.png)  
-
+In this figure, two techniques were used, PCA which is a mathematical transformation from related variables into unrelated variables based on the variables largest possible variance, and UMAP (Uniform Manifold Approximation and Projection)[18] which is a novel approch for dimension reduction (feb 2018). 
+UMAP is demonstrably faster than t-SNE and and provides beter scaling, furthermore, UMAP shows better visualisation than PCA.  
+  
 ![UMAP_embedding_with_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png)  
 
 ![image_groups_by_image](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_image.png)  
@@ -485,3 +491,4 @@ Finally, I will evaluate the new models in relation to the same baseline.
 [15] https://engineering.purdue.edu/elab/CortexNet/  
 [16] https://arxiv.org/pdf/1707.03718.pdf  
 [17] https://arxiv.org/pdf/1606.06724.pdf  
+[18] https://arxiv.org/pdf/1802.03426.pdf
