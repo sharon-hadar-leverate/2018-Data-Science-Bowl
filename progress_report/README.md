@@ -130,26 +130,27 @@ The threshold is calculated per image:
 
 ![th_yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen.png)  
 
-The Threshold should be reversed in cases where the nuclei is darker then the background,
+The binarization should be reversed in cases where the nuclei is darker then the background,
 if the original value is lower then the threshold it would be 1 (white) and if the value is greater it would be 0 (black):  
 
 ![th_yen2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen2.png)  
-
-
-### Threshold exploring:
-When using different threshold methods on a training sample, the following segmentations received:   
-![thresholds](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/thresholds.png)  
-Threshold Yen (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]) seems to have the best fit over explored thresholds for this task, 
-one way to measure the quality of segmentation models is IoU.   
    
 ### IoU - Intersection over union
 IoU is a segmentation performance measure which stands for intersection over union.  
 The intersection (A∩B) is comprised of the pixels found in both the prediction mask and the ground truth mask, 
 whereas the union (A∪B) is simply comprised of all pixels found in either the prediction or target mask.  
-![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN.png)  
+![iou1](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/iou1.png)  
 
 Intersection over union for this case:  
-![threshold Yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/IOU_TH_YEN2.png)  
+![iou2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/iou2.png)  
+
+![score_per_iou](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/score_per_iou.png)  
+
+
+
+
+
+
 Threshold Yen got a nice segmentation with almost no false positive with an average of 0.573 IoU overall test data  
 
 | technique   | IoU |
