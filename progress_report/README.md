@@ -48,7 +48,9 @@ In this competition, the challenger exposes a dataset contains a large number of
 The images were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
 The images can be in RGB, RGBA and grayscale format, based on the modality in which they were acquired. For color images, a third dimension encodes the "channel" (e.g. Red, Green, and Blue).  
 
-number of train samples:  570   number of test samples:  100.  
+* Number of train samples:  570.   
+* Number of test samples:  100.  
+* Each image is reshaped to (128,128,3)  
 
 When plotting random images for the train set, we can clearly see that they differ from each other, for example, we can see that the first image is grayscale where the third image is pink and purple.  
   
@@ -57,16 +59,20 @@ When plotting random images for the train set, we can clearly see that they diff
 Dimension reduction techniques can be used for better visualisation of the data: 
   
 ![image_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_embedding.png)  
-In this figure, two techniques were used, PCA which is a mathematical transformation from related variables into unrelated variables based on the variables largest possible variance, and UMAP (Uniform Manifold Approximation and Projection, feb 2018)[18], which is a novel approch for dimension reduction, that uses local manifold approximations and patches together their local fuzzy simplicial set representations. 
-UMAP shows better visualisation than PCA, also, it is demonstrably faster than t-SNE and and provides beter scaling.    
+In this figure, two techniques were used:  
+PCA which is a mathematical transformation from related variables into unrelated variables based on the variables largest possible variance,  
+
+and UMAP (Uniform Manifold Approximation and Projection, Feb 2018)[18], which is a novel approach for dimension reduction, that uses local manifold approximations and patches together their local fuzzy simplicial set representations.  
+
+UMAP shows better visualization than PCA, also, it is demonstrably faster than t-SNE and provides better scaling.   
+  
   
 <p align="center"><img width="460" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png"></p>  
 
 ![image_groups_by_image](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_image.png)  
 
-
-![hist_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/hist_embedding.png)  
-
+After using UMAP, i used DBSCAN in order to cluster the data into groups, DBSCAN does not take as an input the number
+of clusters to generate, it finds the optimum number of clusters [19], 
 <p align="center"><img width="600" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images_hist.png"></p>  
 
 ![image_groups_by_hist](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_hist3.png)  
@@ -494,3 +500,4 @@ Finally, I will evaluate the new models in relation to the same baseline.
 [16] https://arxiv.org/pdf/1707.03718.pdf  
 [17] https://arxiv.org/pdf/1606.06724.pdf  
 [18] https://arxiv.org/pdf/1802.03426.pdf
+[19] https://web.cs.dal.ca/~zincir/bildiri/jias-ckdnm.pdf
