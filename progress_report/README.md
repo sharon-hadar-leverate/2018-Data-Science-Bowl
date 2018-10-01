@@ -51,6 +51,20 @@ The images can be in RGB, RGBA and grayscale format, based on the modality in wh
 When ploting diffrent random images, we can clearly see that they are differ from each other, for example we can see that the first image is grayscale where the third image is pink and purple.  
 ![plot_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/plot_images.png)  
 
+![image_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_embedding.png)  
+
+![UMAP_embedding_with_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png)  
+
+![image_groups_by_image](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_image.png)  
+
+![hist_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/hist_embedding.png)  
+
+![UMAP_embedding_with_images_hist](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images_hist.png)  
+
+![image_groups_by_hist](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_hist3.png)  
+
+
+
 The image histogram gives an overall idea about the intensity distribution of an image,  
 in the plot above, it seems that a grayscale image has a simillar distribute to other grayscale images but has diffrent distribute to pink or purple images.
 In order to understand better the data, one can use an embadding technic to transform the image histogram into 2 dimentions and plot it.    
