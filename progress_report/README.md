@@ -112,11 +112,22 @@ The clusters information:
 
 
 ##### Basic Techniques
-The simplest method of image segmentation is called the thresholding method.  
-[2][1] This method is based on a clip-level (or a threshold value) to turn a gray-scale image into a binary image The key of this method is to select the threshold value (or values when multiple-levels are selected).  
-Several popular methods are used in industry including the maximum entropy method, Otsu's method (maximum variance), and k-means clustering.  
 
-![Fotsu_threshold](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/%E2%80%8F%E2%80%8Fotsu_threshold.PNG)
+### Threshold
+
+Threshold method for image segmentation is a binarization of the image according to a selected threshold.  
+  
+![arbitrary_th](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/arbitrary_th.png)  
+For example, this figure uses an arbitrary threshold of 50 on a random image,  
+each cell in the image has a value between 0 to 256, where 0 is black and 256 is white.  
+the threshold methods assign a new value base on the original value, if the original value is greater then the threshold (52) it would be 1 (white) and if the value is lower it would be 0 (black)
+
+Several popular methods are used in industry including Otsu's method (maximum variance), and Yen method.  
+
+![th_yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen.png)  
+
+![th_yen2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen2.png)  
+
 
 ### Threshold exploring:
 When using different threshold methods on a training sample, the following segmentations received:   
