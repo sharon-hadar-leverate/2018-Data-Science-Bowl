@@ -70,8 +70,18 @@ UMAP shows better visualization than PCA, also, it is demonstrably faster than t
 
 ![image_groups_by_image](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_image.png)  
 
-After using UMAP, i used DBSCAN in order to cluster the data into groups, DBSCAN finds the optimum number of clusters and does need an input the number of clusters to generate [19].    
-The clusters information:
+After using UMAP, i used DBSCAN in order to cluster the data into groups,   
+DBSCAN finds the optimum number of clusters and does need an input the number of clusters to generate [19].   
+
+It seems that additional mining is required, for example, group number 3 includes pink\purple and grayscale images.  
+one exploring direction is to use the image histogram which gives an overall idea about the intensity distribution of an image,  
+in the plot above, it seems that a grayscale image has a similar distribute to other grayscale images but has different distribute to pink or purple images.  
+
+<p align="center"><img width="600" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images_hist.png"></p>  
+
+![image_groups_by_hist](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_hist3.png)  
+
+The clusters information:  
 
 | group | #samples | background color | nuclei color | nuclei radios | nuclei amounth | 
 | ------------- | ------------- | -------------  | ------------- | ------------- | ------------- |
@@ -80,25 +90,6 @@ The clusters information:
 | 2 | 88 | white -> pink | perpule | small -> large | few -> many |
 | 3 | 26 | white | gray -> perpule | small -> large | few -> many |
 | 4 | 6 | black | grayscale -> white | small -> large | few -> many | 
-
-It seems that the cell value of the image alone is not enough, additional mining is required.  
-The image histogram gives an overall idea about the intensity distribution of an image,  
-in the plot above, it seems that a grayscale image has a simillar distribute to other grayscale images but has diffrent distribute to pink or purple images.
-
-<p align="center"><img width="600" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images_hist.png"></p>  
-
-![image_groups_by_hist](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_hist3.png)  
-
-I choose to try 2 methods PCA vs UMAP (Uniform Manifold Approximation and Projection):  
-![hist_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/hist_embedding.png)  
-UMAP will act better as an iterperator to the data distribute since it manage to split the data in to obviuse group, also the image projection is uncleared (as you can see in my jupyter note book here), forthere more, 
-
-PCA does not preform well in prepering the hist distribute for clusting  cluster the images
-
-![UMAP_embedding_with_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png)  
-
-![hist_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_hist.png)  
-
 
 #### This algorithm needs to identify a range of nuclei across varied conditions.  
 
