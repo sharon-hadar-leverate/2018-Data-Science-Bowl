@@ -54,18 +54,20 @@ When plotting random images for the train set, we can clearly see that they diff
   
 ![plot_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/plot_images.png)  
 
-Dimension reduction techniques can be used for better visualisation of the data:   
-![image_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_embedding.png)  
-In this figure, two techniques were used, PCA which is a mathematical transformation from related variables into unrelated variables based on the variables largest possible variance, and UMAP (Uniform Manifold Approximation and Projection)[18] which is a novel approch for dimension reduction (feb 2018). 
-UMAP is demonstrably faster than t-SNE and and provides beter scaling, furthermore, UMAP shows better visualisation than PCA.  
+Dimension reduction techniques can be used for better visualisation of the data: 
   
-![UMAP_embedding_with_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png)  
+![image_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_embedding.png)  
+In this figure, two techniques were used, PCA which is a mathematical transformation from related variables into unrelated variables based on the variables largest possible variance, and UMAP (Uniform Manifold Approximation and Projection, feb 2018)[18], which is a novel approch for dimension reduction, that uses local manifold approximations and patches together their local fuzzy simplicial set representations. 
+UMAP shows better visualisation than PCA, also, it is demonstrably faster than t-SNE and and provides beter scaling.    
+  
+<p align="center"><img width="460" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png"></p>  
 
 ![image_groups_by_image](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_image.png)  
 
+
 ![hist_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/hist_embedding.png)  
 
-![UMAP_embedding_with_images_hist](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images_hist.png)  
+<p align="center"><img width="600" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images_hist.png"></p>  
 
 ![image_groups_by_hist](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_hist3.png)  
 
