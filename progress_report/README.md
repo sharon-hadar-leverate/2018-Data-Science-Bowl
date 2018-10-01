@@ -48,14 +48,21 @@ In this competition, the challenger exposes a dataset contains a large number of
 The images were acquired under a variety of conditions and vary in the cell type, magnification, and imaging modality (bright field vs. fluorescence).  
 The images can be in RGB, RGBA and grayscale format, based on the modality in which they were acquired. For color images, a third dimension encodes the "channel" (e.g. Red, Green, and Blue).  
 
+
+#### This algorithm needs to identify a range of nuclei across varied conditions.  
+
+
+## Investigate The Data
+
+Basic information:  
 * Number of train samples:  570.   
 * Number of test samples:  100.  
 * Each image is reshaped to (128,128,3)  
 
-When plotting random images for the train set, we can clearly see that they differ from each other, for example, we can see that the first image is grayscale where the third image is pink and purple.  
-  
+In order to understand the data we first need to look at some random images.  
 ![plot_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/plot_images.png)  
-
+we can clearly see that the images differ from each other, for example, we can see that the first image is grayscale where the third image is purple and light purple.  
+  
 Dimension reduction techniques can be used for better visualisation of the data: 
   
 ![image_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_embedding.png)  
@@ -73,9 +80,9 @@ UMAP shows better visualization than PCA, also, it is demonstrably faster than t
 After using UMAP, i used DBSCAN in order to cluster the data into groups,   
 DBSCAN finds the optimum number of clusters and does need an input the number of clusters to generate [19].   
 
-It seems that additional mining is required, for example, group number 3 includes pink\purple and grayscale images.  
+It seems that additional mining is required, for example, group number 3 includes purple and grayscale images.  
 one exploring direction is to use the image histogram which gives an overall idea about the intensity distribution of an image,  
-in the plot above, it seems that a grayscale image has a similar distribute to other grayscale images but has different distribute to pink or purple images.  
+in the plot above, it seems that a grayscale image has a similar distribute to other grayscale images but has different distribute to purple images.  
 
 <p align="center"><img width="600" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images_hist.png"></p>  
 
@@ -94,8 +101,6 @@ The clusters information:
 | 6 | 16 | white | gray | medium | medium | 
 | 7 | 32 | light perpule | perpule | extra small | medium -> many | 
 | 8 | 12 | black | gray | small -> extra large | one -> few | 
-
-#### This algorithm needs to identify a range of nuclei across varied conditions.  
 
 ## A review of basic techniques in image segmentation
 
