@@ -85,11 +85,15 @@ The clusters information:
 
 | group | #samples | background color | nuclei color | nuclei radios | nuclei amounth | 
 | ------------- | ------------- | -------------  | ------------- | ------------- | ------------- |
-| 0 | 106 | black | grayscale | small | few -> many |
-| 1 | 344 | black | grayscale -> white | small -> large | few -> many |
-| 2 | 88 | white -> pink | perpule | small -> large | few -> many |
-| 3 | 26 | white | gray -> perpule | small -> large | few -> many |
-| 4 | 6 | black | grayscale -> white | small -> large | few -> many | 
+| 0 | 257 | black | gray | small -> medium | medium |
+| 1 | 36 | white | purple | small  | medium -> many |
+| 2 | 30 | light perpule | perpule | large | few |
+| 3 | 96 | black | gray -> white | extra small | few -> medium |
+| 4 | 66 | black | gray -> white | extra small | a lot | 
+| 5 | 25 | black | gray | large | medium | 
+| 6 | 16 | white | gray | medium | medium | 
+| 7 | 32 | light perpule | perpule | extra small | medium -> many | 
+| 8 | 12 | black | gray | small -> extra large | one -> few | 
 
 #### This algorithm needs to identify a range of nuclei across varied conditions.  
 
