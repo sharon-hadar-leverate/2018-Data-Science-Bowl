@@ -139,12 +139,18 @@ if the original value is lower then the threshold it would be 1 (white) and if t
 IoU is a segmentation performance measure which stands for intersection over union.  
 The intersection (A∩B) is comprised of the pixels found in both the prediction mask and the ground truth mask, 
 whereas the union (A∪B) is simply comprised of all pixels found in either the prediction or target mask.  
+  
 ![iou1](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/iou1.png)  
 
-Intersection over union for this case:  
+Intersection over union for this case (where white is intersaction and grey is union):  
+  
 ![iou2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/iou2.png)  
 
+Choosing threshold would directly impact the IoU score:  
+  
 ![score_per_iou](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/score_per_iou.png)  
+A resonable value for a good segmentation is above 0.7.
+0.4 IoU score is consider to be poor segmentation.
 
 
 
