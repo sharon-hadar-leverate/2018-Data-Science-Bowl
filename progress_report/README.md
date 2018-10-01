@@ -76,11 +76,9 @@ UMAP shows better visualization than PCA, also, according to UMAP paper, it is d
   
 <p align="center"><img width="460" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png"></p>   
 
-Clustring the data into groups can help identify the diffrent groups of images in the data, a good unsupervised clustring method for this problem is DBSCAN.
-DBSCAN (Density-based spatial clustering of applications with noise)
-groups together points that are close to each other based on a distance measurement and a minimum number of points.  
-DBSCAN finds the optimum number of clusters and does need an input the number of clusters to generate [19].   
-
+Clustering the data into groups can help identify the different groups of images in the data, a good unsupervised clustering method for this problem is DBSCAN.  
+DBSCAN (Density-based spatial clustering of applications with noise) groups together points that are close to each other based on a distance measurement and a minimum number of points.  
+DBSCAN finds the optimum number of clusters and does need an input the number of clusters to generate [19].  
 
 ![image_groups_by_image](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_image.png)  
 
