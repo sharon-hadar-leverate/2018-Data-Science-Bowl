@@ -60,8 +60,9 @@ Basic information:
 * Each image is reshaped to (128,128,3)  
 
 In order to understand the data we first need to look at some random images.  
+  
 ![plot_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/plot_images.png)  
-we can clearly see that the images differ from each other, for example, we can see that the first image is grayscale where the third image is purple and light purple.  
+The pictures are clearly different, for example, we can see that the first image is grayscale where the third image is purple and light purple.  
   
 Dimension reduction techniques can be used for better visualisation of the data: 
   
@@ -69,16 +70,19 @@ Dimension reduction techniques can be used for better visualisation of the data:
 In this figure, two techniques were used:  
 PCA which is a mathematical transformation from related variables into unrelated variables based on the variables largest possible variance,  
 
-and UMAP (Uniform Manifold Approximation and Projection, Feb 2018)[18], which is a novel approach for dimension reduction, that uses local manifold approximations and patches together their local fuzzy simplicial set representations.  
+and UMAP (Uniform Manifold Approximation and Projection, Feb 2018)[18], Which is a new approach to reducing dimensions, using local approximation and various corrections, along with simple fuzzy local representations.
 
-UMAP shows better visualization than PCA, also, it is demonstrably faster than t-SNE and provides better scaling.   
+UMAP shows better visualization than PCA, also, according to UMAP paper, it is demonstrably faster than t-SNE and provides better scaling.   
   
-<p align="center"><img width="460" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png"></p>  
+<p align="center"><img width="460" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png"></p>   
+
+Clustring the data into groups can help identify the diffrent groups of images in the data, a good unsupervised clustring method for this problem is DBSCAN.
+DBSCAN (Density-based spatial clustering of applications with noise)
+groups together points that are close to each other based on a distance measurement and a minimum number of points.  
+DBSCAN finds the optimum number of clusters and does need an input the number of clusters to generate [19].   
+
 
 ![image_groups_by_image](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_image.png)  
-
-After using UMAP, i used DBSCAN in order to cluster the data into groups,   
-DBSCAN finds the optimum number of clusters and does need an input the number of clusters to generate [19].   
 
 It seems that additional mining is required, for example, group number 3 includes purple and grayscale images.  
 one exploring direction is to use the image histogram which gives an overall idea about the intensity distribution of an image,  
