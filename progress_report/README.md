@@ -85,7 +85,7 @@ DBSCAN was also proven to be better than other clustering technics according to 
 
 It seems that additional mining is required, for example, group number 3 includes purple and grayscale images.  
 one exploring direction is to use the image histogram which gives an overall idea about the intensity distribution of an image,  
-in the plot above, it seems that a grayscale image has a similar distribute to other grayscale images but has different distribute to purple images.  
+In the plot above, it seems that a grayscale image has a similar distribute to other grayscale images but has different distribute to purple images.  
 
 <p align="center"><img width="600" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images_hist.png"></p>  
 
@@ -104,6 +104,12 @@ The clusters information:
 | 6 | 16 | white | gray | medium | medium | 
 | 7 | 32 | light perpule | perpule | extra small | medium -> many | 
 | 8 | 12 | black | gray | small -> extra large | one -> few | 
+
+For conclusion, the data is diverse by number of nuclei in an image, the nucleus width, and the image colors, 
+The data can be gathered into different groups that could receive different treatment,  
+the majority of the data is grayscale with a small amount of medium size nucleus,  
+the minority are gray nucleus with a white background which is a negative projection of the majority group.  
+
 
 ## A review of basic techniques in image segmentation
 
