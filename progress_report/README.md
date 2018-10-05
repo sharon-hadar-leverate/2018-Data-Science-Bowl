@@ -142,7 +142,7 @@ The threshold is calculated per image:
 ![th_yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen.png)  
 
 The binarization should be reversed in cases where the nuclei is darker than the background,
-If the original value is #below# the threshold the value is assigned to be one (white), and if the value is #above# the threshold the value is assigned to be zero (black):  
+If the original value is **below** the threshold the value is assigned to be one (white), and if the value is **above** the threshold the value is assigned to be zero (black):  
 
 ![th_yen2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen2.png)  
    
