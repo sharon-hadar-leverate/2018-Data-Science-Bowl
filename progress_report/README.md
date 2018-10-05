@@ -111,18 +111,15 @@ Most of the data is grayscale with a small amount of medium size nucleus.
 The data minority group has a gray nucleus with a white background, which is the opposite of most of the data.   
 
 
-## A review of basic techniques in image segmentation
+## Image Segmentation
 
-**Image Segmentation** is the process of partitioning a digital image into multiple segments (sets of pixels, a.k.a super-pixels)[1]   
+Image Segmentation is the process of partitioning a digital image into multiple segments (sets of pixels, a.k.a super-pixels)[1]   
 The goal of segmentation is to simplify and/or change the representation of an image into something that is more meaningful and easier to analyze.   
 Image segmentation is typically used to locate objects and boundaries (lines, curves, etc.) in images.  
 
 ### More precisely, image segmentation is the process of assigning a label to every pixel in an image such that pixels with the same label share certain characteristics.
 
-
-##### Basic Techniques:
-
-## Threshold
+## Threshold as a segmentation technique
 
 Threshold method for image segmentation is a binarization of the image according to a selected threshold.  
   
@@ -141,12 +138,12 @@ The threshold is calculated per image:
 
 ![th_yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen.png)  
 
-The binarization should be reversed in cases where the nuclei is darker than the background,
+The binarization should be reversed in cases where the nuclei is darker than the background,  
 If the original value is **below** the threshold the value is assigned to be one (white), and if the value is **above** the threshold the value is assigned to be zero (black):  
 
 ![th_yen2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen2.png)  
    
-### IoU - Intersection over union
+### IoU - Intersection over union (performance index)
 IoU is a segmentation performance measure which stands for intersection over union.  
 The intersection (A∩B) is comprised of the pixels found in both the prediction mask and the ground truth mask, 
 whereas the union (A∪B) is simply comprised of all pixels found in either the prediction or target mask.  
