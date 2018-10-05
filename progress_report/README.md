@@ -128,20 +128,21 @@ Threshold method for image segmentation is a binarization of the image according
   
 ![arbitrary_th](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/arbitrary_th.png)  
 For example, this figure uses an arbitrary threshold of 50 on a random image,  
-each cell in the image has a value between 0 to 256, where 0 is black and 256 is white.  
+Each cell in the image has a value between 0 to 256, where 0 is black and 256 is white.  
 The threshold methods assign a new value base on the original value.  
-If the original value is greater than the threshold (>50) the value is assigned to one (white) and if the value is lower the value is assigned to zero (black)
+If the original value is above the threshold (>50) the value is assigned to be one (white), and if the value is below the threshold the value is assigned to be zero (black)
 
 Several popular methods are used in industry including Otsu's method (maximum variance), and Yen method (maximum correlation).  
 
 #### Yen threshold: 
-In this method the threshold is calculated base on the incompatibility between the final image and the original image, (implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12]).  
+In this method the threshold is calculated base on the incompatibility between the final image and the original image,  
+Its implements thresholding based on a maximum correlation criterion for bilevel thresholding as a more computationally efficient alternative to entropy measures.[12].  
 The threshold is calculated per image:  
 
 ![th_yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen.png)  
 
 The binarization should be reversed in cases where the nuclei is darker than the background,
-if the original value is lower than the threshold it would be 1 (white) and if the value is greater it would be 0 (black):  
+If the original value is #below# the threshold the value is assigned to be one (white), and if the value is #above# the threshold the value is assigned to be zero (black):  
 
 ![th_yen2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen2.png)  
    
