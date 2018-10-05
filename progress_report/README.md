@@ -181,13 +181,14 @@ The quality of the solution depends on the initial set of clusters and the value
 ![kmeans_segmentetion](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/kmeans_segmentetion.PNG)
 
 The **watershed transformation**[4] considers the gradient magnitude of an image as a topographic surface.
-Pixels having the highest gradient magnitude intensities (GMIs) correspond to watershed lines, which represent the region boundaries.   Water placed on any pixel enclosed by a common watershed line flows downhill to a common local intensity minimum (LIM).  
+Pixels having the highest gradient magnitude intensities (GMIs) correspond to watershed lines, which represent the region boundaries.    Water placed on any pixel enclosed by a common watershed line flows downhill to a common local intensity minimum (LIM).  
 Pixels draining to a common minimum form a catch basin, which represents a segment.  
 
 ![watershed_segmentetion](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/watershed_segmentetion.PNG)
 
 #### Trainable segmentation:
-Most segmentation methods are based only on color information of pixels in the image. Humans use much more knowledge than this when doing image segmentation, but implementing this knowledge would cost considerable computation time and would require a huge domain knowledge database, which is currently not available. In addition to traditional segmentation methods, there are trainable segmentation methods which can model some of this knowledge.  
+Most segmentation methods are based only on color information of pixels in the image. Humans use much more knowledge than this when doing image segmentation, but implementing this knowledge would cost considerable computation time and would require a huge domain knowledge database, which is currently not available.   
+In addition to traditional segmentation methods, there are trainable segmentation methods which can model some of this knowledge.  
 One of these methods is Deep learning.  
 
 
