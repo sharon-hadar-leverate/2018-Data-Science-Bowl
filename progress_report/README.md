@@ -113,12 +113,14 @@ The data minority group has a gray nucleus with a white background, which is the
 
 ## A review of basic techniques in image segmentation
 
-**Image Segmentation** s the process of partitioning a digital image into multiple segments (sets of pixels, a.k.a super-pixels)[1] The goal of segmentation is to simplify and/or change the representation of an image into something that is more meaningful and easier to analyze. Image segmentation is typically used to locate objects and boundaries (lines, curves, etc.) in images.  
+**Image Segmentation** is the process of partitioning a digital image into multiple segments (sets of pixels, a.k.a super-pixels)[1]   
+The goal of segmentation is to simplify and/or change the representation of an image into something that is more meaningful and easier to analyze.   
+Image segmentation is typically used to locate objects and boundaries (lines, curves, etc.) in images.  
 
 ### More precisely, image segmentation is the process of assigning a label to every pixel in an image such that pixels with the same label share certain characteristics.
 
 
-##### Basic Techniques
+##### Basic Techniques:
 
 ## Threshold
 
@@ -127,7 +129,8 @@ Threshold method for image segmentation is a binarization of the image according
 ![arbitrary_th](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/arbitrary_th.png)  
 For example, this figure uses an arbitrary threshold of 50 on a random image,  
 each cell in the image has a value between 0 to 256, where 0 is black and 256 is white.  
-the threshold methods assign a new value base on the original value, if the original value is greater than the threshold (>50) it would be 1 (white) and if the value is lower it would be 0 (black)
+The threshold methods assign a new value base on the original value.  
+If the original value is greater than the threshold (>50) the value is assigned to one (white) and if the value is lower the value is assigned to zero (black)
 
 Several popular methods are used in industry including Otsu's method (maximum variance), and Yen method (maximum correlation).  
 
