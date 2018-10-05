@@ -62,7 +62,7 @@ Basic information:
 In order to understand the data we first need to look at some random images.  
   
 ![plot_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/plot_images.png)  
-The pictures are clearly different, for example, we can see that the first image is grayscale where the third image is purple and light purple.  
+The images are clearly different, for example, we can see that the first image is grayscale where the third image is purple and light purple.  
   
 Dimension reduction techniques can be used for better visualisation of the data: 
   
@@ -78,7 +78,8 @@ UMAP shows better visualization than PCA, also, according to UMAP paper, it is d
 
 Clustering the data into groups can help identify the different groups of images in the data, a good unsupervised clustering method for this problem is DBSCAN.  
 DBSCAN (Density-based spatial clustering of applications with noise) groups together points that are close to each other based on a distance measurement and a minimum number of points.  
-DBSCAN finds the optimum number of clusters and does need an input the number of clusters to generate [19].  
+DBSCAN finds the optimum number of clusters and does not need an input the number of clusters to generate [19].  
+DBSCAN was also proven to be better than other clustering technics according to sklearn benchmark [20].
 
 ![image_groups_by_image](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_image.png)  
 
@@ -120,7 +121,7 @@ Threshold method for image segmentation is a binarization of the image according
 ![arbitrary_th](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/arbitrary_th.png)  
 For example, this figure uses an arbitrary threshold of 50 on a random image,  
 each cell in the image has a value between 0 to 256, where 0 is black and 256 is white.  
-the threshold methods assign a new value base on the original value, if the original value is greater then the threshold (>50) it would be 1 (white) and if the value is lower it would be 0 (black)
+the threshold methods assign a new value base on the original value, if the original value is greater than the threshold (>50) it would be 1 (white) and if the value is lower it would be 0 (black)
 
 Several popular methods are used in industry including Otsu's method (maximum variance), and Yen method (maximum correlation).  
 
@@ -130,8 +131,8 @@ The threshold is calculated per image:
 
 ![th_yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen.png)  
 
-The binarization should be reversed in cases where the nuclei is darker then the background,
-if the original value is lower then the threshold it would be 1 (white) and if the value is greater it would be 0 (black):  
+The binarization should be reversed in cases where the nuclei is darker than the background,
+if the original value is lower than the threshold it would be 1 (white) and if the value is greater it would be 0 (black):  
 
 ![th_yen2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen2.png)  
    
@@ -532,3 +533,4 @@ Finally, I will evaluate the new models in relation to the same baseline.
 [17] https://arxiv.org/pdf/1606.06724.pdf  
 [18] https://arxiv.org/pdf/1802.03426.pdf
 [19] https://web.cs.dal.ca/~zincir/bildiri/jias-ckdnm.pdf
+[20] http://scikit-learn.org/0.15/auto_examples/cluster/plot_cluster_comparison.html#example-cluster-plot-cluster-comparison-py
