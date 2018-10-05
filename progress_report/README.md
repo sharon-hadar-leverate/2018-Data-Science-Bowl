@@ -105,10 +105,10 @@ The clusters information:
 | 7 | 32 | light perpule | perpule | extra small | medium -> many | 
 | 8 | 12 | black | gray | small -> extra large | one -> few | 
 
-For conclusion, the data are mainly characterized by the number of nuclei in an image, the nucleus width, and the image colors,  
-The data can be gathered into different groups that could receive different treatment,  
-most of the data is grayscale with a small amount of medium size nucleus,  
-the data minority group has a gray nucleus with a white background, which is the opposite of most of the data.  
+For conclusion, the data are mainly characterized by the number of nuclei in an image, the nucleus width, and the image colors.  
+The data can be gathered into different groups that could receive different treatment.  
+Most of the data is grayscale with a small amount of medium size nucleus.  
+The data minority group has a gray nucleus with a white background, which is the opposite of most of the data.   
 
 
 ## A review of basic techniques in image segmentation
