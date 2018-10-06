@@ -207,7 +207,7 @@ A neural network is characterized by:
 **Learning algorithm:** Its method of determining the weights on the connections.  
   
 One way to understand neural networks is to observe logistic regression:  
-Logistic regression uses a binary classification on input data, 
+Logistic regression uses a binary classification on input data,  
 Architecture: the model takes the input's n features and uses a weighted sum over them,   
 Activation function: the weighted sum is then passed as an input to a log function and the classification is activated to one if the log output is greater than a certain threshold.   
 Learning algorithm: learn optimal weights by using optimization techniques such as gradient descent.    
@@ -225,9 +225,10 @@ MLP is defined by several parameters:
  
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/MLP.PNG)
   
-### How To Train NN (neural network) or Logistic regression:  
-Logistic regression uses binary cross-entropy as a loss function, which is a very popular technique in binary classification.  
-When we train a model we are trying to minimize the loss function to get the model optimal weights, one way to minimize this loss function is using Gradient Descent.  
+### How To Train a Neural Network:    
+When we train a model we are trying to minimize the loss function to get the model optimal weights,  
+for example, Logistic regression uses binary cross-entropy as a loss function, which is a very popular technique in binary classification.  
+one way to minimize this loss function is using Gradient Descent.  
 
 #### Gradient Descent (GD): [7]
 
