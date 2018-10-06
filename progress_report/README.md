@@ -165,8 +165,8 @@ Both threshold methods score:
 
 | technique   | Mean IoU |
 | ------------- | ------------- |
-| Threshold Yen | 0.743 |
-| Threshold Otsu | 0.739 |
+| Threshold Yen | 0.696 |
+| Threshold Otsu | 0.718 |
 
 
 ##### Additional Segmentation Techniques
@@ -208,9 +208,9 @@ A neural network is characterized by
 
 One way to understand neural networks is to observe logistic regression:  
 Logistic regression uses a binary classification on input data, 
-Architecture: the model takes the input's n features and uses a weighted sum over them , 
-Activation function: the weighted sum is then passed as an input to a log function and the classification is activated to one if the log output is greater than a certain threshold. 
-Learning algorithm: learn optimal weights by using optemize techniques such as gradient descent.  
+Architecture: the model takes the input's n features and uses a weighted sum over them,   
+Activation function: the weighted sum is then passed as an input to a log function and the classification is activated to one if the log output is greater than a certain threshold.   
+Learning algorithm: learn optimal weights by using optimization techniques such as gradient descent.    
 #### Logistic regression is a simple neural network.
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/%E2%80%8F%E2%80%8FLR.PNG)  
 
