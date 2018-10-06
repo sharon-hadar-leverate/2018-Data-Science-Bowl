@@ -194,22 +194,26 @@ One of these methods is Deep learning.
 
 ## Deep Learning and Neural Network consepts:
 
-**Deep learning** is a subfield of machine learning algorithms that examine construction of models of hierarchical representation of the data, deep learning is what powers the most human-like artificial intelligence.  
-**Neural networks** simulates a lot of tightly connected units in order to learn to recognize patterns and make decisions in a human manner,  
-A neural network does not need to be programmed to study explicitly, it learns everything by itself.  
-
-In general, there is some math that could be done in order to solve a segmentetion problem,  
-But figuring out specifically what math this is will be very complicated.
-Instead of actually coming up with the exact math, just describe how the math will look.  
-for example: use diffrent threshold on small regions of the image.  
-
+**Deep learning** is a subfield of machine learning algorithms that examine and construct models of hierarchical representation of the data, deep learning is what powers the most human-like (natural) artificial intelligence like image and speech recognizion.  
 Though the main ideas behind deep learning have been in place for decades, it wasn’t until data sets became large enough and computers got fast enough that their true power could be revealed.  
+  
+**Neural networks** simulates a lot of tightly connected units in order to describe a hierarchical model, learn to recognize patterns and make decisions in a human manner.   
 
-One way to understand deep learning is to observe logistic regression:  
+#### A neural network does not need to be programmed to study explicitly, it learns everything by itself.   
+
+A neural network is characterized by
+**Architecture:** Its pattern of connections between the neurons.
+**Activation function:** Neurons get activated if the network input exceeds their threshold value.
+**Learning algorithm:** Its method of determining the weights on the connections.
+
+One way to understand neural networks is to observe logistic regression:  
 Logistic regression uses a binary classification on input data, 
-the model takes the input's n features and uses a weighted sum over them, the weighted sum is then passed as an input to a log function and the classification is activated to one if the log output is greater than a certain threshold.  
+Architecture: the model takes the input's n features and uses a weighted sum over them , 
+Activation function: the weighted sum is then passed as an input to a log function and the classification is activated to one if the log output is greater than a certain threshold. 
+Learning algorithm: learn optimal weights by using optemize techniques such as gradient descent.  
 #### Logistic regression is a simple neural network.
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/%E2%80%8F%E2%80%8FLR.PNG)
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/%E2%80%8F%E2%80%8FLR.PNG)  
+
 
 ### Multi Layer Perceptron (MLP):
 MLPs are just logistic regression where a set of nonlinear features are automatically learned from data.    
