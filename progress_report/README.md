@@ -201,7 +201,7 @@ Though the main ideas behind deep learning have been in place for decades, it wa
 
 #### A neural network does not need to be programmed to study explicitly, it learns everything by itself.   
 
-A neural network is characterized by
+A neural network is characterized by:  
 **Architecture:** Its pattern of connections between the neurons.  
 **Activation function:** Neurons get activated if the network input exceeds their threshold value.  
 **Learning algorithm:** Its method of determining the weights on the connections.  
