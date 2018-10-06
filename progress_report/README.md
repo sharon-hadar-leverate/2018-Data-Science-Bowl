@@ -216,7 +216,7 @@ Learning algorithm: learn optimal weights by using optimization techniques such 
 
 
 ### Multi Layer Perceptron (MLP):
-MLPs are stacked simple neural networks, where an output of one layer serves as an input to the next layer.    
+MLPs are simple neural networks in a stack, where one layers output is used as input to the next layer. 
 MLP is defined by several parameters:  
  - Number of hidden units in each layer  
  - Number of hidden layers in the network  
