@@ -194,17 +194,15 @@ One of these methods is Deep learning.
 
 ## Deep Learning and Neural Network consepts:
 
-**Deep learning** deals with the construction of models of machine learning, which examine the hierarchical representation of the data.  
-**Neural networks** are a type of machine learning algorithm that simulate a lot of tightly connected units in order to learn to recognize patterns and make decisions in a human manner.  
-A neural network does not need to be programmed to study explicitly: it learns everything by itself,
+**Deep learning** is a subfield of machine learning algorithms that examine construction of models of hierarchical representation of the data, deep learning is what powers the most human-like artificial intelligence.  
+**Neural networks** simulates a lot of tightly connected units in order to learn to recognize patterns and make decisions in a human manner,  
+A neural network does not need to be programmed to study explicitly, it learns everything by itself.  
 
 In general, there is some math that could be done in order to solve a segmentetion problem,  
 But figuring out specifically what math this is will be very complicated.
 Instead of actually coming up with the exact math, just describe how the math will look.  
 for example: use diffrent threshold on small regions of the image.  
 
-Deep learning is a subfield of machine learning.  
-While both fall under the broad category of artificial intelligence, deep learning is what powers the most human-like artificial intelligence.  
 Though the main ideas behind deep learning have been in place for decades, it wasn’t until data sets became large enough and computers got fast enough that their true power could be revealed.  
 
 One way to understand deep learning is to observe logistic regression:  
