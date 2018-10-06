@@ -216,12 +216,11 @@ Learning algorithm: learn optimal weights by using optimization techniques such 
 
 
 ### Multi Layer Perceptron (MLP):
-MLPs are just logistic regression where a set of nonlinear features are automatically learned from data.    
+MLPs are stacked simple neural networks, where an output of one layer serves as an input to the next layer.    
 MLP is defined by several parameters:  
  - Number of hidden units in each layer  
  - Number of hidden layers in the network  
- - The nonlinear activation function: (could also be RELU an rectified linear unit or tanh)  
- - Learning rate for to use in SGD (using the chain rule of derivatives)  
+ - The activation functions at each layer.
  
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/MLP.PNG)
   
