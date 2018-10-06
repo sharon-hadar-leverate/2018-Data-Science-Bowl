@@ -325,20 +325,35 @@ Trainable params: 1,177
 Non-trainable params: 0  
 ____________________________________________________________________________________________________
 
-#### Testing The Model
+
+I tried different number of epochs, learning rates, and batch sizes on this architecture and evaluate them base on the test set mean iou.  
+the full investigation is shown in this jupyter notebook.  
+the most successful parameters are:  
+epochs: 100 with early stop - meaning that the training stops after 5 epochs with no change in the val_loss.  
+batch_size: of 8 images.    
+learning rate: 1e-3.  
+
+![FCN_v2_lcurves](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/FCN_v2_lcurves.png)
+
+The learning curve is sharp at first but becomes monotonous rather quickly, the monotonous slope indicates slow learning that requires a greater amount of data, an arithmetic that does not require a large amount of data has a higher learning curve and becomes very quickly blunt.  
 
 The model prediction has one channel and a spectrum of values while the segmentation mask has only 2 values.
-In order to get a mask prediction, I used binarization with a threshold.  
-I selected this threshold by testing all test set samples IoU's as a function of all thresholds from 0 to 1 with a step of 0.001.
+In order to get a mask prediction, I used binarization with a threshold. 
+I also tried using Yen thresholding which received mean iou of 0.55 and Otsu thresholding which is better with mean iou of 0.66,   
+But the best resolved received using a threshold by testing all train set samples iou's as a function of all thresholds from 0 to 1 with a step of 0.001.
 The result:  
-![FCN_results](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/FCC_model.png)  
+``` 
+mean test IOU:  0.7381347267693156
+```  
+![FCN_vs_evaluate](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/FCN_vs_evaluate.png)  
 
-FCN received an IoU average 0.501, which is worse than the Yen threshold:  
+FCN received an IoU average 0.738, which is better than the Threshold Otsu:  
 
-| technique   | IoU |
+| technique   | Mean IoU |
 | ------------- | ------------- |
-| Threshold Yen | 0.573  | 
-| FCN | 0.501  |
+| FCN | 0.738 |
+| Threshold Otsu | 0.718 |
+| Threshold Yen | 0.696 |
 
 Apart from fully connected layers, one of the main problems with using CNN's for segmentation is pooling layers.  
 Pooling layers increase the field of view and are able to aggregate the context while discarding the ‘where’ information.    
