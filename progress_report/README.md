@@ -447,14 +447,14 @@ When comparing Unet to FCN, Unet has 30,437 trainable parameters,
 almost 30 times more parameters then FCN, the training procedure takes more time and required more memory,   
 the large model (which includes an additional contracting and expansive step) also require a strong GPU.  
 ``` 
-mean test IOU:  0.8251967977668287
+mean test IOU:  0.8218275476316186
 ```  
 ![unet](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UNET_v2_evaluate.png)  
 Unet got a highest average IoU score of 0.825.  
 
 | technique   | Mean IoU |
 | ------------- | ------------- |
-| UNET | 0.825 |
+| UNET | 0.821 |
 | FCN | 0.738 |
 | Threshold Otsu | 0.718 |
 | Threshold Yen | 0.696 |
@@ -464,13 +464,12 @@ In order to understand Ladder Network, one need to understand Denoising Autoenco
 
 ## Autoencoders
 
-An autoencoder learns to compress data from the input layer into a shortcode, and then uncompress that code into something that closely matches the original data.   
+An autoencoder learns to encode the input layer into a shortcode, and then decode the shortcode to closely matches the original input.   
 The simplest form of an autoencoder is a feedforward neural network having an input layer where the output layer having the same number of nodes as the input layer,   
 and with the purpose of reconstructing its own inputs (instead of predicting the target value Y given inputs X).  
 Therefore, autoencoders are unsupervised learning models.  
 
-![autoencoder2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/autoencoder2.png)  
-
+#### UNET learns to encode the input layer into a shortcode, and then decode the shortcode to closely matches the original input segmentetion.  
 
 #### Denoising Autoencoders  
 This idea relay on the Hebbian learning concept - A synapse between two neurons is strengthened when the neurons on either side of the synapse (input and output) have highly correlated outputs.  
@@ -491,10 +490,18 @@ Hidden layer representation (what the encoder has learn by levels of corruption)
 Each square is one hidden unit visualization of the weight vector between all inputs and the specific hidden unit [13]  
 There is a more significant representation as the signal is more corrupt, clear edges of digits are shown at 50% corruption.
 
-One way to use the benefits of Denoising Autoencoders is by pretraining.  
+![adding_noise](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/adding_noise.png )  
+
+![denoised lc](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/denoised.png)  
+
+![noisy large unet v3](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/denoised1.png)  
+
+
+### Batch Normalization
+
 
 #### Unsupervised Pretraining
-
+One way to use the benefits of Denoising Autoencoders is by pretraining.  
 Deep neural network model weights start with random values and 'twiks' with each sample/batch according to the gradient,   
 when pretraining a deep neural network, 
 the model start with almost optimal weights for the problem and is fine-tuned with the training samples.  
