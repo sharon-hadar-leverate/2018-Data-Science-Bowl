@@ -36,7 +36,7 @@ I would combine each with a ladder network components and evaluate these models.
 - [X] Autoencoders
 - [X] Ladder Networks
 - [X] Future Work
-- [X] [Description of primary products](2018-Data-Science-Bowl.ipynb)
+- [X] [Description of primary products](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/nuclei_segmentation.ipynb)
 - [X] Bibliography
 
 ## 2018 data sience bowl description
@@ -586,7 +586,7 @@ Finally, I will evaluate the new models in relation to the same baseline.
 
 
 ## Description of primary products
-[click here](2018-Data-Science-Bowl.ipynb) to see the hole jupyter notebook
+[click here](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/nuclei_segmentation.ipynb) to see the hole jupyter notebook
 
 ## Bibliography.
 [1] Linda G. Shapiro and George C. Stockman (2001): “Computer Vision”, pp 279-325, New Jersey, Prentice-Hall, ISBN 0-13-030796-3  
