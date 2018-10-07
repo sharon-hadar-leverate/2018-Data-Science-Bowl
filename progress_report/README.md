@@ -469,7 +469,7 @@ The simplest form of an autoencoder is a feedforward neural network having an in
 and with the purpose of reconstructing its own inputs (instead of predicting the target value Y given inputs X).  
 Therefore, autoencoders are unsupervised learning models.  
 
-#### UNET learns to encode the input layer into a shortcode, and then decode the shortcode to closely matches the original input segmentetion.  
+#### UNET learns to encode the input layer into a shortcode, and then decode the shortcode to closely matches the original input segmentation. 
 
 #### Denoising Autoencoders  
 This idea relay on the Hebbian learning concept - A synapse between two neurons is strengthened when the neurons on either side of the synapse (input and output) have highly correlated outputs.  
