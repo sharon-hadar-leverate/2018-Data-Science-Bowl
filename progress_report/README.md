@@ -441,13 +441,15 @@ Trainable params: 30,437
 Non-trainable params: 0  
 ____________________________________________________________________________________________________
 
-![large_unet_v2_lcurves](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/large_unet_v2_lcurves.png)  
-
-![unet](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UNET_v2_evaluate.png)  
+![large_unet_v2_lcurves](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/large_unet_v2_lcurves.png)   
 
 When comparing Unet to FCN, Unet has 30,437 trainable parameters,   
 almost 30 times more parameters then FCN, the training procedure takes more time and required more memory,   
 the large model (which includes an additional contracting and expansive step) also require a strong GPU.  
+``` 
+mean test IOU:  0.8251967977668287
+```  
+![unet](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UNET_v2_evaluate.png)  
 Unet got a highest average IoU score of 0.825.  
 
 | technique   | Mean IoU |
