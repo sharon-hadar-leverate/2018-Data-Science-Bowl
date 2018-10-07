@@ -506,7 +506,7 @@ TODO : write on BN from ladder network and remove ladder network
 TODO : show the new architecture
 
 
-When adding batch normalitetion  to Unet model per convlution layer on the noised data, the mean iou is improved:    
+When adding batch normalization to Unet model per convolution layer on the noised data, the mean iou is improved:  
 ```
 mean test IOU:  0.8343306901825481
 ```  
@@ -521,6 +521,9 @@ mean test IOU:  0.8343306901825481
 | Threshold Otsu | 0.718 |
 | Threshold Yen | 0.696 |
 
+
+
+TODO: add Ladder Networks and Unsupervised Pretraining to Related Work
 
 #### Unsupervised Pretraining
 One way to use the benefits of Denoising Autoencoders is by pretraining.  
@@ -554,6 +557,8 @@ ladder network architecture resemble the unet architecture, These models use an 
 f(l) The feedforward path with the corrupted feedforward path  
 g(l) Denoising functions  
 C(l)d Cost functions on each layer trying to minimize the difference between zˆ(l) and z(l)  
+
+
 
 ### Related Work:
 
