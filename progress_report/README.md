@@ -493,18 +493,33 @@ There is a more significant representation as the signal is more corrupt, clear 
 Random Gaussian noise was added to the train set with mean 0 and SD of 256:  
 ![adding_noise](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/adding_noise.png )  
 
-When training a new Unet model on the noised data, the mean iou is improved:    
+When training a new Unet model on the noised data, the mean iou is not improved:    
 ```
-mean test IOU: 0.8304482490780001
+mean test IOU:  0.820656430606358
 ```  
 ![denoised lc](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/denoised.png)  
 
 ![noisy large unet v3](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/denoised1.png)  
 
 ### Batch Normalization  
+TODO : write on BN from ladder network and remove ladder network  
+TODO : show the new architecture
 
+
+When adding batch normalitetion  to Unet model per convlution layer on the noised data, the mean iou is improved:    
+```
+mean test IOU:  0.8343306901825481
+```  
 ![bn noisy large unet v3](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/denoising_bn_UNET_v2_evaluate.png)  
 
+| technique   | Mean IoU |
+| ------------- | ------------- |
+| Noisy UNET with Batch Normalization   | 0.834 |
+| UNET | 0.821 |
+| Noisy UNET | 0.820 |
+| FCN | 0.738 |
+| Threshold Otsu | 0.718 |
+| Threshold Yen | 0.696 |
 
 
 #### Unsupervised Pretraining
