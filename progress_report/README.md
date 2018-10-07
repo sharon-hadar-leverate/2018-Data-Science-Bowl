@@ -490,14 +490,21 @@ Hidden layer representation (what the encoder has learn by levels of corruption)
 Each square is one hidden unit visualization of the weight vector between all inputs and the specific hidden unit [13]  
 There is a more significant representation as the signal is more corrupt, clear edges of digits are shown at 50% corruption.
 
+Random Gaussian noise was added to the train set with mean 0 and SD of 256:  
 ![adding_noise](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/adding_noise.png )  
 
+When training a new Unet model on the noised data, the mean iou is improved:    
+```
+mean test IOU: 0.8304482490780001
+```  
 ![denoised lc](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/denoised.png)  
 
 ![noisy large unet v3](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/denoised1.png)  
 
+### Batch Normalization  
 
-### Batch Normalization
+![bn noisy large unet v3](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/denoising_bn_UNET_v2_evaluate.png)  
+
 
 
 #### Unsupervised Pretraining
