@@ -347,6 +347,8 @@ mean test IOU:  0.7381347267693156
 ```  
 ![FCN_vs_evaluate](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/FCN_vs_evaluate.png)  
 
+Different data groups got different treatment with different iou scores,   
+the first and fourth groups, which is most of the data, got pretty good iou, while other groups got below 0.72 and even close to zero.   
 FCN received an IoU average 0.738, which is better than the Threshold Otsu:  
 
 | technique   | Mean IoU |
@@ -439,19 +441,21 @@ Trainable params: 30,437
 Non-trainable params: 0  
 ____________________________________________________________________________________________________
 
+![large_unet_v2_lcurves](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/large_unet_v2_lcurves.png)  
 
-![unet](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/Unet_model2.png)
+![unet](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UNET_v2_evaluate.png)  
 
 When comparing Unet to FCN, Unet has 30,437 trainable parameters,   
 almost 30 times more parameters then FCN, the training procedure takes more time and required more memory,   
 the large model (which includes an additional contracting and expansive step) also require a strong GPU.  
-Unet got a highest average IoU score of 0.807.  
+Unet got a highest average IoU score of 0.825.  
 
-| technique   | IoU |
+| technique   | Mean IoU |
 | ------------- | ------------- |
-| Unet | 0.807  |
-| Threshold Yen | 0.573  | 
-| FCN | 0.501  |
+| UNET | 0.738 |
+| FCN | 0.738 |
+| Threshold Otsu | 0.718 |
+| Threshold Yen | 0.696 |
 
 This is the first part of acquiring a baseline. in the next part, I would combine these methods with Ladder Networks components.    
 In order to understand Ladder Network, one need to understand Denoising Autoencoders.  
