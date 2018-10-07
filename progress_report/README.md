@@ -452,7 +452,7 @@ Unet got a highest average IoU score of 0.825.
 
 | technique   | Mean IoU |
 | ------------- | ------------- |
-| UNET | 0.738 |
+| UNET | 0.825 |
 | FCN | 0.738 |
 | Threshold Otsu | 0.718 |
 | Threshold Yen | 0.696 |
