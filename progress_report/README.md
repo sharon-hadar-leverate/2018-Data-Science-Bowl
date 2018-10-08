@@ -31,14 +31,25 @@ I would combine each with noisy input and batch normalization and evaluate these
 
 #### In this report i will introduce: 
 
+- [X] Abstract
+- [X] Figure list
 - [X] 2018 data sience bowl description 
-- [X] A brif review of basic techniques in image segmentation
-- [X] Deep Learning consepts
+- [X] Investigate the data
+- [X] Image segmentation
+- [X] Threshold as a segmentation technique
+- [X] IoU - intersection over union (performance index)
+- [X] Deep Learning and Neural Network consepts
+- [X] Multi Layer Perceptron (MLP)
+- [X] How to train a Neural Network
 - [X] Convolutional Neural Network (CNN)
 - [X] Use of Deep Learning in segmentation problem
+- [X] Fully Convolutional Networks exploring
+- [X] U-Net
+- [X] Unet exploring
 - [X] Autoencoders
-- [X] Ladder Networks
-- [X] Future Work
+- [X] Batch Normalization
+- [X] Discussion and future development
+- [X] Related work
 - [X] [Description of primary products](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/nuclei_segmentation.ipynb)
 - [X] Bibliography
 
