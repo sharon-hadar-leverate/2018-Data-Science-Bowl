@@ -82,6 +82,7 @@ and UMAP (Uniform Manifold Approximation and Projection, Feb 2018)[18], Which is
 UMAP shows better visualization than PCA, also, according to UMAP paper, it is demonstrably faster than t-SNE and provides better scaling.   
   
 <p align="center"><img width="460" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png"></p>   
+
 > (Figure 3: UMAP embedding with annotated images, each image is annotated to her 2d UMAP projection)   
 
 Clustering the data into groups can help identify the different groups of images in the data, a good unsupervised clustering method for this problem is DBSCAN.  
@@ -97,6 +98,7 @@ one exploring direction is to use the image histogram which gives an overall ide
 In the plot above, it seems that a grayscale image has a similar distribute to other grayscale images but has different distribute to purple images.  
 
 <p align="center"><img width="600" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images_hist.png"></p>  
+
 > (Figure 5: UMAP image histogram embedding with annotated images, each image is annotated to her 2d UMAP projection based on images histograms)   
 
 
@@ -178,6 +180,8 @@ Intersection over union for this case (where white is intersection and grey is u
 Choosing a threshold would directly impact the IoU score:  
   
 ![score_per_iou](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/score_per_iou.png)  
+> (Figure 12: IOU score per threshold, each row is the same sample that been examen by different threshold, the first column is the image histogram where the black line is Yen threshold, same is the figure above, and the red line is the exam threshold, the second column is the binarization of the image based on that threshold and the third column is the IOU plot)  
+
 A reasonable value for a good segmentation is above 0.7.  
 0.4 IOU score is considered to be poor segmentation.
   
