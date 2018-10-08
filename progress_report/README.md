@@ -8,6 +8,8 @@ Student Sharon Hadar
 Supervisor Sharon Yalov-handzel, DR   
 ____________________________________________________________________________________________________
 
+![top](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/%E2%80%8F%E2%80%8FTOP.PNG)  
+
 ## Abstract
 Image segmentation is the process of assigning a label to each pixel in the image where each label is a group with certain characteristics, it is widely used in medical image processing, face recognition, autonomous vehicle etc.  
 In the 2010s, Deep Learning revolution and the use of it for medical segmentation has gained momentum,[21] in March 2015, a convolutional encoder-decoder architecture called Unet got the highest rank on the EM segmentation challenge [22].  
