@@ -54,36 +54,36 @@ I would combine each with noisy input and batch normalization and evaluate these
 - [X] Bibliography
 
 #### List of figures:
-- [1] images by segmentation and histogram.
-- [2] PCA embedding and UMAP embedding
-- [3] UMAP embedding with annotated images
-- [4] Images embedding groups
-- [5] UMAP image histogram embedding with annotated images
-- [6] Images histograms embedding groups,
-- [7] The arbitrary threshold
-- [8] Yen threshold example 1
-- [9] Yen threshold example 2
-- [10] IOU example 1
-- [11] IOU example 2
-- [12] IOU score per threshold
-- [13] Kmeans segmentetion
-- [14] Watershed segmentetion
-- [15] Logistic regression
-- [16] MLP
-- [17] Convolutional Neural Network (CNN)
-- [18] Dumb pixel Network
-- [19] FCN
-- [20] FCN learning curves
-- [21] FCN model evaluation
-- [22] Unet architecture
-- [23] Unet learning curves
-- [24] Unet model evaluation
-- [25] Denoise Autoencoder
-- [26] Hidden layer mean activation by denoise
-- [27] Noise input
-- [28] Denoised Unet learning curves
-- [29] Denoised Unet model evaluation
-- [30] Denoised Unet with Batch Normalization model evaluation  
+- figure 1: images by segmentation and histogram.
+- figure 2: PCA embedding and UMAP embedding
+- figure 3: UMAP embedding with annotated images
+- figure 4: Images embedding groups
+- figure 5: UMAP image histogram embedding with annotated images
+- figure 6: Images histograms embedding groups,
+- figure 7: The arbitrary threshold
+- figure 8: Yen threshold example 1
+- figure 9: Yen threshold example 2
+- figure 10 IOU example 1
+- figure 11: IOU example 2
+- figure 12: IOU score per threshold
+- figure 13: Kmeans segmentetion
+- figure 14: Watershed segmentetion
+- figure 15: Logistic regression
+- figure 16 MLP
+- figure 17: Convolutional Neural Network (CNN)
+- figure 18: Dumb pixel Network
+- figure 19: FCN
+- figure 20: FCN learning curves
+- figure 21: FCN model evaluation
+- figure 22: Unet architecture
+- figure 23: Unet learning curves
+- figure 24: Unet model evaluation
+- figure 25: Denoise Autoencoder
+- figure 26: Hidden layer mean activation by denoise
+- figure 27: Noise input
+- figure 28: Denoised Unet learning curves
+- figure 29: Denoised Unet model evaluation
+- figure 30: Denoised Unet with Batch Normalization model evaluation  
 
 ## 2018 data sience bowl description
 “2018 Data Science Bowl” is a Kaggle competition that its goal is to create an algorithm to automate nucleus detection in divergent images to advance medical discovery.  
