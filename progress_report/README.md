@@ -65,7 +65,8 @@ Basic information:
 In order to understand the data we first need to look at some random images.  
   
 ![plot_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/plot_images.png)  
-> (Figure 1: the first line are the images, the second line is the image segmentation and the last line is the image histogram)     
+> (Figure 1: the first line are the images, the second line is the image segmentation and the last line is the image histogram)   
+
 The images are clearly different, for example, we can see that the first image is grayscale where the third image is purple and light purple.  
   
 Dimension reduction techniques can be used for better visualisation of the data: 
