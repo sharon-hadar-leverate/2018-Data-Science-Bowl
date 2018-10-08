@@ -561,25 +561,26 @@ and insert it ass an additional input to the next iteration. [17]
 
 ## Bibliography.
 [1] Linda G. Shapiro and George C. Stockman (2001): “Computer Vision”, pp 279-325, New Jersey, Prentice-Hall, ISBN 0-13-030796-3  
-[2] https://www.mathworks.com/discovery/image-segmentation.html  
+[2] https://www.mathworks.com/discovery/image-segmentation.html   MathWorks "Segmentation methods in image processing and analysis"
 [3]  Barghout, Lauren; Sheynin, Jacob (2013). "Real-world scene perception and perceptual organization: Lessons from Computer Vision". Journal of Vision. 13 (9): 709–709. doi:10.1167/13.9.709.  
-[4]  Olsen, O. and Nielsen, M.: Multi-scale gradient magnitude watershed segmentation, Proc. of ICIAP 97, Florence, Italy, Lecture Notes in Computer Science, pages 6–13. Springer Verlag, September 1997.  
+[4]  Olsen, O. and Nielsen, M.: Multi-scale gradient magnitude watershed segmentation, Proc. of ICIAP 97, Florence, Italy, Lecture Notes in Computer Science, pages 6–13. Springer Verlag, September 1997.   
 [5] http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review  
-[6]  Andrew L. Beam (a great introduction to deep learning): http://beamandrew.github.io/deeplearning/2017/02/23/deep_learning_101_part2.html  
+[6]  Andrew L. Beam (a great introduction to deep learning):   http://beamandrew.github.io/deeplearning/2017/02/23/deep_learning_101_part2.html  
 [7] Bottou, Léon (1998). "Online Algorithms and Stochastic Approximations". Online Learning and Neural Networks. Cambridge University Press. ISBN 978-0-521-65263-6  
-[8] https://en.wikipedia.org/wiki/Convolutional_neural_network  
-[9] http://neuralnetworksanddeeplearning.com/  
-[10] http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review  
-[11] https://arxiv.org/abs/1505.04597  
-[12] https://ieeexplore.ieee.org/abstract/document/366472/  
-[13] https://www.youtube.com/watch?v=6DO_jVbDP3I&t=1s  
-[14] https://arxiv.org/pdf/1507.02672.pdf  
-[15] https://engineering.purdue.edu/elab/CortexNet/  
-[16] https://arxiv.org/pdf/1707.03718.pdf  
-[17] https://arxiv.org/pdf/1606.06724.pdf  
-[18] https://arxiv.org/pdf/1802.03426.pdf
-[19] https://web.cs.dal.ca/~zincir/bildiri/jias-ckdnm.pdf
-[20] http://scikit-learn.org/0.15/auto_examples/cluster/plot_cluster_comparison.html#example-cluster-plot-cluster-comparison-py
-[21] https://arxiv.org/ftp/arxiv/papers/1707/1707.02051.pdf
-[22] http://brainiac2.mit.edu/isbi_challenge/
-[23] https://towardsdatascience.com/batch-normalization-in-neural-networks-1ac91516821c
+[8] https://en.wikipedia.org/wiki/Convolutional_neural_network  "Convolutional neural network"
+From Wikipedia, the free encyclopedia  
+[9] http://neuralnetworksanddeeplearning.com/  "Deep Learning", book by Ian Goodfellow, Yoshua Bengio, and Aaron Courville  
+[10] http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review Sasank Chilamkurthy (July 5, 2017), "A 2017 Guide to Semantic Segmentation with Deep Learning"  
+[11] https://arxiv.org/abs/1505.04597  Olaf Ronneberger, Philipp Fischer, Thomas Brox (18 May 2015) "U-Net: Convolutional Networks for Biomedical Image Segmentation".  
+[12] https://ieeexplore.ieee.org/abstract/document/366472/  Jui-Cheng Yen, Fu-Juay Chang, Shyang Chang ( Mar 1995) "A new criterion for automatic multilevel thresholding"  
+[13] https://www.youtube.com/watch?v=6DO_jVbDP3I&t=1s  Hugo Larochelle (nov 2013) "Neural networks [6.3] : Autoencoder - example"   
+[14] https://arxiv.org/pdf/1507.02672.pdf  Antti Rasmus, Harri Valpola, Mikko Honkala, The Curious AI Company, Finland (jul 2015) "Semi-Supervised Learning with Ladder Networks"    
+[15] https://engineering.purdue.edu/elab/CortexNet/ Alfredo Canziani, Eugenio Culurciello (Jun 2017) "CortexNet: a robust predictive deep neural network trained on videos"  
+[16] https://arxiv.org/pdf/1707.03718.pdf Abhishek Chaurasia, Eugenio Culurciello (Jun 2017) "LinkNet: Exploiting Encoder Representations for Efficient Semantic Segmentation"   
+[17] https://arxiv.org/pdf/1606.06724.pdf Antti Rasmus, Harri Valpola, Mikko Honkala, The Curious AI Company, Finland (nov 2016) "Tagger: Deep Unsupervised Perceptual Grouping"  
+[18] https://arxiv.org/pdf/1802.03426.pdf Leland McInnes and John Healy (feb 2018) "UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction"  
+[19] https://web.cs.dal.ca/~zincir/bildiri/jias-ckdnm.pdf Carlos Bacquet1, Kubra Gumus2, Dogukan Tizer3, A. Nur Zincir-Heywood4 and Malcolm I. Heywood5 "A Comparison of Unsupervised Learning Techniques for Encrypted Traffic Identification"  
+[20] http://scikit-learn.org/0.15/auto_examples/cluster/plot_cluster_comparison.html#example-cluster-plot-cluster-comparison-py sklearn "Comparing different clustering algorithms on toy datasets"  
+[21] https://arxiv.org/ftp/arxiv/papers/1707/1707.02051.pdf Song Yuheng1, Yan Hao1 "Image Segmentation Algorithms Overview"
+[22] http://brainiac2.mit.edu/isbi_challenge/ "ISBI Challenge: Segmentation of neuronal structures in EM stacks"
+[23] https://towardsdatascience.com/batch-normalization-in-neural-networks-1ac91516821c Firdaouss Doukkal (oct 2017) "Batch normalization in Neural Networks"
