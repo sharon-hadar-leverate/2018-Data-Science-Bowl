@@ -53,6 +53,38 @@ I would combine each with noisy input and batch normalization and evaluate these
 - [X] [Description of primary products](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/nuclei_segmentation.ipynb)
 - [X] Bibliography
 
+#### List of figures:
+- [1] images by segmentation and histogram.
+- [2] PCA embedding and UMAP embedding
+- [3] UMAP embedding with annotated images
+- [4] Images embedding groups
+- [5] UMAP image histogram embedding with annotated images
+- [6] Images histograms embedding groups,
+- [7] The arbitrary threshold
+- [8] Yen threshold example 1
+- [9] Yen threshold example 2
+- [10] IOU example 1
+- [11] IOU example 2
+- [12] IOU score per threshold
+- [13] Kmeans segmentetion
+- [14] Watershed segmentetion
+- [15] Logistic regression
+- [16] MLP
+- [17] Convolutional Neural Network (CNN)
+- [18] Dumb pixel Network
+- [19] FCN
+- [20] FCN learning curves
+- [21] FCN model evaluation
+- [22] Unet architecture
+- [23] Unet learning curves
+- [24] Unet model evaluation
+- [25] Denoise Autoencoder
+- [26] Hidden layer mean activation by denoise
+- [27] Noise input
+- [28] Denoised Unet learning curves
+- [29] Denoised Unet model evaluation
+- [30] Denoised Unet with Batch Normalization model evaluation  
+
 ## 2018 data sience bowl description
 “2018 Data Science Bowl” is a Kaggle competition that its goal is to create an algorithm to automate nucleus detection in divergent images to advance medical discovery.  
 
@@ -83,7 +115,7 @@ The images are clearly different, for example, we can see that the first image i
 Dimension reduction techniques can be used for better visualisation of the data: 
   
 ![image_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_embedding.png)  
-> (Figure 2: PCA embedding (left) UMAP embedding (right))   
+> (Figure 2: pca embedding (left) UMAP embedding (right))   
 
 In this figure, two techniques were used:  
 PCA which is a mathematical transformation from related variables into unrelated variables based on the variables largest possible variance,  
@@ -94,7 +126,7 @@ UMAP shows better visualization than PCA, also, according to UMAP paper, it is d
   
 <p align="center"><img width="460" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png"></p>   
 
-> (Figure 3: UMAP embedding with annotated images, each image is annotated to her 2d UMAP projection)   
+> (Figure 3: umap embedding with annotated images, each image is annotated to her 2d umap projection)   
 
 Clustering the data into groups can help identify the different groups of images in the data, a good unsupervised clustering method for this problem is DBSCAN.  
 DBSCAN (Density-based spatial clustering of applications with noise) groups together points that are close to each other based on a distance measurement and a minimum number of points.  
@@ -110,11 +142,11 @@ In the plot above, it seems that a grayscale image has a similar distribute to o
 
 <p align="center"><img width="600" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images_hist.png"></p>  
 
-> (Figure 5: UMAP image histogram embedding with annotated images, each image is annotated to her 2d UMAP projection based on images histograms)   
+> (Figure 5: umap image histogram embedding with annotated images, each image is annotated to her 2d umap projection based on images histograms)   
 
 
 ![image_groups_by_hist](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_hist3.png) 
-> (Figure 6: Images histograms embedding groups, each column is a group (9), each shows 3 different sample in the group and the samples histograms)    
+> (Figure 6: images histograms embedding groups, each column is a group (9), each shows 3 different sample in the group and the samples histograms)    
 
 The clusters information:  
 
