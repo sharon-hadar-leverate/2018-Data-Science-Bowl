@@ -1,30 +1,31 @@
 
-# Progress Report Introduction: 
+# Find the nuclei in divergent images to advance medical discovery    
 ____________________________________________________________________________________________________
 21.08.2018  
-Find the nuclei in divergent images to advance medical discovery  
 מציאת גרעיני תא בתמונות מסתעפות לקדם גילוי רפואי
  
 Student Sharon Hadar   
 Supervisor Sharon Yalov-handzel, DR   
 ____________________________________________________________________________________________________
 
-
-In this work I will present my thesis that a Ladder network could improve the accuracy of existing methods for medical image segmentation.  
-
-
-In order to understand if the ladder network helps improving segmentation, 
-I will build a benchmark of various methods for segmentation with performance measures (as IOU).   
-I will start by reviewing what is image segmentation and what are the basic techniques in image segmentation,   
+## Abstract
+Image segmentation is the process of assigning a label to each pixel in the image where each label is a group with certain characteristics, it is widely used in medical image processing, face recognition, autonomous vehicle etc.  
+In the 2010s, Deep Learning revolution and the use of it for medical segmentation has gained momentum,[21] in March 2015, a convolutional encoder-decoder architecture called Unet got the highest rank on the EM segmentation challenge [22].  
+Apart from segmentation, Deep Learning has improved latent data structure learning with the use of Autoencoders, a 'Neural Network' that tries to reconstruct is own input, the use of noisy input and batch normalization improve the ability of the network to learn meaningful futures.  
+One example of this improvement is the 'Ladder Network', which resembles a stacked Denoising Autoencoders that received state of the art scores in classification problems.[14]   
+In this work, I will present my thesis that using noisy input and batch normalization could improve the accuracy of existing methods for medical image segmentation.  
+In order to show any improvement, I will build a benchmark of various methods for segmentation with IOU as a performance measure.  
+I will use Kaggle's “2018 Data Science Bowl” competition data and start by examining the data.
+Then, I will review what is image segmentation and what are the basic techniques in image segmentation,   
 I will present what are the image segmentation performance measures and practice a threshold technique to get the first row of my benchmark,   
 Then I would review trainable segmentation techniques with deep learning:   
-Ill start with explaining basic concepts of deep learning,
+I'll start by explaining the basic concepts of deep learning,
 convolutional neural network (CNN) and the use of it in segmentation problem,    
 I would present the second row in my benchmark which is a  Fully Convolutional Networks (FCN),  
 Then, I will use Unet, which is a state of the art deep learning model for image segmentation, 
 and add it as a row to my benchmark.   
-After acquiring a baseline with two neural networks (a simple and a complex one) 
-I would combine each with a ladder network components and evaluate these models.  
+After acquiring a baseline with two neural networks (a simple and complex one) 
+I would combine each with noisy input and batch normalization and evaluate these models.  
 
 #### In this report i will introduce: 
 
@@ -130,6 +131,9 @@ The threshold methods assign a new value base on the original value.
 If the original value is above the threshold (>50) the value is assigned to be one (white), and if the value is below the threshold the value is assigned to be zero (black)
 
 Several popular methods are used in industry including Otsu's method (maximum variance), and Yen method (maximum correlation).  
+
+#### Otsu threshold: 
+Otsu The most commonly used threshold segmentation algorithm that uses the largest interclass variance  which selects a globally optimal threshold by maximizing the variance between classes.[21]  
 
 #### Yen threshold: 
 In this method the threshold is calculated base on the incompatibility between the final image and the original image,  
@@ -404,7 +408,9 @@ The network new architecture is:
 | --- | --- | --- | --- |
 | input (InputLayer) | (None, 128, 128, 3) | 0 | +++ |  
 | dropout (Dropout) | (None, 128, 128, 3) | 0 | input |  
-| conv2d_1 (Conv2D) | (None, 128, 128, 4) | 112 | dropout |  
+| conv2d_1 (Conv2D) | (None, 128, 128, 4) | 
+
+2 | dropout |  
 | conv2d_2 (Conv2D) | (None, 128, 128, 4) | 148 | conv2d_1 |  
 | max_pooling2d_1 (MaxPooling2D) | (None, 64, 64, 4) | 0 | conv2d_2 |
 | conv2d_3 (Conv2D) | (None, 64, 64, 8) | 296 | max_pooling2d_1 | 
@@ -609,3 +615,5 @@ Finally, I will evaluate the new models in relation to the same baseline.
 [18] https://arxiv.org/pdf/1802.03426.pdf
 [19] https://web.cs.dal.ca/~zincir/bildiri/jias-ckdnm.pdf
 [20] http://scikit-learn.org/0.15/auto_examples/cluster/plot_cluster_comparison.html#example-cluster-plot-cluster-comparison-py
+[21] https://arxiv.org/ftp/arxiv/papers/1707/1707.02051.pdf
+[22] http://brainiac2.mit.edu/isbi_challenge/
