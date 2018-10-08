@@ -523,6 +523,7 @@ mean test IOU:  0.8343306901825481
 | Noisy UNET with Batch Normalization   | 0.834 |
 | UNET | 0.821 |
 | Noisy UNET | 0.820 |
+| UNET with Batch Normalization  | 0.818 |
 | FCN | 0.738 |
 | Threshold Otsu | 0.718 |
 | Threshold Yen | 0.696 |
@@ -543,6 +544,9 @@ previous layers viewed as feature extraction when Fix the parameters of previous
  First layer: find hidden unit features that are more common in training inputs than in random input  
  Second layer: find combinations of hidden unit features that are more common than random hidden unit features.  
  Third layer: find combinations of combinations of..   
+
+## Discussion and future development:
+
 
 
 ## Ladder Networks  [14]
