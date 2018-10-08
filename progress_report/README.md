@@ -17,7 +17,7 @@ Apart from segmentation, Deep Learning has improved latent data structure learni
 One example of this improvement is the 'Ladder Network', which resembles a stacked Denoising Autoencoders that received state of the art scores in classification problems.[14]   
 In this work, I will present my thesis that using noisy input and batch normalization could improve the accuracy of existing methods for medical image segmentation.  
 In order to show any improvement, I will build a benchmark of various methods for segmentation with IOU as a performance measure.  
-I will use Kaggle's “2018 Data Science Bowl” competition data and start by examining the data.
+I will use Kaggle's “2018 Data Science Bowl” competition data and start by examining the data.  
 Then, I will review what is image segmentation and what are the basic techniques in image segmentation,   
 I will present what are the image segmentation performance measures and practice a threshold technique to get the first row of my benchmark,   
 Then I would review trainable segmentation techniques with deep learning:   
@@ -410,9 +410,7 @@ The network new architecture is:
 | --- | --- | --- | --- |
 | input (InputLayer) | (None, 128, 128, 3) | 0 | +++ |  
 | dropout (Dropout) | (None, 128, 128, 3) | 0 | input |  
-| conv2d_1 (Conv2D) | (None, 128, 128, 4) | 
-
-2 | dropout |  
+| conv2d_1 (Conv2D) | (None, 128, 128, 4) | 2 | dropout |  
 | conv2d_2 (Conv2D) | (None, 128, 128, 4) | 148 | conv2d_1 |  
 | max_pooling2d_1 (MaxPooling2D) | (None, 64, 64, 4) | 0 | conv2d_2 |
 | conv2d_3 (Conv2D) | (None, 64, 64, 8) | 296 | max_pooling2d_1 | 
