@@ -508,9 +508,9 @@ mean test IOU:  0.820656430606358
 ![noisy large unet v3](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/denoised1.png)  
 
 ### Batch Normalization  
-TODO : write on BN from ladder network and remove ladder network  
-TODO : show the new architecture
-
+Batch normalization is a technique for improving the performance and stability of artificial neural networks.  
+It is a technique to provide any layer in a neural network with inputs that are zero mean/unit variance.
+It is used to normalize the input layer by adjusting and scaling the activations, in other words, if an algorithm learned some X to Y mapping, and if the distribution of X changes, then we might need to retrain the learning algorithm by trying to align the distribution of X with the distribution of Y.[23]
 
 When adding batch normalization to Unet model per convolution layer on the noised data, the mean iou is improved:  
 ```
@@ -528,22 +528,6 @@ mean test IOU:  0.8343306901825481
 | Threshold Otsu | 0.718 |
 | Threshold Yen | 0.696 |
 
-
-
-TODO: add Ladder Networks and Unsupervised Pretraining to Related Work
-
-#### Unsupervised Pretraining
-One way to use the benefits of Denoising Autoencoders is by pretraining.  
-Deep neural network model weights start with random values and 'twiks' with each sample/batch according to the gradient,   
-when pretraining a deep neural network, 
-the model start with almost optimal weights for the problem and is fine-tuned with the training samples.  
-The idea is to use denoising autoencoder to train one layer at a time from the first hidden layer to the last, 
-previous layers viewed as feature extraction when Fix the parameters of previously hidden layers:  
-![pretrained](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/pretrain.png)   
-
- First layer: find hidden unit features that are more common in training inputs than in random input  
- Second layer: find combinations of hidden unit features that are more common than random hidden unit features.  
- Third layer: find combinations of combinations of..   
 
 ## Discussion and future development:
 
@@ -621,3 +605,4 @@ Finally, I will evaluate the new models in relation to the same baseline.
 [20] http://scikit-learn.org/0.15/auto_examples/cluster/plot_cluster_comparison.html#example-cluster-plot-cluster-comparison-py
 [21] https://arxiv.org/ftp/arxiv/papers/1707/1707.02051.pdf
 [22] http://brainiac2.mit.edu/isbi_challenge/
+[23] https://towardsdatascience.com/batch-normalization-in-neural-networks-1ac91516821c
