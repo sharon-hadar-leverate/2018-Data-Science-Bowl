@@ -65,13 +65,15 @@ Basic information:
 In order to understand the data we first need to look at some random images.  
   
 ![plot_images](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/plot_images.png)  
-> (Figure 1: the first line are the images, the second line is the image segmentation and the last line is the image histogram)   
+> (Figure 1: images by segmentation and histogram. the first line is the images, the second line is the image segmentation and the last line is the image histogram)   
 
 The images are clearly different, for example, we can see that the first image is grayscale where the third image is purple and light purple.  
   
 Dimension reduction techniques can be used for better visualisation of the data: 
   
 ![image_embedding](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_embedding.png)  
+> (Figure 2: PCA embedding (left) UMAP embedding (right))   
+
 In this figure, two techniques were used:  
 PCA which is a mathematical transformation from related variables into unrelated variables based on the variables largest possible variance,  
 
@@ -80,6 +82,7 @@ and UMAP (Uniform Manifold Approximation and Projection, Feb 2018)[18], Which is
 UMAP shows better visualization than PCA, also, according to UMAP paper, it is demonstrably faster than t-SNE and provides better scaling.   
   
 <p align="center"><img width="460" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images.png"></p>   
+> (Figure 3: UMAP embedding with annotated images, each image is annotated to her 2d UMAP projection)   
 
 Clustering the data into groups can help identify the different groups of images in the data, a good unsupervised clustering method for this problem is DBSCAN.  
 DBSCAN (Density-based spatial clustering of applications with noise) groups together points that are close to each other based on a distance measurement and a minimum number of points.  
@@ -87,14 +90,18 @@ DBSCAN finds the optimum number of clusters and does not need an input the numbe
 DBSCAN was also proven to be better than other clustering technics according to sklearn benchmark [20].
 
 ![image_groups_by_image](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_image.png)  
+> (Figure 4: Images embedding groups, each column is a group (5), each shows 3 different sample in the group and the samples histograms)   
 
 It seems that additional mining is required, for example, group number 3 includes purple and grayscale images.  
 one exploring direction is to use the image histogram which gives an overall idea about the intensity distribution of an image,  
 In the plot above, it seems that a grayscale image has a similar distribute to other grayscale images but has different distribute to purple images.  
 
 <p align="center"><img width="600" height="300" src="https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UMAP_embedding_with_images_hist.png"></p>  
+> (Figure 5: UMAP image histogram embedding with annotated images, each image is annotated to her 2d UMAP projection based on images histograms)   
 
-![image_groups_by_hist](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_hist3.png)  
+
+![image_groups_by_hist](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/image_groups_by_hist3.png) 
+> (Figure 6: Images histograms embedding groups, each column is a group (9), each shows 3 different sample in the group and the samples histograms)    
 
 The clusters information:  
 
@@ -128,7 +135,9 @@ Image segmentation is typically used to locate objects and boundaries (lines, cu
 
 Threshold method for image segmentation is a binarization of the image according to a selected threshold.  
   
-![arbitrary_th](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/arbitrary_th.png)  
+![arbitrary_th](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/arbitrary_th.png) 
+> (Figure 7: the arbitrary threshold, in this plot (from left to right), are the original image, a binarization of an image with an arbitrary threshold of 50, the image actual mask and the image histogram where the black line is the threshold)   
+
 For example, this figure uses an arbitrary threshold of 50 on a random image,  
 Each cell in the image has a value between 0 to 256, where 0 is black and 256 is white.  
 The threshold methods assign a new value base on the original value.  
@@ -145,11 +154,13 @@ Its implements thresholding based on a maximum correlation criterion for bilevel
 The threshold is calculated per image:  
 
 ![th_yen](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen.png)  
+> (Figure 8: Yen threshold example 1, in this plot (from left to right), are the original image, a binarization of an image with Yen threshold, the image actual mask and the image histogram where the black line is Yen threshold (11))   
 
 The binarization should be reversed in cases where the nuclei is darker than the background,  
 If the original value is **below** the threshold the value is assigned to be one (white), and if the value is **above** the threshold the value is assigned to be zero (black):  
 
 ![th_yen2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/th_yen2.png)  
+> (Figure 9: Yen threshold example 2, in this plot (from left to right), are the original image, a binarization of an image with Yen threshold, the image actual mask and the image histogram where the black line is Yen threshold (164))   
    
 ### IoU - Intersection over union (performance index)
 IoU is a segmentation performance measure which stands for intersection over union.  
@@ -157,10 +168,12 @@ The intersection (A∩B) is comprised of the pixels found in both the prediction
 whereas the union (A∪B) is simply comprised of all pixels found in either the prediction or target mask.  
   
 ![iou1](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/iou1.png)  
+> (Figure 10: IOU example 1, in this plot (from left to right up to down), is a binarization of an image with Yen threshold, the image actual mask, the intersection between them and the union between them)   
 
 Intersection over union for this case (where white is intersection and grey is union):  
   
 ![iou2](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/iou2.png)  
+> (Figure 11: IOU example 2, the Intersection over the union, the intersection is white and the union without intersection is grey, the Iou is the white are divided by the white and gray area)  
 
 Choosing a threshold would directly impact the IoU score:  
   
