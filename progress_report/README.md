@@ -96,17 +96,17 @@ In the plot above, it seems that a grayscale image has a similar distribute to o
 
 The clusters information:  
 
-| group | #samples | background color | nuclei color | nuclei radios | nuclei amounth | 
-| ------------- | ------------- | -------------  | ------------- | ------------- | ------------- |
-| 0 | 257 | black | gray | small -> medium | medium |
-| 1 | 36 | white | purple | small  | medium -> many |
-| 2 | 30 | light perpule | perpule | large | few |
-| 3 | 96 | black | gray -> white | extra small | few -> medium |
-| 4 | 66 | black | gray -> white | extra small | a lot | 
-| 5 | 25 | black | gray | large | medium | 
-| 6 | 16 | white | gray | medium | medium | 
-| 7 | 32 | light perpule | perpule | extra small | medium -> many | 
-| 8 | 12 | black | gray | small -> extra large | one -> few | 
+| group | #samples | background color | nuclei color | nuclei radios | nuclei amounth | precentage |
+| ------------- | ------------- | -------------  | ------------- | ------------- | ------------- | ------------- |
+| 0 | 257 | black | gray | small -> medium | medium | 45% |
+| 1 | 36 | white | purple | small  | medium -> many | 6.3% |
+| 2 | 30 | light perpule | perpule | large | few | 5.2% |
+| 3 | 96 | black | gray -> white | extra small | few -> medium | 16.8% |
+| 4 | 66 | black | gray -> white | extra small | a lot | 11.5 |
+| 5 | 25 | black | gray | large | medium | 4.3% |
+| 6 | 16 | white | gray | medium | medium |  2.8% |
+| 7 | 32 | light perpule | perpule | extra small | medium -> many | 5.6% | 
+| 8 | 12 | black | gray | small -> extra large | one -> few | 2.1% |
 
 For conclusion, the data are mainly characterized by the number of nuclei in an image, the nucleus width, and the image colors.  
 The data can be gathered into different groups that could receive different treatment.  
@@ -508,9 +508,9 @@ mean test IOU:  0.820656430606358
 ![noisy large unet v3](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/denoised1.png)  
 
 ### Batch Normalization  
-Batch normalization is a technique for improving the performance and stability of artificial neural networks.  
+To increase the stability of a neural network, batch normalization normalizes the output of a previous activation layer by subtracting the batch mean and dividing by the batch standard deviation.
 It is a technique to provide any layer in a neural network with inputs that are zero mean/unit variance.
-It is used to normalize the input layer by adjusting and scaling the activations, in other words, if an algorithm learned some X to Y mapping, and if the distribution of X changes, then we might need to retrain the learning algorithm by trying to align the distribution of X with the distribution of Y.[23]
+If an algorithm learned some X to Y mapping, and if the distribution of X changes, then we might need to retrain the learning algorithm by trying to align the distribution of X with the distribution of Y.[23]
 
 When adding batch normalization to Unet model per convolution layer on the noised data, the mean iou is improved:  
 ```
@@ -521,38 +521,23 @@ mean test IOU:  0.8343306901825481
 | technique   | Mean IoU |
 | ------------- | ------------- |
 | Noisy UNET with Batch Normalization   | 0.834 |
+| UNET with Batch Normalization  | 0.828 |
 | UNET | 0.821 |
 | Noisy UNET | 0.820 |
-| UNET with Batch Normalization  | 0.818 |
 | FCN | 0.738 |
 | Threshold Otsu | 0.718 |
 | Threshold Yen | 0.696 |
 
 
-## Discussion and future development:
-
-
-
-## Ladder Networks  [14]
-
-There is a problem with pretraining: In complex tasks, there is often much more structure in the inputs than can be represented, 
-and unsupervised learning cannot, by definition, know what will be useful for the task at hand.  
-One instance is the autoencoder approach applied to natural images:   
-The autoencoder will try to preserve all the details needed for reconstructing the image at a pixel level,  even though classification is typically invariant to all kinds of transformations which do not preserve pixel values.  
-Most of the information required for pixel-level reconstruction is irrelevant and takes space from the more relevant invariant features which cannot alone be used for reconstruction.  
-
-#### Ladder Network learns the latent space of each layer by combining denoising autoencoders to each layer and adding the autoencoders loss function to the network cost function.     
-Ladder Network is a semi-supervised that was developed by "Harri Valpola" from "The Curious AI Company" back in nov 2015. The Curious AI Company was founded by Harri Valpola in 2015 in Helsinki,  
-The company focuses on semi-supervised and unsupervised machine learning, which takes the human brain as its model.  
-
-#### The structure of the Ladder network:  
-![ladder network](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/ladder_network2.png)  
-ladder network architecture resemble the unet architecture, These models use an encoder and a decoder pair to segment images into parts and objects.
-f(l) The feedforward path with the corrupted feedforward path  
-g(l) Denoising functions  
-C(l)d Cost functions on each layer trying to minimize the difference between zˆ(l) and z(l)  
-
-
+## Discussion and future development:  
+The combination of Batch normalization with the Unet model received better scores than the Unet along, 
+The data was trained mainly by grayscale images (80%) and when applying Unet network to colored images the performance gained less Iou score, the training set, and the prediction set are both nucleus images but they differ, Unet learns some encoded mapping of different groups of images, and if the distribution of one group has changed, then we might need to retrain the learning algorithm by trying to align the distribution of this group with the distribution of other groups, which is exactly what batch normalization does.  
+The introduction to noise improved the Iou score when combining it with Batch normalization, noise made the model learn connections between groups, while this along did improve the Iou of weaker groups in the data (for example, a sample from group #2 received 0.758 Iou on the regular Unet and 0.84 Iou on the Unet model with noise), the overall Iou score wasn't better, this could imply that combining Batch normalization with noise also improve the model global learning compare to a noise alone Unet.    
+ 
+Future development is to adjust the Unet architecture further and combine it with the Ladder Network architecture,   
+Ladder Network, received state of the art results, learns the latent space of each layer by combining denoising autoencoders to each layer and adding the autoencoders loss function to the network cost function, the combination could be that each downsampling in the model would become an autoencoder.  
+Combining U-net with these components isn't trivial and could create a very complex model, 
+one that will probably require more memory and GPU.
 
 ### Related Work:
 
@@ -571,15 +556,7 @@ where each group is processed separately and learns its own prediction,
 in each iteration, save the group assignment probabilities and the expected value of the input for that group, 
 and insert it ass an additional input to the next iteration. [17]  
 
-### Future Work  
-In the next step, I will add Batch Normalization and denoising autoencoder to the FCN and Unet models I implemented.  
-Combining U-net with these components isn't trivial and could create a very complex model, 
-one that will probably require more memory and GPU, 
-in this case, I would use Google Cloud Platform compute engine \ ML engine.  
-Finally, I will evaluate the new models in relation to the same baseline.  
-
-
-## Description of primary products
+## Description of products
 [click here](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/nuclei_segmentation.ipynb) to see the hole jupyter notebook
 
 ## Bibliography.
