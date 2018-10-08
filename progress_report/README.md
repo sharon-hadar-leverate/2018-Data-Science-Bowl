@@ -32,7 +32,6 @@ I would combine each with noisy input and batch normalization and evaluate these
 #### In this report i will introduce: 
 
 - [X] Abstract
-- [X] Figure list
 - [X] 2018 data sience bowl description 
 - [X] Investigate the data
 - [X] Image segmentation
@@ -51,39 +50,8 @@ I would combine each with noisy input and batch normalization and evaluate these
 - [X] Discussion and future development
 - [X] Related work
 - [X] [Description of primary products](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/nuclei_segmentation.ipynb)
+- [X] Figure list
 - [X] Bibliography
-
-#### List of figures:
-- figure 1: images by segmentation and histogram.
-- figure 2: PCA embedding and UMAP embedding
-- figure 3: UMAP embedding with annotated images
-- figure 4: Images embedding groups
-- figure 5: UMAP image histogram embedding with annotated images
-- figure 6: Images histograms embedding groups,
-- figure 7: The arbitrary threshold
-- figure 8: Yen threshold example 1
-- figure 9: Yen threshold example 2
-- figure 10 IOU example 1
-- figure 11: IOU example 2
-- figure 12: IOU score per threshold
-- figure 13: Kmeans segmentetion
-- figure 14: Watershed segmentetion
-- figure 15: Logistic regression
-- figure 16 MLP
-- figure 17: Convolutional Neural Network (CNN)
-- figure 18: Dumb pixel Network
-- figure 19: FCN
-- figure 20: FCN learning curves
-- figure 21: FCN model evaluation
-- figure 22: Unet architecture
-- figure 23: Unet learning curves
-- figure 24: Unet model evaluation
-- figure 25: Denoise Autoencoder
-- figure 26: Hidden layer mean activation by denoise
-- figure 27: Noise input
-- figure 28: Denoised Unet learning curves
-- figure 29: Denoised Unet model evaluation
-- figure 30: Denoised Unet with Batch Normalization model evaluation  
 
 ## 2018 data sience bowl description
 “2018 Data Science Bowl” is a Kaggle competition that its goal is to create an algorithm to automate nucleus detection in divergent images to advance medical discovery.  
@@ -634,6 +602,38 @@ and insert it ass an additional input to the next iteration. [17]
 
 ## Description of products
 [click here](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/nuclei_segmentation.ipynb) to see the hole jupyter notebook
+
+#### List of figures:
+- figure 1: images by segmentation and histogram.
+- figure 2: PCA embedding and UMAP embedding
+- figure 3: UMAP embedding with annotated images
+- figure 4: Images embedding groups
+- figure 5: UMAP image histogram embedding with annotated images
+- figure 6: Images histograms embedding groups,
+- figure 7: The arbitrary threshold
+- figure 8: Yen threshold example 1
+- figure 9: Yen threshold example 2
+- figure 10 IOU example 1
+- figure 11: IOU example 2
+- figure 12: IOU score per threshold
+- figure 13: Kmeans segmentetion
+- figure 14: Watershed segmentetion
+- figure 15: Logistic regression
+- figure 16 MLP
+- figure 17: Convolutional Neural Network (CNN)
+- figure 18: Dumb pixel Network
+- figure 19: FCN
+- figure 20: FCN learning curves
+- figure 21: FCN model evaluation
+- figure 22: Unet architecture
+- figure 23: Unet learning curves
+- figure 24: Unet model evaluation
+- figure 25: Denoise Autoencoder
+- figure 26: Hidden layer mean activation by denoise
+- figure 27: Noise input
+- figure 28: Denoised Unet learning curves
+- figure 29: Denoised Unet model evaluation
+- figure 30: Denoised Unet with Batch Normalization model evaluation  
 
 ## Bibliography.
 [1] Linda G. Shapiro and George C. Stockman (2001): “Computer Vision”, pp 279-325, New Jersey, Prentice-Hall, ISBN 0-13-030796-3  
