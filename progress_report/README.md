@@ -1,7 +1,7 @@
 
-# Find the nuclei in divergent images to advance medical discovery    
+# Find the nuclei in divergent images    
 ____________________________________________________________________________________________________
-21.08.2018  
+08.10.2018  
 מציאת גרעיני תא בתמונות מסתעפות לקדם גילוי רפואי
  
 Student Sharon Hadar   
