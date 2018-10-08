@@ -204,12 +204,14 @@ This algorithm is guaranteed to converge, but it may not return the optimal solu
 The quality of the solution depends on the initial set of clusters and the value of K.  
 
 ![kmeans_segmentetion](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/kmeans_segmentetion.PNG)
+> (Figure 13: kmeans segmentetion)  
 
 The **watershed transformation**[4] considers the gradient magnitude of an image as a topographic surface.
 Pixels having the highest gradient magnitude intensities (GMIs) correspond to watershed lines, which represent the region boundaries.    Water placed on any pixel enclosed by a common watershed line flows downhill to a common local intensity minimum (LIM).  
 Pixels draining to a common minimum form a catch basin, which represents a segment.  
 
 ![watershed_segmentetion](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/watershed_segmentetion.PNG)
+> (Figure 14: watershed segmentetion) 
 
 #### Trainable segmentation:
 Most segmentation methods are based only on color information of pixels in the image. Humans use much more knowledge than this when doing image segmentation, but implementing this knowledge would cost considerable computation time and would require a huge domain knowledge database, which is currently not available.   
@@ -238,7 +240,7 @@ Activation function: the weighted sum is then passed as an input to a log functi
 Learning algorithm: learn optimal weights by using optimization techniques such as gradient descent.    
 #### Logistic regression is a simple neural network.
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/%E2%80%8F%E2%80%8FLR.PNG)  
-
+> (Figure 15: logistic regression, the input are the blue units, the summarization is the green sigma unit and the activation is the yellow unit) 
 
 ### Multi Layer Perceptron (MLP):
 MLPs are simple neural networks in a stack, where one layers output is used as input to the next layer. 
@@ -247,8 +249,9 @@ MLP is defined by several parameters:
  - Number of hidden layers in the network  
  - The activation functions at each layer.
  
-![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/MLP.PNG)
-  
+![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/MLP.PNG)  
+> (Figure 16: mlp, the input are the units in the red rectangle, the hidden layer are each summarization and activation unit layers, the last unit is the output) 
+
 ### How To Train a Neural Network:    
 When we train a model we are trying to minimize the loss function to get the model optimal weights,  
 for example, Logistic regression uses binary cross-entropy as a loss function, which is a very popular technique in binary classification.  
@@ -285,6 +288,7 @@ allowing the network to be deeper with fewer parameters.
 Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex.[8]  
 Yann LeCun from Facebook’s AI Research group built the first Convolution Neural Network in 1988 called LeNet. [9]
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/CNN.PNG)  
+> (Figure 17: Convolutional Neural Network (CNN), get an image as an input, then use convolution on a sliding window follow by max polling and a fully connected layer which classify the image into a bird, sunset or another label) 
 
 The CNN components are:  
 
@@ -314,11 +318,12 @@ A classic architecture for CNN:
 One of the popular initial deep learning approaches was patch classification where each pixel was separately classified into classes using a patch of the image around it.[10]   
 The main reason to use patches was that classification networks usually have full connected layers and therefore required fixed size images.   
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/pixlewise.PNG)  
-
+> (Figure 18: dumb pixel Network, gets an image as an input, and extract patches to classify each of them to cow or grass) 
 
 In 2014, Fully Convolutional Networks (FCN) by Long et al. from Berkeley, popularized CNN architectures for dense predictions without any fully connected layers.  
 This allowed segmentation maps to be generated for an image of any size and was also much faster compared to the patch classification approach.  
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/FCN.PNG)  
+> (Figure 19: fcn, gets an image as an input, and use multi-layer convolution the use activate to each label at pixel resolution)  
 
 Almost all the subsequent state of the art approaches on semantic segmentation adopted this paradigm.  
 (pictures from Stanford University School of Engineering course)
@@ -359,6 +364,7 @@ batch_size: of 8 images.
 learning rate: 1e-3.  
 
 ![FCN_v2_lcurves](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/FCN_v2_lcurves.png)
+> (Figure 20: fcn learning curves, train and test model accuracy by epochs (left) model loss by  epochs (right))  
 
 The learning curve is sharp at first but becomes monotonous rather quickly, the monotonous slope indicates slow learning that requires a greater amount of data, an arithmetic that does not require a large amount of data has a higher learning curve and becomes very quickly blunt.  
 
@@ -370,7 +376,8 @@ The result:
 ``` 
 mean test IOU:  0.7381347267693156
 ```  
-![FCN_vs_evaluate](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/FCN_vs_evaluate.png)  
+![FCN_vs_evaluate](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/FCN_vs_evaluate.png)   
+> (Figure 21: fcn model evaluation, in this figure each column belongs to a different group in the data, the first row is the image, the second row is the image truth mask, the third row is the model projection before thresholding the fourth row is the binarization of the projection and the last row is the sample iou)  
 
 Different data groups got different treatment with different iou scores,   
 the first and fourth groups, which is most of the data, got pretty good iou, while other groups got below 0.72 and even close to zero.   
@@ -392,13 +399,11 @@ In 2015, Olaf Ronneberger, Philipp Fischer and Thomas Brox proposed a new deep l
 Encoder gradually reduces the spatial dimension with pooling layers and decoder gradually recovers the object details and spatial dimension.  
 There are shortcut connections from the encoder to the decoder to help decoder recover the object details better.  
 ![alt text](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/unet.png)  
-
-[11] U-net architecture (an example of 32x32 pixels in the lowest resolution).  
-Each blue box corresponds to a multi-channel feature map.  
+> (Figure 22: u-net architecture,[11] Each blue box corresponds to a multi-channel feature map.  
 The number of channels is denoted on top of the box.  
 The x-y-size is provided at the lower left edge of the box.   
 White boxes represent copied feature maps.   
-The arrows denote the different operations.  
+The arrows denote the different operations.)  
 
 The u-net architecture achieves very good performance on very different biomedical segmentation applications.   
 The network consist of 2 paths:  
@@ -467,6 +472,7 @@ Non-trainable params: 0
 ____________________________________________________________________________________________________
 
 ![large_unet_v2_lcurves](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/large_unet_v2_lcurves.png)   
+> (Figure 23: unet learning curves, train and test model accuracy by epochs (left) model loss by  epochs (right))  
 
 When comparing Unet to FCN, Unet has 30,437 trainable parameters,   
 almost 30 times more parameters then FCN, the training procedure takes more time and required more memory,   
@@ -475,6 +481,8 @@ the large model (which includes an additional contracting and expansive step) al
 mean test IOU:  0.8218275476316186
 ```  
 ![unet](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/UNET_v2_evaluate.png)  
+> (Figure 24: unet model evaluation, in this figure each column belongs to a different group in the data, the first row is the image, the second row is the image truth mask, the third row is the model projection before thresholding the fourth row is the binarization of the projection and the last row is the sample iou) 
+
 Unet got a highest average IoU score of 0.825.  
 
 | technique   | Mean IoU |
@@ -508,23 +516,28 @@ Learn representation that would be robust to the introduction of noise will enfo
 The introduction of noise causes the sample to distance itself from the data distribution.  
 Then, when learning to reconstruct the same sample without the noise, the gradient is forced to contain a component that is precisely oriented to the data distribution.  
 ![denoise_autoencoder](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/denoise_autoencoder.png)  
+> (Figure 25: denoise autoencoder, in a projection of abstract demensions) 
 
 Hidden layer representation (what the encoder has learn by levels of corruption)  
 ![hidden_layer_rep_dae](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/assets/hidden_layer_rep_dae.png)
+> (Figure 26: hidden layer mean activation by denoise (corruption rates)) 
 
 Each square is one hidden unit visualization of the weight vector between all inputs and the specific hidden unit [13]  
 There is a more significant representation as the signal is more corrupt, clear edges of digits are shown at 50% corruption.
 
 Random Gaussian noise was added to the train set with mean 0 and SD of 256:  
 ![adding_noise](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/adding_noise.png )  
+> (Figure 27: noise input, the first row is the original image, the second row is the original image histogram, the third row is the image corrupt, the fourth row is the corrupted image histogram and the last row is the image mask) 
 
 When training a new Unet model on the noised data, the mean iou is not improved:    
 ```
 mean test IOU:  0.820656430606358
 ```  
 ![denoised lc](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/denoised.png)  
+> (Figure 28: denoised unet learning curves, train and test model accuracy by epochs (left) model loss by  epochs (right))  
 
 ![noisy large unet v3](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/denoised1.png)  
+> (Figure 29: denoised unet model evaluation, in this figure each column belongs to a different group in the data, the first row is the image, the second row is the image truth mask, the third row is the model projection before thresholding the fourth row is the binarization of the projection and the last row is the sample iou)  
 
 ### Batch Normalization  
 To increase the stability of a neural network, batch normalization normalizes the output of a previous activation layer by subtracting the batch mean and dividing by the batch standard deviation.
@@ -536,6 +549,7 @@ When adding batch normalization to Unet model per convolution layer on the noise
 mean test IOU:  0.8343306901825481
 ```  
 ![bn noisy large unet v3](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/denoising_bn_UNET_v2_evaluate.png)  
+> (Figure 30: denoised unet with batch normalization model evaluation, in this figure each column belongs to a different group in the data, the first row is the image, the second row is the image truth mask, the third row is the model projection before thresholding the fourth row is the binarization of the projection and the last row is the sample iou)   
 
 | technique   | Mean IoU |
 | ------------- | ------------- |
