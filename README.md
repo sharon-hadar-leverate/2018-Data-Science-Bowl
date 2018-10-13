@@ -13,7 +13,7 @@ ________________________________________________________________________________
 ## Abstract
 Image segmentation is the process of assigning a label to each pixel in the image where each label is a group with certain characteristics, it is widely used in medical image processing, face recognition, autonomous vehicle etc.  
 In the 2010s, Deep Learning revolution and the use of it for medical segmentation has gained momentum,[21] in March 2015, a convolutional encoder-decoder architecture called Unet got the highest rank on the EM segmentation challenge [22].  
-Apart from segmentation, Deep Learning has improved the data latent variables learning in with the use of Autoencoders, a Neural Network that tries to reconstruct is own input, the use of noisy input and batch normalization improve the ability of the network to learn meaningful futures.  
+Apart from segmentation, Deep Learning has improved the data latent variables learning with the use of Autoencoders, a Neural Network that tries to reconstruct is own input, the use of noisy input and batch normalization improve the ability of the network to learn meaningful futures.  
 One example of this improvement is the 'Ladder Network', which resembles a stacked Denoising Autoencoders and received state of the art scores in classification problems.[14]   
 In this work, 
 I present my thesis that using noisy input and batch normalization could improve the accuracy of existing methods for medical image segmentation.  
@@ -501,8 +501,8 @@ Unet got a highest average IoU score of 0.825.
 | Threshold Otsu | 0.718 |
 | Threshold Yen | 0.696 |
 
-This is the first part of acquiring a baseline. in the next part, I would combine these methods with Ladder Networks components.    
-In order to understand Ladder Network, one need to understand Denoising Autoencoders.  
+This is the first part of acquiring a baseline. in the next part, I would combine these methods with noisy input and batch normalization.   
+In order to understand the usage of noisy input and batch normalization, one need to understand Denoising Autoencoders.  
 
 ## Autoencoders
 
@@ -572,6 +572,13 @@ mean test IOU:  0.8343306901825481
 
 
 ## Discussion and future development:  
+
+In this project, I introduced the idea that using noisy input and batch normalization could improve the accuracy of existing methods for medical image segmentation.   
+In order to show any improvement, I built a benchmark of various methods for segmentation with IOU as a performance measure.  
+I used Kaggle's “2018 Data Science Bowl” and after analyzing it I have shown that it is mainly characterized by the number of nuclei in an image, the nucleus width, and the image colors, and also that the data can be gathered into different groups that could receive different treatment.  
+This benchmark has both classic segmentation technics and modern trainable technics, it is clearly shown that using trainable modern technics, as deep learning, perform better than classic technics, as Threshold Otsu\ Yen.  
+This benchmark also shows that Unet receives better IOU score than Fully Convolutional Networks, which was expected since it is state of the art technic for medical image segmentation.  
+
 The combination of Batch normalization with the Unet model received better scores than the Unet along, 
 The data was trained mainly by grayscale images (80%) and when applying Unet network to colored images the performance gained less Iou score, the training set, and the prediction set are both nucleus images but they differ, Unet learns some encoded mapping of different groups of images, and if the distribution of one group has changed, then we might need to retrain the learning algorithm by trying to align the distribution of this group with the distribution of other groups, which is exactly what batch normalization does.  
 The introduction to noise improved the Iou score when combining it with Batch normalization, noise made the model learn connections between groups, while this along did improve the Iou of weaker groups in the data (for example, a sample from group #2 received 0.758 Iou on the regular Unet and 0.84 Iou on the Unet model with noise), the overall Iou score wasn't better, this could imply that combining Batch normalization with noise also improve the model global learning compare to a noise alone Unet.    
