@@ -576,7 +576,7 @@ mean test IOU:  0.8343306901825481
 In this project, I introduced the idea that using noisy input and batch normalization could improve the accuracy of existing methods for medical image segmentation.   
 In order to show any improvement, I built a benchmark of various methods for segmentation with IOU as a performance measure.  
 I used Kaggle's “2018 Data Science Bowl” and after analyzing it I have shown that it is mainly characterized by the number of nuclei in an image, the nucleus width, and the image colors, and also that the data can be gathered into different groups that could receive different treatment.  
-This benchmark has both classic segmentation technics and modern trainable technics, it is clearly shown that using trainable modern technics, as deep learning, perform better than classic technics, as Threshold Otsu\ Yen.  
+This benchmark has both classic segmentation technics and modern trainable segmentation technics, it is clearly shown that using trainable modern technics, as deep learning, perform better than classic technics, as Threshold Otsu\ Yen.  
 This benchmark also shows that Unet receives better IOU score than Fully Convolutional Networks, which was expected since it is state of the art technic for medical image segmentation.  
 
 The combination of Batch normalization with the Unet model received better scores than the Unet along, 
