@@ -13,21 +13,19 @@ ________________________________________________________________________________
 ## Abstract
 Image segmentation is the process of assigning a label to each pixel in the image where each label is a group with certain characteristics, it is widely used in medical image processing, face recognition, autonomous vehicle etc.  
 In the 2010s, Deep Learning revolution and the use of it for medical segmentation has gained momentum,[21] in March 2015, a convolutional encoder-decoder architecture called Unet got the highest rank on the EM segmentation challenge [22].  
-Apart from segmentation, Deep Learning has improved latent data structure learning with the use of Autoencoders, a 'Neural Network' that tries to reconstruct is own input, the use of noisy input and batch normalization improve the ability of the network to learn meaningful futures.  
-One example of this improvement is the 'Ladder Network', which resembles a stacked Denoising Autoencoders that received state of the art scores in classification problems.[14]   
-In this work, I will present my thesis that using noisy input and batch normalization could improve the accuracy of existing methods for medical image segmentation.  
-In order to show any improvement, I will build a benchmark of various methods for segmentation with IOU as a performance measure.  
-I will use Kaggle's “2018 Data Science Bowl” competition data and start by examining the data.  
-Then, I will review what is image segmentation and what are the basic techniques in image segmentation,   
-I will present what are the image segmentation performance measures and practice a threshold technique to get the first row of my benchmark,   
-Then I would review trainable segmentation techniques with deep learning:   
-I'll start by explaining the basic concepts of deep learning,
-convolutional neural network (CNN) and the use of it in segmentation problem,    
-I would present the second row in my benchmark which is a  Fully Convolutional Networks (FCN),  
-Then, I will use Unet, which is a state of the art deep learning model for image segmentation, 
-and add it as a row to my benchmark.   
-After acquiring a baseline with two neural networks (a simple and complex one) 
-I would combine each with noisy input and batch normalization and evaluate these models.  
+Apart from segmentation, Deep Learning has improved latent data structure learning with the use of Autoencoders, a Neural Network that tries to reconstruct is own input, the use of noisy input and batch normalization improve the ability of the network to learn meaningful futures.  
+One example of this improvement is the 'Ladder Network', which resembles a stacked Denoising Autoencoders and received state of the art scores in classification problems.[14]   
+In this work, 
+I present my thesis that using noisy input and batch normalization could improve the accuracy of existing methods for medical image segmentation.  
+In order to show any improvement, I built a benchmark of various methods for segmentation with IOU as a performance measure.  
+I used Kaggle's “2018 Data Science Bowl” competition data and started the work in identifying and analyzing the data.  
+I have summarized several methods for segmentation and present what are the image segmentation performance measures.      
+I explain and show my experience with the threshold technique to get the first row in my benchmark,   
+I have summarized several trainable segmentation techniques with deep learning:   
+I explain some basic concepts of deep learning, convolutional neural network (CNN) and the use of it in segmentation problem,
+I explain and show my experience with Fully Convolutional Networks (FCN) in order to get the second row in my benchmark, 
+In addition, I explain the Unet model, which is a state of the art deep learning model for image segmentation, and present my experience with it in order to get the third row in my benchmark,  
+After acquiring these models, I present their combination with noisy input and batch normalization and evaluate these models.
 
 #### In this report i will introduce: 
 
