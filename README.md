@@ -13,7 +13,7 @@ ________________________________________________________________________________
 ## Abstract
 Image segmentation is the process of assigning a label to each pixel in the image where each label is a group with certain characteristics, it is widely used in medical image processing, face recognition, autonomous vehicle etc.  
 In the 2010s, Deep Learning revolution and the use of it for medical segmentation has gained momentum,[21] in March 2015, a convolutional encoder-decoder architecture called Unet got the highest rank on the EM segmentation challenge [22].  
-Apart from segmentation, Deep Learning has improved latent data structure learning with the use of Autoencoders, a Neural Network that tries to reconstruct is own input, the use of noisy input and batch normalization improve the ability of the network to learn meaningful futures.  
+Apart from segmentation, Deep Learning has improved the data latent variables learning in with the use of Autoencoders, a Neural Network that tries to reconstruct is own input, the use of noisy input and batch normalization improve the ability of the network to learn meaningful futures.  
 One example of this improvement is the 'Ladder Network', which resembles a stacked Denoising Autoencoders and received state of the art scores in classification problems.[14]   
 In this work, 
 I present my thesis that using noisy input and batch normalization could improve the accuracy of existing methods for medical image segmentation.  
