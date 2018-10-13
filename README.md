@@ -30,6 +30,38 @@ After acquiring these models, I present their combination with noisy input and b
 - [X] IoU - intersection over union (performance index)
 - [X] Deep Learning and Neural Network consepts
 - [X] Multi Layer Perceptron (MLP)
+
+# Find the nuclei in divergent images    
+____________________________________________________________________________________________________  
+![top](https://github.com/sharon-hadar-leverate/2018-Data-Science-Bowl/blob/master/new_assets/%E2%80%8F%E2%80%8FTOP.PNG)  
+
+## Abstract
+Image segmentation is the process of assigning a label to each pixel in the image where each label is a group with certain characteristics, it is widely used in medical image processing, face recognition, autonomous vehicle etc.  
+In the 2010s, Deep Learning revolution and the use of it for medical segmentation has gained momentum,[21] in March 2015, a convolutional encoder-decoder architecture called Unet got the highest rank on the EM segmentation challenge [22].  
+Apart from segmentation, Deep Learning has improved the data latent variables learning with the use of Autoencoders, a Neural Network that tries to reconstruct is own input, the use of noisy input and batch normalization improve the ability of the network to learn meaningful futures.  
+One example of this improvement is the 'Ladder Network', which resembles a stacked Denoising Autoencoders and received state of the art scores in classification problems.[14]   
+In this work, 
+I present my thesis that using noisy input and batch normalization could improve the accuracy of existing methods for medical image segmentation.  
+In order to show any improvement, I built a benchmark of various methods for segmentation with IOU as a performance measure.  
+I used Kaggle's “2018 Data Science Bowl” competition data and started the work in identifying and analyzing the data.  
+I have summarized several methods for segmentation and present what are the image segmentation performance measures.      
+I explain and show my experience with the threshold technique to get the first row in my benchmark,   
+I have summarized several trainable segmentation techniques with deep learning:   
+I explain some basic concepts of deep learning, convolutional neural network (CNN) and the use of it in segmentation problem,
+I explain and show my experience with Fully Convolutional Networks (FCN) in order to get the second row in my benchmark, 
+In addition, I explain the Unet model, which is a state of the art deep learning model for image segmentation, and present my experience with it in order to get the third row in my benchmark,  
+After acquiring these models, I present their combination with noisy input and batch normalization and evaluate these models.
+
+#### In this report i will introduce: 
+
+- [X] Abstract
+- [X] 2018 data sience bowl description 
+- [X] Investigate the data
+- [X] Image segmentation
+- [X] Threshold as a segmentation technique
+- [X] IoU - intersection over union (performance index)
+- [X] Deep Learning and Neural Network consepts
+- [X] Multi Layer Perceptron (MLP)
 - [X] How to train a Neural Network
 - [X] Convolutional Neural Network (CNN)
 - [X] Use of Deep Learning in segmentation problem
