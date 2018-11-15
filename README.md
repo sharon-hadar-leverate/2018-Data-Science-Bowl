@@ -34,7 +34,7 @@ After acquiring these models, I present their combination with noisy input and b
 - [X] Convolutional Neural Network (CNN)
 - [X] Use of Deep Learning in segmentation problem
 - [X] Fully Convolutional Networks exploring
-- [X] U-Net
+- [X] U-Net 
 - [X] Unet exploring
 - [X] Autoencoders
 - [X] Batch Normalization
